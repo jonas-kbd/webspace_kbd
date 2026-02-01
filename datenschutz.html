@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <title>Kassel Business Digital | Datenschutzerklärung</title>
+    <meta name="description" content="Datenschutzerklärung der Kassel Business Digital (Jonas Meyer & Dayan Hindermann GbR). Maximale Transparenz zu Datenerfassung, Hosting und Ihren Rechten.">
+    
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.kassel-bd.de/datenschutz.html">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#071F36">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kassel Business Digital | Datenschutzerklärung">
+    <meta property="og:description" content="Unsere Verpflichtung zu Datenschutz und Transparenz. Informationen zu Hosting, Datenverarbeitung und Ihren Rechten.">
+    <meta property="og:image" content="https://www.kassel-bd.de/icon.png">
+    <meta property="og:url" content="https://www.kassel-bd.de/datenschutz.html">
+    <meta property="og:locale" content="de_DE">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.kassel-bd.de/datenschutz.html">
+    <meta name="twitter:title" content="Kassel Business Digital | Datenschutzerklärung">
+    <meta name="twitter:description" content="Unsere Verpflichtung zu Datenschutz und Transparenz. Informationen zu Hosting, Datenverarbeitung und Ihren Rechten.">
+    <meta name="twitter:image" content="https://www.kassel-bd.de/icon.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Kassel Business Digital",
+      "url": "https://www.kassel-bd.de",
+      "logo": "https://www.kassel-bd.de/icon.png",
+      "sameAs": [
+        "https://www.linkedin.com/company/kassel-bd",
+        "https://www.instagram.com/kassel_bd/"
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="config.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        kbdBlue: '#071F36',
+                        richGrey: '#2D3748',
+                        softGrey: '#4A5563',
+                        lightGrey: '#F3F5F7',
+                        bracketBlue: '#071F36'
+                    },
+                    boxShadow: {
+                        'premium': '0 20px 40px -5px rgba(7, 31, 54, 0.1)',
+                        'premium-hover': '0 25px 50px -12px rgba(7, 31, 54, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Fonts loaded globally via design-system.css */
+
+        /* --- GLOBAL VARIABLES --- */
+        :root {
+            --kbd-blue: #071F36;
+            --rich-grey: #2D3748;
+            --soft-grey: #4A5563;
+            --white: #FFFFFF;
+            --bracket-blue: #071F36;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--rich-grey);
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.6;
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4, h5, h6 { color: var(--kbd-blue); letter-spacing: -0.01em; line-height: 1.15; }
+        h1 { font-weight: 700; } h2 { font-weight: 700; } h3 { font-weight: 700; /* Changed from 600 */ }
+
+        .text-body { color: var(--rich-grey); font-weight: 400; font-size: 17px; line-height: 1.6; }
+        .eyebrow {
+            font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: 0.02em;
+            text-transform: uppercase; color: var(--soft-grey); font-size: 12px;
+        }
+
+        /* BUTTONS */
+        .btn-primary {
+            background-color: var(--kbd-blue);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500; 
+            font-size: 16px;
+            border-radius: 0px; 
+            padding: 14px 24px;
+            border: 1px solid var(--kbd-blue);
+            transition: all 0.2s ease;
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn-primary:hover {
+            background-color: #0A2A4A;
+            border-color: #0A2A4A;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(7, 31, 54, 0.15);
+        }
+
+        .btn-white {
+            background-color: var(--white);
+            color: var(--kbd-blue);
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            border-radius: 0px;
+            padding: 14px 24px;
+            border: 1px solid var(--white);
+            transition: all 0.2s ease;
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn-white:hover {
+            background-color: #F3F5F7;
+            border-color: #F3F5F7;
+            color: var(--kbd-blue);
+            transform: translateY(-1px);
+        }
+
+        /* UTILITIES */
+        .section-padding { padding-top: 128px; padding-bottom: 128px; }
+        .modal-open { overflow: hidden; }
+        .hp-hidden { display: none !important; visibility: hidden !important; }
+
+        /* FORM STYLES */
+        .form-input {
+            border-bottom-width: 1px; border-color: #E1E5E9; background-color: transparent; transition: border-color 0.2s;
+        }
+        .form-input:focus { border-color: #071F36; outline: none; }
+        input[type="checkbox"], input[type="radio"] { accent-color: #071F36; cursor: pointer; }
+        input[type="radio"] { width: 1.25em; height: 1.25em; border: 1px solid #D1D5DB; }
+        input[type="radio"]:checked { border-color: #071F36; background-color: #071F36; }
+
+        /* HEADER SCROLL STATE */
+        .nav-scrolled { background-color: rgba(255, 255, 255, 0.98); backdrop-filter: blur(12px); box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05); }
+
+        /* HERO BANNER STYLES */
+        .hero-banner {
+            position: relative;
+            height: 400px;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+        }
+        .hero-bg-img {
+            position: absolute; inset: 0; width: 100%; height: 100%;
+            object-fit: cover; object-position: center; z-index: 0;
+        }
+        .hero-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to bottom, rgba(7,31,54,0.3) 0%, rgba(7,31,54,0.6) 100%);
+            z-index: 1;
+        }
+
+        /* Legal Content Styles */
+        .legal-value ul { list-style-type: disc; padding-left: 1.25rem; margin-top: 0.5rem; margin-bottom: 0.5rem; color: #4A5563; font-size: 0.95rem; }
+        .legal-value a { text-decoration: underline; text-underline-offset: 4px; transition: color 0.2s; }
+        .legal-value a:hover { color: #071F36; }
+
+        @media (max-width: 768px) {
+            .section-padding { padding-top: 80px; padding-bottom: 80px; }
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-transparent">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20 transition-all duration-300" id="nav-container">
+                
+                <div class="flex items-center gap-3 z-50">
+                    <a href="index.html" class="block relative group" aria-label="Zur Startseite">
+                        <img src="icon.png" alt="KBD Logo" id="nav-logo" width="56" height="56" class="h-10 md:h-12 w-auto object-contain transition-all duration-300 brightness-0 invert" style="will-change: filter;" />
+                    </a>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-8 text-[15px] font-medium tracking-wide text-white" id="nav-links">
+                    <a href="ueberuns.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Über Uns</a>
+                    <a href="leistungen.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Leistungen</a>
+                    <a href="technologie.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Technologie</a>
+                    <a href="erfolge.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Erfolge</a>
+                    <a href="publikationen/index.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Publikationen</a>
+                    
+                    <button type="button" onclick="openContactModal(event)" class="btn-primary ml-2 border-white/10 !py-2 !px-5 !text-[14px]">
+                        Kontakt
+                    </button>
+                </div>
+
+                <button type="button" class="lg:hidden text-white p-2 -mr-2 transition-colors duration-300 focus:outline-none" id="menu-btn" onclick="toggleMobileMenu()" aria-label="Menu öffnen">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-2xl border-t border-gray-100 transform origin-top transition-all duration-300 ease-in-out z-40">
+            <div class="flex flex-col px-6 py-8 space-y-6 font-medium text-[#071F36]">
+                <a href="ueberuns.html" class="block text-lg border-b border-gray-100 pb-4">Über Uns</a>
+                <a href="leistungen.html" class="block text-lg border-b border-gray-100 pb-4">Leistungen</a>
+                <a href="technologie.html" class="block text-lg border-b border-gray-100 pb-4">Technologie</a>
+                <a href="erfolge.html" class="block text-lg border-b border-gray-100 pb-4">Erfolge</a>
+                <a href="publikationen/index.html" class="block text-lg border-b border-gray-100 pb-4">Publikationen</a>
+                <a href="karriere.html" class="block text-lg border-b border-gray-100 pb-4">Karriere</a>
+                
+                <button type="button" onclick="openContactModal(event)" class="w-full text-left text-lg font-bold text-[#071F36] pt-2">
+                    Kontakt
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+        
+        <div class="hero-banner">
+            <img src="images/dsgvobild.jpeg" 
+                 alt="Abstrakte Technologie-Strukturen" 
+                 class="hero-bg-img" 
+                 loading="eager" />
+            <div class="hero-overlay"></div>
+            
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full relative z-10 pb-12">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight drop-shadow-md">
+                    Datenschutzerklärung
+                </h1>
+            </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-6 lg:px-8 py-24">
+
+            <section id="dsgvo-content" class="space-y-16">
+                
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                    <div class="md:col-span-4">
+                        <h2 class="text-lg font-bold text-[#071F36]">1. Datenschutz auf einen Blick</h2>
+                    </div>
+                    <div class="md:col-span-8 space-y-8">
+                        <div>
+                            <span class="eyebrow">Allgemeine Hinweise</span>
+                            <div class="text-body text-[16px]">
+                                <p>Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung. Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL-bzw. TLS-Verschlüsselung.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="eyebrow">Datenschutz & Tracking</span>
+                            <div class="text-body text-[16px]">
+                                <p>Wir setzen auf dieser Website Technologien ein, um unsere Prozesse zu optimieren und das Nutzerverhalten besser zu verstehen. Hierbei kommen Cookies und Tracking-Skripte (z. B. von HubSpot) zum Einsatz, jedoch <strong>ausschließlich dann, wenn Sie uns hierzu Ihre ausdrückliche Einwilligung (Opt-In) über unser Cookie-Banner erteilt haben.</strong></p>
+                                <p class="mt-2">Ohne Ihre Zustimmung werden keine Analyse-Daten erhoben. Essenzielle Cookies, die für den technischen Betrieb der Seite notwendig sind, werden unabhängig davon gesetzt.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-px w-full bg-[#E1E5E9]"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                    <div class="md:col-span-4">
+                        <h2 class="text-lg font-bold text-[#071F36]">2. Verantwortliche Stelle</h2>
+                    </div>
+                    <div class="md:col-span-8 space-y-8">
+                        <div>
+                            <span class="eyebrow">Verantwortlich für die Datenverarbeitung auf dieser Website ist</span>
+                            <div class="text-body text-[16px]">
+                                Jonas Meyer & Dayan Hindermann GbR<br>
+                                Nordring 1<br>
+                                34519 Diemelsee
+                            </div>
+                        </div>
+                        <div>
+                            <span class="eyebrow">Vertretungsberechtigte Gesellschafter</span>
+                            <div class="text-body text-[16px]">
+                                Jonas Meyer, Dayan Hindermann
+                            </div>
+                        </div>
+                        <div>
+                            <span class="eyebrow">Kontakt</span>
+                            <div class="text-body text-[16px]">
+                                E-Mail: <a href="mailto:info@kassel-bd.de" class="hover:text-[#071F36] hover:underline">info@kassel-bd.de</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-px w-full bg-[#E1E5E9]"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                    <div class="md:col-span-4">
+                        <h2 class="text-lg font-bold text-[#071F36]">3. Hosting & Infrastruktur</h2>
+                    </div>
+                    <div class="md:col-span-8 space-y-8">
+                        <div>
+                            <span class="eyebrow">Externes Hosting durch Strato</span>
+                            <div class="text-body text-[16px]">
+                                <p class="mb-4">Wir hosten unsere Website bei der Strato AG, Pascalstraße 10, 10587 Berlin (nachfolgend: Strato). Wenn Sie unsere Website besuchen, erfasst Strato verschiedene Logfiles inklusive Ihrer IP-Adressen. Dies ist technisch notwendig, um die Website sicher und stabil auszuliefern.</p>
+                                <p class="mb-4"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (Berechtigtes Interesse an Zuverlässigkeit und Sicherheit).</p>
+                                <p><strong>Auftragsverarbeitung:</strong> Ein AV-Vertrag mit Strato wurde geschlossen.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="eyebrow">Technische Einbindungen (CDNs)</span>
+                            <div class="text-body text-[16px] legal-value">
+                                <p class="mb-2">Um unsere Website optisch ansprechend und schnell auszuliefern, nutzen wir Content Delivery Networks (CDNs). Dabei wird technisch bedingt Ihre IP-Adresse an den Anbieter übermittelt:</p>
+                                <ul>
+                                    <li><strong>Tailwind CSS:</strong> (via cdn.tailwindcss.com / Cloudflare Inc., USA) zur Design-Darstellung.</li>
+                                    <li><strong>Lucide Icons:</strong> (via unpkg.com / NPM Inc.) zur Darstellung von Icons.</li>
+                                </ul>
+                                <p>Die Nutzung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-px w-full bg-[#E1E5E9]"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                    <div class="md:col-span-4">
+                        <h2 class="text-lg font-bold text-[#071F36]">4. Datenerfassung & Kommunikation</h2>
+                    </div>
+                    <div class="md:col-span-8 space-y-8">
+                        <div>
+                            <span class="eyebrow">Kontaktformular & E-Mail</span>
+                            <div class="text-body text-[16px]">
+                                <p class="mb-4">Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben (Name, E-Mail, Mobilnummer, Unternehmensname, Thema, Nachricht) zwecks Bearbeitung in unserem CRM (HubSpot) gespeichert.</p>
+                                <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) oder Art. 6 Abs. 1 lit. f DSGVO (Berechtigtes Interesse).</p>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="eyebrow">Videokonferenzen (Microsoft Teams)</span>
+                            <div class="text-body text-[16px]">
+                                <p>Für Online-Meetings und Audits nutzen wir Microsoft Teams. Hierbei werden Metadaten, Video- und Audiodaten verarbeitet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-px w-full bg-[#E1E5E9]"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                    <div class="md:col-span-4">
+                        <h2 class="text-lg font-bold text-[#071F36]">5. Analyse & Werbe-Tracking</h2>
+                    </div>
+                    <div class="md:col-span-8 space-y-8">
+                        <div>
+                            <span class="eyebrow">Hinweis</span>
+                            <div class="text-body text-[16px] italic">
+                                <p>Tracking-Tools werden nur aktiviert, wenn Sie im Cookie-Banner ausdrücklich zugestimmt haben (Opt-In).</p>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="eyebrow">HubSpot Analytics</span>
+                            <div class="text-body text-[16px]">
+                                <p class="mb-4">Wir nutzen Webanalysedienste von HubSpot Inc. (USA). HubSpot verwendet Cookies, um zu analysieren, wie Besucher unsere Website nutzen (z. B. Verweildauer, aufgerufene Seiten). Diese Informationen helfen uns, unsere Beratungsangebote besser auf den deutschen Mittelstand auszurichten.</p>
+                                <p>HubSpot ist nach dem EU-US Data Privacy Framework zertifiziert. Ein AV-Vertrag wurde geschlossen.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="eyebrow">LinkedIn Insight Tag</span>
+                            <div class="text-body text-[16px]">
+                                <p class="mb-4">Diese Website verwendet das „LinkedIn Insight Tag“ der LinkedIn Ireland Unlimited Company. Dieses Tool legt ein Cookie ab, welches die Erfassung von Daten wie IP-Adresse und Seitenereignissen ermöglicht. Wir nutzen dies, um Zielgruppen besser zu verstehen und relevante Impulse anzuzeigen.</p>
+                                <p><strong>Rechtsgrundlage für alle Tracker:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-px w-full bg-[#E1E5E9]"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                    <div class="md:col-span-4">
+                        <h2 class="text-lg font-bold text-[#071F36]">6. Interne Tools & Zahlung</h2>
+                    </div>
+                    <div class="md:col-span-8 space-y-8">
+                        <div>
+                            <span class="eyebrow">Interne Verarbeitung</span>
+                            <div class="text-body text-[16px] legal-value">
+                                <p class="mb-2">Zur Erbringung unserer Dienstleistung nutzen wir spezialisierte Software (alle mit AV-Vertrag):</p>
+                                <ul>
+                                    <li><strong>Lexoffice:</strong> Buchhaltung & Rechnungsstellung.</li>
+                                    <li><strong>Notion:</strong> Projektorganisation & Dokumentation.</li>
+                                    <li><strong>HubSpot CRM:</strong> Zentrale Kundendatenbank.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="eyebrow">Zahlungsabwicklung</span>
+                            <div class="text-body text-[16px]">
+                                <p>Für die Bezahlung (z. B. Audits) nutzen wir gängige Zahlungswege (Überweisung, PayPal, Stripe). Dabei werden Zahlungsdaten an den jeweiligen Anbieter übermittelt (Art. 6 Abs. 1 lit. b DSGVO).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-px w-full bg-[#E1E5E9]"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                    <div class="md:col-span-4">
+                        <h2 class="text-lg font-bold text-[#071F36]">7. Ihre Rechte (Betroffenenrechte)</h2>
+                    </div>
+                    <div class="md:col-span-8 space-y-8">
+                        <div>
+                            <span class="eyebrow">Sie haben jederzeit das Recht auf:</span>
+                            <div class="text-body text-[16px] legal-value">
+                                <ul>
+                                    <li>Auskunft (Art. 15 DSGVO)</li>
+                                    <li>Berichtigung (Art. 16 DSGVO)</li>
+                                    <li>Löschung (Art. 17 DSGVO)</li>
+                                    <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+                                    <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
+                                    <li><strong>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</strong></li>
+                                    <li>Widerruf Ihrer Einwilligung.</li>
+                                </ul>
+                                <p>Kontakt: <a href="mailto:info@kassel-bd.de">info@kassel-bd.de</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <section class="py-12 bg-gradient-to-r from-[#020B14] via-[#071F36] to-[#020B14] border-t border-white/10 relative overflow-hidden shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                <h2 class="text-xl md:text-2xl font-bold text-white m-0 tracking-wide drop-shadow-sm text-center md:text-left">
+                    Sie haben Fragen an uns?
+                </h2>
+                
+                <button onclick="openContactModal(event)" class="btn-white">
+                    Kontakt
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-white text-[#071F36] border-t border-[#E1E5E9] font-inter mt-auto relative z-10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20 items-start">
+                
+                <div class="lg:col-span-3 flex flex-col items-start">
+                    <a href="index.html" class="block mb-8 group" aria-label="Zur Startseite">
+                        <img src="icon.png" alt="KBD Logo" width="56" height="56" class="h-12 md:h-14 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity" />
+                    </a>
+                    <p class="text-[#4A5563] text-sm leading-relaxed max-w-md mb-8">
+                        Wir automatisieren Ihre Abläufe intelligent, damit Ihre Mitarbeiter mehr Zeit für echte Wertschöpfung haben.   </p>
+                    <div class="flex items-center gap-6">
+                        <a href="https://www.linkedin.com/company/kassel-bd" target="_blank" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="KBD auf LinkedIn"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        <a href="https://www.instagram.com/kassel_bd/" target="_blank" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="KBD auf Instagram"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Unternehmen</h4>
+                    <ul class="space-y-3 text-[#2D3748] text-sm">
+                        <li><a href="ueberuns.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Über Uns</a></li>
+                        <li><a href="karriere.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Karriere</a></li>
+                        <li><a href="partner.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Partner</a></li>
+                        <li><a href="kontakt.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Expertise</h4>
+                    <ul class="space-y-3 text-[#2D3748] text-sm">
+                        <li><a href="leistungen.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Leistungen</a></li>
+                        <li><a href="technologie.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Technologie</a></li>
+                        <li><a href="erfolge.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Erfolge</a></li>
+                        <li><a href="publikationen/index.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Publikationen</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Werte & Recht</h4>
+                    <ul class="space-y-3 text-[#2D3748] text-sm">
+                        <li><a href="verantwortung.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Verantwortung</a></li>
+                        <li><a href="impressum.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Impressum</a></li>
+                        <li><a href="datenschutz.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all text-[#071F36] font-semibold">Datenschutz</a></li>
+                        <li><a href="trust-center.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Trust Center</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-3">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Insights</h4>
+                    <p class="text-[#4A5563] text-xs mb-4 leading-relaxed max-w-xs">Exklusive Marktanalysen und strategische Impulse. Substanz für Ihre Entscheidungen.</p>
+                    <button onclick="openNewsletterModal(event)" class="btn-primary w-full max-w-xs !py-3">Anmelden</button>
+                </div>
+            </div>
+
+            <div class="border-t border-[#E1E5E9] pt-8 flex flex-col md:flex-row justify-between items-center text-[#9CA3AF] text-xs">
+                <p>&copy; 2026 Kassel Business Digital.</p>
+                <p class="mt-2 md:mt-0 font-medium">Excellence in Process Architecture.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="contact-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-[#071F36]/90 backdrop-blur-sm transition-opacity opacity-0" id="contact-backdrop" onclick="closeContactModal()"></div>
+        <div class="relative bg-white w-full max-w-2xl shadow-2xl transform transition-all scale-95 opacity-0 translate-y-4 flex flex-col max-h-[90vh]" id="contact-content">
+            <div class="p-4 border-b border-[#E1E5E9] flex justify-between items-center bg-[#F3F5F7] shrink-0">
+                <span class="text-xs font-bold uppercase text-[#071F36] tracking-wider ml-2">Kontakt aufnehmen</span>
+                <button onclick="closeContactModal()" class="text-[#4A5563] hover:text-[#071F36] transition-colors p-2 hover:bg-[#E1E5E9]">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <div class="p-6 overflow-y-auto bg-white">
+                <div id="contact-success" class="hidden flex flex-col items-center justify-center py-12 text-center h-full">
+                    <div class="w-16 h-16 bg-[#071F36] flex items-center justify-center mb-6 rounded-full">
+                        <i data-lucide="check" class="text-white w-8 h-8"></i>
+                    </div>
+                    <h2 class="text-[#071F36] text-2xl font-bold tracking-tight mb-4">Vielen Dank</h2>
+                    <p class="text-[#2D3748] text-base leading-relaxed max-w-md">
+                        Ihre Anfrage wurde erfolgreich übermittelt. Ein Berater wird sich in Kürze bei Ihnen melden.
+                    </p>
+                    <button onclick="closeContactModal()" class="mt-8 btn-primary">
+                        Schließen
+                    </button>
+                </div>
+
+                <div id="contact-form-container">
+                    <form id="contact-form" onsubmit="handleContactFormSubmit(event)" class="space-y-6">
+                        <div class="hp-hidden">
+                            <input type="text" name="b_address" tabindex="-1" value="" autocomplete="off">
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-1">
+                                <label for="firstname" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Vorname *</label>
+                                <input type="text" name="firstname" id="firstname" required class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="Max" />
+                            </div>
+                            <div class="space-y-1">
+                                <label for="lastname" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Nachname *</label>
+                                <input type="text" name="lastname" id="lastname" required class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="Mustermann" />
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-1">
+                                <label for="email" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">E-Mail *</label>
+                                <input type="email" name="email" id="email" required class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="max@unternehmen.de" />
+                            </div>
+                            <div class="space-y-1">
+                                <label for="phone" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Telefon</label>
+                                <input type="tel" name="phone" id="phone" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="+49 123 456789" />
+                            </div>
+                        </div>
+
+                        <div class="space-y-1">
+                            <label for="company" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Unternehmen</label>
+                            <input type="text" name="company" id="company" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="Firma GmbH" />
+                        </div>
+
+                        <div class="space-y-3 pt-2">
+                            <label class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Ihr Thema *</label>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <label class="flex items-center space-x-3 cursor-pointer group p-2 -ml-2 rounded hover:bg-[#F3F5F7] transition-colors">
+                                    <input type="radio" name="topic" value="beratung" class="form-radio text-[#071F36] focus:ring-[#071F36]" required>
+                                    <span class="text-[#2D3748] text-sm font-medium group-hover:text-[#071F36]">Beratung</span>
+                                </label>
+                                <label class="flex items-center space-x-3 cursor-pointer group p-2 -ml-2 rounded hover:bg-[#F3F5F7] transition-colors">
+                                    <input type="radio" name="topic" value="karriere" class="form-radio text-[#071F36] focus:ring-[#071F36]">
+                                    <span class="text-[#2D3748] text-sm font-medium group-hover:text-[#071F36]">Karriere</span>
+                                </label>
+                                <label class="flex items-center space-x-3 cursor-pointer group p-2 -ml-2 rounded hover:bg-[#F3F5F7] transition-colors">
+                                    <input type="radio" name="topic" value="partner" class="form-radio text-[#071F36] focus:ring-[#071F36]">
+                                    <span class="text-[#2D3748] text-sm font-medium group-hover:text-[#071F36]">Partnerkooperation</span>
+                                </label>
+                                <label class="flex items-center space-x-3 cursor-pointer group p-2 -ml-2 rounded hover:bg-[#F3F5F7] transition-colors">
+                                    <input type="radio" name="topic" value="sonstige" class="form-radio text-[#071F36] focus:ring-[#071F36]">
+                                    <span class="text-[#2D3748] text-sm font-medium group-hover:text-[#071F36]">Sonstiges</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="message" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Nachricht</label>
+                            <textarea name="message" id="message" rows="3" class="block w-full border border-[#E1E5E9] p-3 text-[#2D3748] placeholder-[#A0AEC0] focus:border-[#071F36] focus:outline-none transition-colors bg-[#F3F5F7] resize-none text-sm" placeholder="Wie können wir Sie unterstützen?"></textarea>
+                        </div>
+
+                        <div class="flex items-start">
+                            <input id="contact-consent" name="consent" type="checkbox" required class="mt-1 h-4 w-4 border-gray-300 text-[#071F36] focus:ring-[#071F36] rounded-none cursor-pointer" />
+                            <label for="contact-consent" class="ml-3 text-xs text-[#4A5563] leading-snug">
+                                Ich stimme der Verarbeitung meiner Daten gemäß der <a href="datenschutz.html" target="_blank" class="underline hover:text-[#071F36]">Datenschutzerklärung</a> zu.
+                            </label>
+                        </div>
+
+                        <button type="submit" id="contact-submit-btn" class="btn-primary w-full">
+                            <span id="contact-btn-text">Anfrage absenden</span>
+                            <span id="contact-btn-loading" class="hidden flex items-center">
+                                <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                                Wird gesendet...
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="newsletter-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-[#071F36]/90 backdrop-blur-sm transition-opacity opacity-0" id="newsletter-backdrop" onclick="closeNewsletterModal()"></div>
+        
+        <div class="relative bg-white w-full max-w-md shadow-2xl transform transition-all scale-95 opacity-0 translate-y-4 flex flex-col" id="newsletter-content">
+            
+            <div class="p-8 pb-0 flex justify-between items-start">
+                <div class="flex flex-col">
+                    <span class="text-xs font-bold uppercase text-[#071F36] tracking-wider mb-2">KBD Insights</span>
+                    <h3 class="text-2xl font-bold text-[#071F36] leading-tight">Exklusives Update</h3>
+                </div>
+                <button onclick="closeNewsletterModal()" class="text-[#4A5563] hover:text-[#071F36] transition-colors p-1 hover:bg-[#F3F5F7] -mr-2 -mt-2">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <div class="p-8 pt-6">
+                <div id="newsletter-success" class="hidden flex flex-col items-center justify-center py-8 text-center">
+                    <div class="w-12 h-12 bg-[#F3F5F7] flex items-center justify-center mb-4 rounded-none">
+                        <i data-lucide="check" class="text-[#071F36] w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-[#071F36] mb-2">Anmeldung erfolgreich</h4>
+                    <p class="text-[#4A5563] text-sm">Bitte prüfen Sie Ihren Posteingang zur Bestätigung.</p>
+                    <button onclick="closeNewsletterModal()" class="mt-6 text-sm underline text-[#071F36]">Schließen</button>
+                </div>
+
+                <form id="newsletter-form" onsubmit="handleNewsletterSubmit(event)" class="space-y-6">
+                    <p class="text-sm text-[#4A5563] leading-relaxed">
+                        Erhalten Sie kuratierte Einblicke in Prozessarchitektur und Automatisierung. Kein Spam, nur Substanz.
+                    </p>
+
+                    <div class="space-y-1">
+                        <label htmlFor="nl-firstname" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Vorname *</label>
+                        <input type="text" id="nl-firstname" name="firstname" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent text-base focus:border-[#071F36] transition-colors" placeholder="Max" required>
+                    </div>
+
+                    <div class="space-y-1">
+                        <label htmlFor="nl-lastname" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Nachname *</label>
+                        <input type="text" id="nl-lastname" name="lastname" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent text-base focus:border-[#071F36] transition-colors" placeholder="Mustermann" required>
+                    </div>
+
+                    <div class="space-y-1">
+                        <label htmlFor="nl-email" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">E-Mail *</label>
+                        <input type="email" id="nl-email" name="email" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent text-base focus:border-[#071F36] transition-colors" placeholder="max@unternehmen.de" required>
+                    </div>
+
+                    <div class="flex items-start pt-2">
+                        <input id="nl-consent" name="consent" type="checkbox" required class="mt-1 h-4 w-4 border-gray-300 text-[#071F36] focus:ring-[#071F36] rounded-none cursor-pointer accent-[#071F36]">
+                        <label htmlFor="nl-consent" class="ml-3 text-xs text-[#4A5563] leading-snug">
+                            Ich stimme der Verarbeitung meiner Daten gemäß der <a href="datenschutz.html" class="underline hover:text-[#071F36]" target="_blank">Datenschutzerklärung</a> zu.
+                        </label>
+                    </div>
+
+                    <button type="submit" id="nl-submit-btn" class="btn-primary w-full !py-3 mt-4">
+                        <span id="nl-btn-text">Jetzt anmelden</span>
+                        <span id="nl-btn-loading" class="hidden flex items-center">
+                            <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                            Verarbeite...
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Icons init
+        lucide.createIcons();
+
+        // --- WEBHOOK URLS ---
+        // Werte werden aus config.js geladen (window.KBD_CONFIG)
+        const N8N_CONTACT_WEBHOOK = (window.KBD_CONFIG && window.KBD_CONFIG.N8N_CONTACT_WEBHOOK) || '';
+        const N8N_NEWSLETTER_WEBHOOK = (window.KBD_CONFIG && window.KBD_CONFIG.N8N_NEWSLETTER_WEBHOOK) || '';
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const nav = document.getElementById('navbar');
+            menu.classList.toggle('hidden');
+            
+            if (!menu.classList.contains('hidden')) {
+                nav.classList.add('bg-white');
+                nav.classList.remove('bg-transparent');
+                const logo = document.getElementById('nav-logo');
+                if(logo) { logo.classList.remove('invert', 'brightness-0'); logo.style.filter = "none"; }
+                const btn = document.getElementById('menu-btn');
+                if(btn) { btn.classList.remove('text-white'); btn.classList.add('text-[#071F36]'); }
+            } else {
+                handleScroll();
+            }
+        }
+
+        // --- SCROLL HANDLER (Header Design) ---
+        function handleScroll() {
+            const nav = document.getElementById('navbar');
+            const logo = document.getElementById('nav-logo');
+            const navLinks = document.getElementById('nav-links');
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) return;
+
+            if (window.scrollY > 10) {
+                // SCROLLED DOWN
+                nav.classList.add('nav-scrolled');
+                nav.classList.remove('bg-transparent');
+                
+                if(logo) { logo.classList.remove('invert', 'brightness-0'); logo.style.filter = "none"; }
+                if(navLinks) { 
+                    navLinks.classList.remove('text-white'); 
+                    navLinks.classList.add('text-[#071F36]');
+                    navLinks.querySelectorAll('a').forEach(l => {
+                        if(l.id === 'active-link') l.classList.replace('border-white', 'border-[#071F36]');
+                    });
+                }
+                if(menuBtn) { menuBtn.classList.remove('text-white'); menuBtn.classList.add('text-[#071F36]'); }
+
+            } else {
+                // TOP OF PAGE
+                nav.classList.remove('nav-scrolled');
+                nav.classList.add('bg-transparent');
+
+                if(logo) { logo.classList.add('invert', 'brightness-0'); logo.style.filter = "brightness(0) invert(1)"; }
+                if(navLinks) { 
+                    navLinks.classList.add('text-white'); 
+                    navLinks.classList.remove('text-[#071F36]');
+                    navLinks.querySelectorAll('a').forEach(l => {
+                        if(l.id === 'active-link') l.classList.replace('border-[#071F36]', 'border-white');
+                    });
+                }
+                if(menuBtn) { menuBtn.classList.add('text-white'); menuBtn.classList.remove('text-[#071F36]'); }
+            }
+        }
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+
+        // --- MODAL LOGIC (CONTACT FORM) ---
+        function openContactModal(e) {
+            if(e) e.preventDefault();
+            const modal = document.getElementById('contact-modal');
+            const backdrop = document.getElementById('contact-backdrop');
+            const content = document.getElementById('contact-content');
+            
+            // Reset
+            document.getElementById('contact-form').reset();
+            document.getElementById('contact-form-container').classList.remove('hidden');
+            document.getElementById('contact-success').classList.add('hidden');
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; 
+
+            setTimeout(() => {
+                backdrop.classList.remove('opacity-0');
+                content.classList.remove('scale-95', 'opacity-0', 'translate-y-4');
+                content.classList.add('scale-100', 'opacity-100', 'translate-y-0');
+            }, 10);
+        }
+
+        function closeContactModal() {
+            const modal = document.getElementById('contact-modal');
+            const backdrop = document.getElementById('contact-backdrop');
+            const content = document.getElementById('contact-content');
+            
+            backdrop.classList.add('opacity-0');
+            content.classList.remove('scale-100', 'opacity-100', 'translate-y-0');
+            content.classList.add('scale-95', 'opacity-0', 'translate-y-4');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        async function handleContactFormSubmit(e) {
+            e.preventDefault();
+            const submitBtn = document.getElementById('contact-submit-btn');
+            const btnText = document.getElementById('contact-btn-text');
+            const btnLoading = document.getElementById('contact-btn-loading');
+            const form = e.target;
+            
+            if (form.b_address.value !== "") return; // Honeypot
+
+            submitBtn.disabled = true;
+            btnText.classList.add('hidden');
+            btnLoading.classList.remove('hidden');
+            
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch(N8N_CONTACT_WEBHOOK, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ ...data, submittedAt: new Date().toISOString(), url: window.location.href, type: 'contact_request_datenschutz' }),
+                });
+
+                if (response.ok) {
+                    document.getElementById('contact-form-container').classList.add('hidden');
+                    document.getElementById('contact-success').classList.remove('hidden');
+                } else { throw new Error('Fehler'); }
+            } catch (error) {
+                console.error(error);
+                alert('Fehler bei der Übertragung. Bitte versuchen Sie es später erneut.');
+            } finally {
+                submitBtn.disabled = false;
+                btnText.classList.remove('hidden');
+                btnLoading.classList.add('hidden');
+            }
+        }
+
+        // --- MODAL LOGIC (NEWSLETTER) ---
+        function openNewsletterModal(e) {
+            if(e) e.preventDefault();
+            const modal = document.getElementById('newsletter-modal');
+            const backdrop = document.getElementById('newsletter-backdrop');
+            const content = document.getElementById('newsletter-content');
+            
+            // Reset state
+            document.getElementById('newsletter-form').reset();
+            document.getElementById('newsletter-form').classList.remove('hidden');
+            document.getElementById('newsletter-success').classList.add('hidden');
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; 
+
+            setTimeout(() => {
+                backdrop.classList.remove('opacity-0');
+                content.classList.remove('scale-95', 'opacity-0', 'translate-y-4');
+                content.classList.add('scale-100', 'opacity-100', 'translate-y-0');
+            }, 10);
+        }
+
+        function closeNewsletterModal() {
+            const modal = document.getElementById('newsletter-modal');
+            const backdrop = document.getElementById('newsletter-backdrop');
+            const content = document.getElementById('newsletter-content');
+            
+            backdrop.classList.add('opacity-0');
+            content.classList.remove('scale-100', 'opacity-100', 'translate-y-0');
+            content.classList.add('scale-95', 'opacity-0', 'translate-y-4');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        async function handleNewsletterSubmit(e) {
+            e.preventDefault();
+            const btn = document.getElementById('nl-submit-btn');
+            const text = document.getElementById('nl-btn-text');
+            const load = document.getElementById('nl-btn-loading');
+            const form = e.target;
+            const successDiv = document.getElementById('newsletter-success');
+            const formDiv = document.getElementById('newsletter-form');
+
+            btn.disabled = true;
+            text.classList.add('hidden');
+            load.classList.remove('hidden');
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch(N8N_NEWSLETTER_WEBHOOK, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        firstname: data.firstname,
+                        lastname: data.lastname, 
+                        email: data.email,
+                        source: 'newsletter_modal_datenschutz',
+                        timestamp: new Date().toISOString()
+                    })
+                });
+
+                if(response.ok) {
+                    formDiv.classList.add('hidden');
+                    successDiv.classList.remove('hidden');
+                } else {
+                    throw new Error('API Error');
+                }
+            } catch (err) {
+                console.error(err);
+                alert('Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.');
+            } finally {
+                btn.disabled = false;
+                text.classList.remove('hidden');
+                load.classList.add('hidden');
+            }
+        }
+
+        // Close on Escape Key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                if(!document.getElementById('contact-modal').classList.contains('hidden')) closeContactModal();
+                if(!document.getElementById('newsletter-modal').classList.contains('hidden')) closeNewsletterModal();
+            }
+        });
+
+    </script>
+</body>
+</html>

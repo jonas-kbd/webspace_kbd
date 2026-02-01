@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <title>Kassel Business Digital | Publikationen & Insights</title>
+    <meta name="description" content="Marktanalysen, Keynotes und Interviews. Fundiertes Wissen zur digitalen Transformation im Mittelstand.">
+    
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.kassel-bd.de/publikationen/">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#071F36">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kassel Business Digital | Publikationen & Insights">
+    <meta property="og:description" content="Impulse und Perspektiven. Unsere Analysen zur Lage der Wirtschaft und Digitalisierung.">
+    <meta property="og:image" content="https://www.kassel-bd.de/icon.png">
+    <meta property="og:url" content="https://www.kassel-bd.de/publikationen/">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Kassel Business Digital",
+      "url": "https://www.kassel-bd.de",
+      "logo": "https://www.kassel-bd.de/icon.png",
+      "sameAs": [
+        "https://www.linkedin.com/company/kassel-bd",
+        "https://www.instagram.com/kassel_bd/"
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../config.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        kbdBlue: '#071F36',
+                        richGrey: '#2D3748',
+                        softGrey: '#4A5563',
+                        lightGrey: '#F3F5F7',
+                        bracketBlue: '#071F36'
+                    },
+                    boxShadow: {
+                        'premium': '0 20px 40px -5px rgba(7, 31, 54, 0.1)',
+                        'premium-hover': '0 25px 50px -12px rgba(7, 31, 54, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* --- LOKALE FONTS --- */
+        /* Fonts loaded globally via design-system.css (../../css/design-system.css) */
+
+        /* --- GLOBAL VARIABLES --- */
+        :root {
+            --kbd-blue: #071F36;
+            --rich-grey: #2D3748;
+            --soft-grey: #4A5563;
+            --white: #FFFFFF;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--rich-grey);
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.6;
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4, h5, h6 { color: var(--kbd-blue); letter-spacing: -0.01em; line-height: 1.15; }
+        h1 { font-weight: 700; } h2 { font-weight: 700; } h3 { font-weight: 700; /* Changed from 600 */ }
+
+        .text-body { color: var(--rich-grey); font-weight: 400; font-size: 17px; line-height: 1.6; }
+        .eyebrow {
+            font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: 0.02em;
+            text-transform: uppercase; color: var(--soft-grey); font-size: 13px;
+        }
+
+        /* BUTTONS */
+        .btn-primary {
+            background-color: var(--kbd-blue);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500; 
+            font-size: 16px;
+            border-radius: 0px; 
+            padding: 14px 24px;
+            border: 1px solid var(--kbd-blue);
+            transition: all 0.2s ease;
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn-primary:hover {
+            background-color: #0A2A4A;
+            border-color: #0A2A4A;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(7, 31, 54, 0.15);
+        }
+        .btn-primary:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+
+        /* Primary Button Inverted */
+        .btn-white-outline {
+            background-color: transparent;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500; 
+            font-size: 16px;
+            border-radius: 0px; 
+            padding: 14px 24px;
+            border: 1px solid white;
+            transition: all 0.2s ease;
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn-white-outline:hover {
+            background-color: white;
+            color: #071F36;
+            transform: translateY(-1px);
+        }
+
+        /* FORM STYLES */
+        .form-input {
+            border-bottom-width: 1px; border-color: #E1E5E9; background-color: transparent; transition: border-color 0.2s;
+        }
+        .form-input:focus { border-color: #071F36; outline: none; }
+        input[type="checkbox"], input[type="radio"] { accent-color: #071F36; cursor: pointer; }
+        input[type="radio"] { width: 1.25em; height: 1.25em; border: 1px solid #D1D5DB; }
+        input[type="radio"]:checked { border-color: #071F36; background-color: #071F36; }
+        .hp-hidden { display: none !important; visibility: hidden !important; }
+
+        /* CUSTOM DROPDOWN STYLING */
+        .custom-select-wrapper { position: relative; user-select: none; width: 100%; max-width: 400px; }
+        .custom-select { position: relative; display: flex; flex-direction: column; }
+        .custom-select__trigger {
+            position: relative; display: flex; align-items: center; justify-content: space-between;
+            padding: 20px 32px; font-size: 18px; font-weight: 700; /* Changed from 600 */ color: #071F36;
+            background: #ffffff; border: 1px solid transparent; cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        .custom-select__trigger:hover { transform: translateY(-2px); box-shadow: 0 15px 35px rgba(0,0,0,0.12); }
+        .custom-select.open .custom-select__trigger { border-bottom: 1px solid #E1E5E9; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+        .custom-options {
+            position: absolute; display: block; top: 100%; left: 0; right: 0;
+            background: #fff; transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            opacity: 0; visibility: hidden; pointer-events: none; z-index: 50;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1); margin-top: 8px; border: 1px solid rgba(0,0,0,0.05);
+        }
+        .custom-select.open .custom-options { opacity: 1; visibility: visible; pointer-events: all; transform: translateY(0); }
+        .custom-option {
+            position: relative; display: flex; align-items: center; padding: 16px 32px;
+            font-size: 16px; font-weight: 400; color: #4A5563; cursor: pointer;
+            transition: all 0.2s; border-left: 3px solid transparent;
+        }
+        .custom-option:hover { background-color: #F8FAFC; color: #071F36; border-left-color: #071F36; }
+        .custom-option.selected { font-weight: 700; /* Changed from 600 */ color: #071F36; background-color: #F3F5F7; border-left-color: #071F36; }
+        .arrow-icon { transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); color: #071F36; }
+        .custom-select.open .arrow-icon { transform: rotate(180deg); }
+
+        /* FADE EFFECT */
+        .tab-content { animation: fadeIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* UTILITIES */
+        .section-padding { padding-top: 128px; padding-bottom: 128px; }
+        .modal-open { overflow: hidden; }
+        
+        /* HEADER SCROLL STATE */
+        .nav-scrolled { background-color: rgba(255, 255, 255, 0.98); backdrop-filter: blur(12px); box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05); }
+        .nav-transparent { background: transparent; padding-top: 1rem; padding-bottom: 1rem; }
+
+        @media (max-width: 768px) {
+            .section-padding { padding-top: 80px; padding-bottom: 80px; }
+            .custom-select__trigger { padding: 16px 20px; font-size: 16px; }
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-transparent">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20 transition-all duration-300" id="nav-container">
+                
+                <div class="flex items-center gap-3 z-50">
+                    <a href="../index.html" class="block relative group" aria-label="Zur Startseite">
+                        <img src="../icon.png" alt="KBD Logo" id="nav-logo" width="56" height="56" class="h-10 md:h-12 w-auto object-contain transition-all duration-300 brightness-0 invert" style="will-change: filter;" />
+                    </a>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-8 text-[15px] font-medium tracking-wide text-white" id="nav-links">
+                    <a href="../ueberuns.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Über Uns</a>
+                    <a href="../leistungen.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Leistungen</a>
+                    <a href="../technologie.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Technologie</a>
+                    <a href="../erfolge.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Erfolge</a>
+                    <a href="index.html" class="nav-item relative py-2 opacity-100 border-b-2 border-white pb-1 font-semibold">Publikationen</a>
+                    
+                    <button type="button" onclick="openContactModal(event)" class="btn-primary ml-2 border-white/10 !py-2 !px-5 !text-[14px]">
+                        Kontakt
+                    </button>
+                </div>
+
+                <button type="button" class="lg:hidden text-white p-2 -mr-2 transition-colors duration-300 focus:outline-none" id="menu-btn" onclick="toggleMobileMenu()" aria-label="Menu öffnen">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-2xl border-t border-gray-100 transform origin-top transition-all duration-300 ease-in-out z-40">
+            <div class="flex flex-col px-6 py-8 space-y-6 font-medium text-[#071F36]">
+                <a href="../ueberuns.html" class="block text-lg border-b border-gray-100 pb-4">Über Uns</a>
+                <a href="../leistungen.html" class="block text-lg border-b border-gray-100 pb-4">Leistungen</a>
+                <a href="../technologie.html" class="block text-lg border-b border-gray-100 pb-4">Technologie</a>
+                <a href="../erfolge.html" class="block text-lg border-b border-gray-100 pb-4">Erfolge</a>
+                <a href="index.html" class="block text-lg border-b border-gray-100 pb-4 font-bold text-[#071F36]">Publikationen</a>
+                <a href="../karriere.html" class="block text-lg border-b border-gray-100 pb-4">Karriere</a>
+                
+                <button type="button" onclick="openContactModal(event)" class="w-full text-left text-lg font-bold text-[#071F36] pt-2">
+                    Kontakt
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+        
+        <div class="relative w-full bg-white">
+            <div class="h-[60vh] min-h-[500px] w-full relative overflow-hidden">
+                 <img src="../images/publikationen/hero.avif" 
+                      alt="KBD Insights" 
+                      class="absolute inset-0 w-full h-full object-cover object-center opacity-100" 
+                      fetchpriority="high" />
+                 
+                 <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-90"></div> 
+            </div>
+            
+            <div class="relative z-20 max-w-5xl mx-auto px-6 -mt-48 mb-20">
+                <div class="bg-white p-10 md:p-16 shadow-premium border-t-4 border-[#071F36] text-center rounded-[0px] relative z-20">
+                    <span class="eyebrow mb-8 block">Knowledge Hub</span>
+                    <h1 class="text-3xl md:text-5xl lg:text-[56px] mb-8 leading-tight text-[#071F36]">
+                        Impulse & Perspektiven
+                    </h1>
+                    <div class="h-px w-24 bg-[#E1E5E9] mx-auto mb-8"></div>
+                    <p class="text-body text-lg md:text-[18px] max-w-[70ch] mx-auto leading-relaxed text-[#4A5563]">
+                        Wir beschäftigen uns intensiv mit der Digitalisierung des Mittelstands. Hier teilen wir unsere Beobachtungen, Analysen und Gedankenanstöße – als Einladung zum gemeinsamen Dialog und Weiterdenken.
+                    </p>
+                </div>
+
+                <div class="flex justify-center -mt-8 relative z-30">
+                    <div class="custom-select-wrapper">
+                        <div class="custom-select" id="content-filter">
+                            <div class="custom-select__trigger">
+                                <span id="current-selection" class="flex items-center gap-3">
+                                    <i data-lucide="filter" class="w-5 h-5 text-[#071F36]/60"></i>
+                                    Thema wählen
+                                </span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 arrow-icon"></i>
+                            </div>
+                            <div class="custom-options">
+                                <span class="custom-option selected" data-value="overview">
+                                    <span class="w-2 h-2 rounded-full bg-[#071F36] mr-3"></span> Übersicht & Highlights
+                                </span>
+                                <span class="custom-option" data-value="reporte">Fachreporte & Analysen</span>
+                                <span class="custom-option" data-value="keynotes">Vorträge</span>
+                                <span class="custom-option" data-value="interviews">Interviews</span>
+                                <span class="custom-option" data-value="presse">Presse & Medien</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="section-padding bg-white pt-12 min-h-[600px]">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                
+                <div id="content-overview" class="tab-content block">
+                    <div class="flex justify-between items-end mb-12">
+                        <div>
+                            <h2 class="text-3xl font-bold text-[#071F36] mb-4">Neueste Einblicke</h2>
+                            <div class="h-1 w-12 bg-[#071F36]"></div>
+                            <p class="text-[#4A5563] mt-4 text-lg">Ein Querschnitt unserer aktuellen Themen und Aktivitäten.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        
+                        <a href="efficiency_paradox.html" class="group relative overflow-hidden cursor-pointer border border-[#E1E5E9] min-h-[450px] flex flex-col">
+                            <div class="absolute top-0 left-0 w-full h-2 bg-[#071F36] z-20"></div> 
+                            <div class="h-64 overflow-hidden relative">
+                                <img src="../images/publikationen/recruiting.avif" alt="Recruiting Mittelstand" class="w-full h-full object-cover grayscale transition-transform duration-700 ease-out group-hover:scale-[1.05]" />
+                                <div class="absolute inset-0 bg-[#071F36]/20 group-hover:bg-transparent transition-colors duration-500"></div>
+                            </div>
+                            <div class="p-8 flex-grow flex flex-col bg-white relative z-10">
+                                <span class="text-xs font-bold text-[#E74C3C] uppercase tracking-widest mb-3 flex items-center gap-2">
+                                    <span class="w-2 h-2 rounded-full bg-[#E74C3C]"></span>
+                                    Fachbericht
+                                </span>
+                                <h3 class="text-3xl font-bold text-[#071F36] mb-4 leading-tight group-hover:text-[#2D3748] transition-colors">
+                                    Recruiting im Mittelstand 2025.
+                                </h3>
+                                <p class="text-[#4A5563] mb-6 flex-grow">
+                                    Vergessen Sie den Obstkorb. Wer heute gute Fachkräfte gewinnen will, muss aufhören, sie mit veralteten Verwaltungsprozessen zu quälen.
+                                </p>
+                                <span class="text-[#071F36] font-semibold flex items-center gap-2 mt-auto">
+                                    Zum Bericht <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                                </span>
+                            </div>
+                        </a>
+
+                        <div class="flex flex-col gap-8">
+                            
+                            <div class="border border-[#E1E5E9] bg-white p-8 flex flex-col justify-center h-full hover:border-[#071F36] transition-colors cursor-pointer group" onclick="selectTab('keynotes')">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <i data-lucide="mic-2" class="w-5 h-5 text-[#071F36]"></i>
+                                    <span class="text-xs font-bold text-[#071F36] uppercase tracking-widest">Vorträge & Impulse</span>
+                                </div>
+                                <h4 class="text-xl font-bold text-[#2D3748] mb-3 group-hover:text-[#071F36] transition-colors">Klartext auf Ihrer Bühne</h4>
+                                <p class="text-[#4A5563] text-sm mb-6">
+                                    Ob große Bühne, Fach-Podcast oder interner Workshop: Wir teilen unsere Sichtweise auf die Digitalisierung gerne.
+                                </p>
+                                <span class="text-[#071F36] text-sm font-semibold flex items-center gap-2">
+                                    Zu den Vortrags-Themen <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </span>
+                            </div>
+
+                            <div class="border border-[#E1E5E9] bg-[#F9FAFB] p-8 flex flex-col justify-center h-full hover:border-[#071F36] transition-colors cursor-pointer group" onclick="selectTab('interviews')">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <i data-lucide="message-circle" class="w-5 h-5 text-[#071F36]"></i>
+                                    <span class="text-xs font-bold text-[#071F36] uppercase tracking-widest">Praxis-Dialog</span>
+                                </div>
+                                <h4 class="text-xl font-bold text-[#2D3748] mb-3 group-hover:text-[#071F36] transition-colors">Wir suchen den direkten Draht</h4>
+                                <p class="text-[#4A5563] text-sm mb-6">
+                                    Wir suchen den Austausch mit innovativen Unternehmen. Egal ob Traditionsbetrieb oder Start-up: Ihre Perspektive interessiert uns.
+                                </p>
+                                <span class="text-[#071F36] text-sm font-semibold underline decoration-1 underline-offset-4">
+                                    Zum Interview-Bereich
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="content-reporte" class="tab-content hidden">
+                    <div class="flex justify-between items-end mb-12">
+                        <div>
+                            <h2 class="text-3xl font-bold text-[#071F36] mb-4">Fachreporte & Analysen</h2>
+                            <div class="h-1 w-12 bg-[#071F36]"></div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 mb-12">
+                        
+                        <div class="w-full">
+                            <a href="efficiency_paradox.html" class="group relative overflow-hidden cursor-pointer border border-[#E1E5E9] h-full min-h-[500px] block">
+                                <img src="../images/publikationen/recruiting.avif" alt="Recruiting im Mittelstand 2025" class="absolute inset-0 w-full h-full object-cover grayscale transition-transform duration-700 ease-out group-hover:scale-[1.02]" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-[#071F36] via-[#071F36]/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
+                                
+                                <div class="absolute bottom-0 left-0 p-8 md:p-12 w-full z-20">
+                                    <span class="inline-block px-3 py-1 bg-white/20 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-widest rounded-sm mb-4 border border-white/10">
+                                        Fachbericht
+                                    </span>
+                                    <h3 class="text-3xl md:text-4xl font-bold text-white mb-2 leading-tight">
+                                        Recruiting im Mittelstand 2025.
+                                    </h3>
+                                    
+                                    <div class="h-0 group-hover:h-auto overflow-hidden transition-all duration-500 ease-out">
+                                        <p class="text-white/80 mt-6 text-base font-normal max-w-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 transform translate-y-4 group-hover:translate-y-0">
+                                            Vergessen Sie den Obstkorb. Wer heute gute Fachkräfte gewinnen will, muss aufhören, sie mit veralteten Verwaltungsprozessen zu quälen.
+                                        </p>
+                                        <span class="inline-flex items-center gap-2 text-white font-medium text-sm mt-8 border-b border-white/30 pb-1 hover:border-white transition-colors">
+                                            Vollständigen Bericht lesen <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="content-keynotes" class="tab-content hidden">
+                    <div class="relative w-full min-h-[500px] flex items-center justify-center overflow-hidden border border-[#E1E5E9]">
+                        <img src="../images/publikationen/keynote.webp" alt="Stage Speaker" class="absolute inset-0 w-full h-full object-cover object-center" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#071F36] via-[#071F36]/80 to-[#071F36]/60"></div>
+                        
+                        <div class="relative z-10 text-center max-w-2xl px-6 py-12">
+                            <div class="inline-flex items-center justify-center p-4 rounded-full border border-white/20 bg-white/10 backdrop-blur-md mb-8">
+                                <i data-lucide="mic-2" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <h3 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                                Vorträge
+                            </h3>
+                            <p class="text-lg md:text-xl text-white/90 leading-relaxed mb-10 font-light">
+                                Ob große Bühne, Fach-Podcast oder interner Workshop: Wir teilen unsere Sichtweise auf die Digitalisierung gerne. Wir freuen uns über Anfragen und den gemeinsamen Austausch.
+                            </p>
+                            <button onclick="openContactModal(event)" class="btn-white-outline">
+                                Speaker anfragen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="content-interviews" class="tab-content hidden">
+                    <div class="relative w-full min-h-[500px] flex items-center justify-center overflow-hidden border border-[#E1E5E9]">
+                        <img src="../images/publikationen/interview.avif" alt="Interview Dialogue" class="absolute inset-0 w-full h-full object-cover object-center" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#071F36] via-[#071F36]/80 to-[#071F36]/60"></div>
+                        
+                        <div class="relative z-10 text-center max-w-2xl px-6 py-12">
+                            <div class="inline-flex items-center justify-center p-4 rounded-full border border-white/20 bg-white/10 backdrop-blur-md mb-8">
+                                <i data-lucide="users" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <h3 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                                Interviews
+                            </h3>
+                            <p class="text-lg md:text-xl text-white/90 leading-relaxed mb-10 font-light">
+                                Wir suchen den direkten Draht zu Ihnen – den Akteuren der Wirtschaft. Wenn Sie in Ihrem Unternehmen neue Wege gehen und darüber sprechen möchten: Wir hören zu. Melden Sie sich gerne für ein Gespräch.
+                            </p>
+                            <button onclick="openContactModal(event)" class="btn-white-outline">
+                                Gespräch vereinbaren
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="content-presse" class="tab-content hidden">
+                    <div class="relative w-full min-h-[500px] flex items-center justify-center overflow-hidden border border-[#E1E5E9]">
+                        <img src="../images/publikationen/presse.webp" alt="Press News" class="absolute inset-0 w-full h-full object-cover object-center" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#071F36] via-[#071F36]/80 to-[#071F36]/60"></div>
+                        
+                        <div class="relative z-10 text-center max-w-2xl px-6 py-12">
+                            <div class="inline-flex items-center justify-center p-4 rounded-full border border-white/20 bg-white/10 backdrop-blur-md mb-8">
+                                <i data-lucide="newspaper" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <h3 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                                Presse & Medien
+                            </h3>
+                            <p class="text-lg md:text-xl text-white/90 leading-relaxed mb-10 font-light">
+                                Sie benötigen eine Einschätzung zur Digitalisierung im Mittelstand? Wir stehen Redaktionen und Journalisten gerne für Hintergrundgespräche und Statements zur Verfügung.
+                            </p>
+                            <button onclick="openContactModal(event)" class="btn-white-outline">
+                                Presseanfrage stellen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="py-12 bg-gradient-to-r from-[#020B14] via-[#071F36] to-[#020B14] border-t border-white/10 relative overflow-hidden shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none"></div>
+            
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                    <div class="text-center md:text-left">
+                        <h2 class="text-xl md:text-2xl font-bold text-white m-0 tracking-wide drop-shadow-sm mb-1">
+                            Haben wir etwas vergessen?
+                        </h2>
+                        <p class="text-white/80 text-sm max-w-md">Ob Themenvorschlag, Feedback oder eine ganz andere Idee für eine Zusammenarbeit: Schreiben Sie uns einfach.</p>
+                    </div>
+                    
+                    <button onclick="openContactModal(event)" class="px-8 py-3 bg-white text-[#071F36] font-bold text-sm rounded-none shadow-[0_4px_14px_0_rgba(0,0,0,0.3)] hover:shadow-[0_6px_20px_rgba(255,255,255,0.2)] hover:-translate-y-0.5 transition-all duration-300 border border-white/20 cursor-pointer">
+                        Kontakt
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact" class="bg-white text-[#071F36] border-t border-[#E1E5E9] font-inter mt-auto relative z-10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20 items-start">
+                
+                <div class="lg:col-span-3 flex flex-col items-start">
+                    <a href="../index.html" class="block mb-8 group" aria-label="Zur Startseite">
+                        <img src="../icon.png" alt="KBD Logo" width="56" height="56" class="h-12 md:h-14 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity" />
+                    </a>
+                    <p class="text-[#4A5563] text-sm leading-relaxed max-w-md mb-8">
+                        Wir automatisieren Ihre Abläufe intelligent, damit Ihre Mitarbeiter mehr Zeit für echte Wertschöpfung haben.     </p>
+                    <div class="flex items-center gap-6">
+                        <a href="https://www.linkedin.com/company/kassel-bd" target="_blank" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="KBD auf LinkedIn"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        <a href="https://www.instagram.com/kassel_bd/" target="_blank" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="KBD auf Instagram"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Unternehmen</h4>
+                    <ul class="space-y-3 text-[#2D3748] text-sm">
+                        <li><a href="../ueberuns.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Über Uns</a></li>
+                        <li><a href="../karriere.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Karriere</a></li>
+                        <li><a href="../partner.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Partner</a></li>
+                        <li><a href="../kontakt.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Expertise</h4>
+                    <ul class="space-y-3 text-[#2D3748] text-sm">
+                        <li><a href="../leistungen.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Leistungen</a></li>
+                        <li><a href="../technologie.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Technologie</a></li>
+                        <li><a href="../erfolge.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Erfolge</a></li>
+                        <li><a href="index.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all font-bold text-[#071F36]">Publikationen</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Werte & Recht</h4>
+                    <ul class="space-y-3 text-[#2D3748] text-sm">
+                        <li><a href="../verantwortung.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Verantwortung</a></li>
+                        <li><a href="../impressum.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Impressum</a></li>
+                        <li><a href="../datenschutz.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Datenschutz</a></li>
+                        <li><a href="../trust-center.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Trust Center</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-3">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Insights</h4>
+                    <p class="text-[#4A5563] text-xs mb-4 leading-relaxed max-w-xs">Exklusive Marktanalysen und strategische Impulse. Substanz für Ihre Entscheidungen.</p>
+                    <button onclick="openNewsletterModal(event)" class="btn-primary w-full max-w-xs !py-3">Anmelden</button>
+                </div>
+            </div>
+
+            <div class="border-t border-[#E1E5E9] pt-8 flex flex-col md:flex-row justify-between items-center text-[#9CA3AF] text-xs">
+                <p>&copy; 2025 Kassel Business Digital.</p>
+                <p class="mt-2 md:mt-0 font-medium">Excellence in Process Architecture.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="contact-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-[#071F36]/90 backdrop-blur-sm transition-opacity opacity-0" id="contact-backdrop" onclick="closeContactModal()"></div>
+        <div class="relative bg-white w-full max-w-2xl shadow-2xl transform transition-all scale-95 opacity-0 translate-y-4 flex flex-col max-h-[90vh]" id="contact-content">
+            <div class="p-4 border-b border-[#E1E5E9] flex justify-between items-center bg-[#F3F5F7] shrink-0">
+                <span class="text-xs font-bold uppercase text-[#071F36] tracking-wider ml-2">Kontakt aufnehmen</span>
+                <button onclick="closeContactModal()" class="text-[#4A5563] hover:text-[#071F36] transition-colors p-2 hover:bg-[#E1E5E9]">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <div class="p-6 overflow-y-auto bg-white">
+                
+                <div id="contact-success" class="hidden flex flex-col items-center justify-center py-12 text-center h-full">
+                    <div class="w-16 h-16 bg-[#071F36] flex items-center justify-center mb-6 rounded-full">
+                        <i data-lucide="check" class="text-white w-8 h-8"></i>
+                    </div>
+                    <h2 class="text-[#071F36] text-2xl font-bold tracking-tight mb-4">Vielen Dank</h2>
+                    <p class="text-[#2D3748] text-base leading-relaxed max-w-md">
+                        Ihre Anfrage wurde erfolgreich übermittelt. Ein Berater wird sich in Kürze bei Ihnen melden.
+                    </p>
+                    <button onclick="closeContactModal()" class="mt-8 btn-primary">
+                        Schließen
+                    </button>
+                </div>
+
+                <div id="contact-form-container">
+                    <form id="contact-form" onsubmit="handleContactFormSubmit(event)" class="space-y-6">
+                        
+                        <div class="hp-hidden">
+                            <input type="text" name="b_address" tabindex="-1" value="" autocomplete="off">
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-1">
+                                <label for="firstname" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Vorname *</label>
+                                <input type="text" name="firstname" id="firstname" required class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="Max" />
+                            </div>
+                            <div class="space-y-1">
+                                <label for="lastname" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Nachname *</label>
+                                <input type="text" name="lastname" id="lastname" required class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="Mustermann" />
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-1">
+                                <label for="email" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">E-Mail *</label>
+                                <input type="email" name="email" id="email" required class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="max@unternehmen.de" />
+                            </div>
+                            <div class="space-y-1">
+                                <label for="phone" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Telefon</label>
+                                <input type="tel" name="phone" id="phone" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="+49 123 456789" />
+                            </div>
+                        </div>
+
+                        <div class="space-y-1">
+                            <label for="company" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Unternehmen</label>
+                            <input type="text" name="company" id="company" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="Firma GmbH" />
+                        </div>
+
+                        <div class="space-y-3 pt-2">
+                            <label class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Ihr Thema *</label>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <label class="flex items-center space-x-3 cursor-pointer group p-2 -ml-2 rounded hover:bg-[#F3F5F7] transition-colors">
+                                    <input type="radio" name="topic" value="beratung" class="form-radio text-[#071F36] focus:ring-[#071F36]" required>
+                                    <span class="text-[#2D3748] text-sm font-medium group-hover:text-[#071F36]">Beratung</span>
+                                </label>
+                                <label class="flex items-center space-x-3 cursor-pointer group p-2 -ml-2 rounded hover:bg-[#F3F5F7] transition-colors">
+                                    <input type="radio" name="topic" value="karriere" class="form-radio text-[#071F36] focus:ring-[#071F36]">
+                                    <span class="text-[#2D3748] text-sm font-medium group-hover:text-[#071F36]">Karriere</span>
+                                </label>
+                                <label class="flex items-center space-x-3 cursor-pointer group p-2 -ml-2 rounded hover:bg-[#F3F5F7] transition-colors">
+                                    <input type="radio" name="topic" value="partner" class="form-radio text-[#071F36] focus:ring-[#071F36]">
+                                    <span class="text-[#2D3748] text-sm font-medium group-hover:text-[#071F36]">Partnerkooperation</span>
+                                </label>
+                                <label class="flex items-center space-x-3 cursor-pointer group p-2 -ml-2 rounded hover:bg-[#F3F5F7] transition-colors">
+                                    <input type="radio" name="topic" value="sonstige" class="form-radio text-[#071F36] focus:ring-[#071F36]">
+                                    <span class="text-[#2D3748] text-sm font-medium group-hover:text-[#071F36]">Sonstiges</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="message" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Nachricht</label>
+                            <textarea name="message" id="message" rows="3" class="block w-full border border-[#E1E5E9] p-3 text-[#2D3748] placeholder-[#A0AEC0] focus:border-[#071F36] focus:outline-none transition-colors bg-[#F3F5F7] resize-none text-sm" placeholder="Wie können wir Sie unterstützen?"></textarea>
+                        </div>
+
+                        <div class="flex items-start">
+                            <input id="contact-consent" name="consent" type="checkbox" required class="mt-1 h-4 w-4 border-gray-300 text-[#071F36] focus:ring-[#071F36] rounded-none cursor-pointer" />
+                            <label for="contact-consent" class="ml-3 text-xs text-[#4A5563] leading-snug">
+                                Ich stimme der Verarbeitung meiner Daten gemäß der <a href="../datenschutz.html" target="_blank" class="underline hover:text-[#071F36]">Datenschutzerklärung</a> zu.
+                            </label>
+                        </div>
+
+                        <button type="submit" id="contact-submit-btn" class="btn-primary w-full">
+                            <span id="contact-btn-text">Anfrage absenden</span>
+                            <span id="contact-btn-loading" class="hidden flex items-center">
+                                <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                                Wird gesendet...
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="newsletter-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-[#071F36]/90 backdrop-blur-sm transition-opacity opacity-0" id="newsletter-backdrop" onclick="closeNewsletterModal()"></div>
+        
+        <div class="relative bg-white w-full max-w-md shadow-2xl transform transition-all scale-95 opacity-0 translate-y-4 flex flex-col" id="newsletter-content">
+            
+            <div class="p-8 pb-0 flex justify-between items-start">
+                <div class="flex flex-col">
+                    <span class="text-xs font-bold uppercase text-[#071F36] tracking-wider mb-2">KBD Insights</span>
+                    <h3 class="text-2xl font-bold text-[#071F36] leading-tight">Exklusives Update</h3>
+                </div>
+                <button onclick="closeNewsletterModal()" class="text-[#4A5563] hover:text-[#071F36] transition-colors p-1 hover:bg-[#F3F5F7] -mr-2 -mt-2">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <div class="p-8 pt-6">
+                <div id="newsletter-success" class="hidden flex flex-col items-center justify-center py-8 text-center">
+                    <div class="w-12 h-12 bg-[#F3F5F7] flex items-center justify-center mb-4 rounded-none">
+                        <i data-lucide="check" class="text-[#071F36] w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-[#071F36] mb-2">Anmeldung erfolgreich</h4>
+                    <p class="text-[#4A5563] text-sm">Bitte prüfen Sie Ihren Posteingang zur Bestätigung.</p>
+                    <button onclick="closeNewsletterModal()" class="mt-6 text-sm underline text-[#071F36]">Schließen</button>
+                </div>
+
+                <form id="newsletter-form" onsubmit="handleNewsletterSubmit(event)" class="space-y-6">
+                    <p class="text-sm text-[#4A5563] leading-relaxed">
+                        Erhalten Sie kuratierte Einblicke in Prozessarchitektur und Automatisierung. Kein Spam, nur Substanz.
+                    </p>
+
+                    <div class="space-y-1">
+                        <label htmlFor="nl-firstname" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Vorname *</label>
+                        <input type="text" id="nl-firstname" name="firstname" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent text-base focus:border-[#071F36] transition-colors" placeholder="Max" required>
+                    </div>
+
+                    <div class="space-y-1">
+                        <label htmlFor="nl-lastname" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Nachname *</label>
+                        <input type="text" id="nl-lastname" name="lastname" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent text-base focus:border-[#071F36] transition-colors" placeholder="Mustermann" required>
+                    </div>
+
+                    <div class="space-y-1">
+                        <label htmlFor="nl-email" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">E-Mail *</label>
+                        <input type="email" id="nl-email" name="email" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent text-base focus:border-[#071F36] transition-colors" placeholder="max@unternehmen.de" required>
+                    </div>
+
+                    <div class="flex items-start pt-2">
+                        <input id="nl-consent" name="consent" type="checkbox" required class="mt-1 h-4 w-4 border-gray-300 text-[#071F36] focus:ring-[#071F36] rounded-none cursor-pointer accent-[#071F36]">
+                        <label htmlFor="nl-consent" class="ml-3 text-xs text-[#4A5563] leading-snug">
+                            Ich stimme der Verarbeitung meiner Daten gemäß der <a href="../datenschutz.html" class="underline hover:text-[#071F36]" target="_blank">Datenschutzerklärung</a> zu.
+                        </label>
+                    </div>
+
+                    <button type="submit" id="nl-submit-btn" class="btn-primary w-full !py-3 mt-4">
+                        <span id="nl-btn-text">Jetzt anmelden</span>
+                        <span id="nl-btn-loading" class="hidden flex items-center">
+                            <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                            Verarbeite...
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Icons init
+        lucide.createIcons();
+
+        // --- WEBHOOK URLS ---
+        // Werte werden aus config.js geladen (window.KBD_CONFIG)
+        const N8N_CONTACT_WEBHOOK = (window.KBD_CONFIG && window.KBD_CONFIG.N8N_CONTACT_WEBHOOK) || '';
+        const N8N_NEWSLETTER_WEBHOOK = (window.KBD_CONFIG && window.KBD_CONFIG.N8N_NEWSLETTER_WEBHOOK) || '';
+
+        // --- DROPDOWN & FILTER LOGIC ---
+        const dropWrapper = document.querySelector('.custom-select-wrapper');
+        const dropSelect = document.querySelector('.custom-select');
+        const dropOptions = document.querySelectorAll('.custom-option');
+        const dropCurrent = document.getElementById('current-selection');
+
+        if(dropSelect) {
+            dropSelect.addEventListener('click', function() {
+                this.classList.toggle('open');
+            });
+
+            for (const option of dropOptions) {
+                option.addEventListener('click', function() {
+                    if (!this.classList.contains('selected')) {
+                        // 1. Update Visuals
+                        const previousSelected = this.parentNode.querySelector('.custom-option.selected');
+                        if (previousSelected) previousSelected.classList.remove('selected');
+                        this.classList.add('selected');
+                        
+                        // Update trigger text - keeping icon
+                        dropCurrent.innerHTML = '<i data-lucide="filter" class="w-5 h-5 text-[#071F36]/60"></i> ' + this.textContent;
+                        lucide.createIcons(); // Re-init icons for new innerHTML
+                        
+                        // 2. Switch Content
+                        const value = this.getAttribute('data-value');
+                        switchContent(value);
+                    }
+                });
+            }
+
+            // Close on click outside
+            window.addEventListener('click', function(e) {
+                if (!dropSelect.contains(e.target)) {
+                    dropSelect.classList.remove('open');
+                }
+            });
+        }
+
+        function selectTab(value) {
+            // Helper to programmatically select a tab
+            const options = document.querySelectorAll('.custom-option');
+            options.forEach(opt => {
+                if (opt.getAttribute('data-value') === value) {
+                    // Update UI manually
+                    const previousSelected = document.querySelector('.custom-option.selected');
+                    if(previousSelected) previousSelected.classList.remove('selected');
+                    opt.classList.add('selected');
+                    
+                    const dropCurrent = document.getElementById('current-selection');
+                    if(dropCurrent) {
+                        dropCurrent.innerHTML = '<i data-lucide="filter" class="w-5 h-5 text-[#071F36]/60"></i> ' + opt.textContent;
+                        lucide.createIcons();
+                    }
+                }
+            });
+            switchContent(value);
+            // Scroll to content
+            document.getElementById('content-filter').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function switchContent(contentId) {
+            // Hide all
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            // Show selected
+            const target = document.getElementById('content-' + contentId);
+            if(target) target.classList.remove('hidden');
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const nav = document.getElementById('navbar');
+            menu.classList.toggle('hidden');
+            
+            // Wenn offen, Navbar solid weiß machen
+            if (!menu.classList.contains('hidden')) {
+                nav.classList.add('bg-white');
+                nav.classList.remove('bg-transparent');
+                // Logo dunkel
+                const logo = document.getElementById('nav-logo');
+                if(logo) { logo.classList.remove('invert', 'brightness-0'); logo.style.filter = "none"; }
+                // Menu Btn dunkel
+                const btn = document.getElementById('menu-btn');
+                if(btn) { btn.classList.remove('text-white'); btn.classList.add('text-[#071F36]'); }
+            } else {
+                // Wenn zu, Scroll checken um Farbe wiederherzustellen
+                handleScroll();
+            }
+        }
+
+        // --- SCROLL HANDLER (Header Design) ---
+        function handleScroll() {
+            const nav = document.getElementById('navbar');
+            const logo = document.getElementById('nav-logo');
+            const navLinks = document.getElementById('nav-links');
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Wenn Mobile Menu offen ist, nichts ändern
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) return;
+
+            if (window.scrollY > 10) {
+                // SCROLLED DOWN
+                nav.classList.add('nav-scrolled');
+                nav.classList.remove('bg-transparent');
+                
+                if(logo) { logo.classList.remove('invert', 'brightness-0'); logo.style.filter = "none"; }
+                if(navLinks) { 
+                    navLinks.classList.remove('text-white'); 
+                    navLinks.classList.add('text-[#071F36]');
+                    navLinks.querySelectorAll('a').forEach(l => {
+                        // Special check for active link border color
+                        if(l.id === 'active-link') l.classList.replace('border-white', 'border-[#071F36]');
+                    });
+                }
+                if(menuBtn) { menuBtn.classList.remove('text-white'); menuBtn.classList.add('text-[#071F36]'); }
+
+            } else {
+                // TOP OF PAGE
+                nav.classList.remove('nav-scrolled');
+                // UPDATE: Background transparent (Text ist jetzt dunkel)
+                nav.classList.add('bg-transparent');
+
+                // UPDATE: Logo wieder invertieren (weiß) für dunklen Hintergrund
+                if(logo) { 
+                    logo.classList.add('invert', 'brightness-0'); 
+                    logo.style.filter = "brightness(0) invert(1)"; 
+                }
+                
+                // UPDATE: Links wieder Weiß
+                if(navLinks) { 
+                    navLinks.classList.add('text-white'); 
+                    navLinks.classList.remove('text-[#071F36]');
+                      navLinks.querySelectorAll('a').forEach(l => {
+                        // Special check for active link border color
+                        if(l.id === 'active-link') l.classList.replace('border-[#071F36]', 'border-white');
+                    });
+                }
+                
+                // UPDATE: Menu Btn wieder Weiß
+                if(menuBtn) { 
+                    menuBtn.classList.add('text-white'); 
+                    menuBtn.classList.remove('text-[#071F36]'); 
+                }
+            }
+        }
+        window.addEventListener('scroll', handleScroll);
+        // Initial check
+        handleScroll();
+
+        // --- CONTACT MODAL LOGIC ---
+        function openContactModal(e) {
+            if(e) e.preventDefault();
+            const modal = document.getElementById('contact-modal');
+            const backdrop = document.getElementById('contact-backdrop');
+            const content = document.getElementById('contact-content');
+            
+            // Reset
+            document.getElementById('contact-form').reset();
+            document.getElementById('contact-form-container').classList.remove('hidden');
+            document.getElementById('contact-success').classList.add('hidden');
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => {
+                backdrop.classList.remove('opacity-0');
+                content.classList.remove('scale-95', 'opacity-0', 'translate-y-4');
+                content.classList.add('scale-100', 'opacity-100', 'translate-y-0');
+            }, 10);
+        }
+
+        function closeContactModal() {
+            const modal = document.getElementById('contact-modal');
+            const backdrop = document.getElementById('contact-backdrop');
+            const content = document.getElementById('contact-content');
+            
+            backdrop.classList.add('opacity-0');
+            content.classList.remove('scale-100', 'opacity-100', 'translate-y-0');
+            content.classList.add('scale-95', 'opacity-0', 'translate-y-4');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        async function handleContactFormSubmit(e) {
+            e.preventDefault();
+            const submitBtn = document.getElementById('contact-submit-btn');
+            const btnText = document.getElementById('contact-btn-text');
+            const btnLoading = document.getElementById('contact-btn-loading');
+            const form = e.target;
+            
+            // Honeypot check
+            if (form.b_address.value !== "") return;
+
+            submitBtn.disabled = true;
+            btnText.classList.add('hidden');
+            btnLoading.classList.remove('hidden');
+            
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch(N8N_CONTACT_WEBHOOK, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ ...data, submittedAt: new Date().toISOString(), url: window.location.href, type: 'contact_request' }),
+                });
+
+                if (response.ok) {
+                    document.getElementById('contact-form-container').classList.add('hidden');
+                    document.getElementById('contact-success').classList.remove('hidden');
+                } else { throw new Error('Fehler'); }
+            } catch (error) {
+                console.error(error);
+                alert('Fehler bei der Übertragung. Bitte versuchen Sie es später erneut.');
+            } finally {
+                submitBtn.disabled = false;
+                btnText.classList.remove('hidden');
+                btnLoading.classList.add('hidden');
+            }
+        }
+
+        // --- NEWSLETTER MODAL LOGIC ---
+        function openNewsletterModal(e) {
+            if(e) e.preventDefault();
+            const modal = document.getElementById('newsletter-modal');
+            const backdrop = document.getElementById('newsletter-backdrop');
+            const content = document.getElementById('newsletter-content');
+            
+            // Reset state
+            document.getElementById('newsletter-form').reset();
+            document.getElementById('newsletter-form').classList.remove('hidden');
+            document.getElementById('newsletter-success').classList.add('hidden');
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; 
+
+            setTimeout(() => {
+                backdrop.classList.remove('opacity-0');
+                content.classList.remove('scale-95', 'opacity-0', 'translate-y-4');
+                content.classList.add('scale-100', 'opacity-100', 'translate-y-0');
+            }, 10);
+        }
+
+        function closeNewsletterModal() {
+            const modal = document.getElementById('newsletter-modal');
+            const backdrop = document.getElementById('newsletter-backdrop');
+            const content = document.getElementById('newsletter-content');
+            
+            backdrop.classList.add('opacity-0');
+            content.classList.remove('scale-100', 'opacity-100', 'translate-y-0');
+            content.classList.add('scale-95', 'opacity-0', 'translate-y-4');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        async function handleNewsletterSubmit(e) {
+            e.preventDefault();
+            const btn = document.getElementById('nl-submit-btn');
+            const text = document.getElementById('nl-btn-text');
+            const load = document.getElementById('nl-btn-loading');
+            const form = e.target;
+            const successDiv = document.getElementById('newsletter-success');
+            const formDiv = document.getElementById('newsletter-form');
+
+            btn.disabled = true;
+            text.classList.add('hidden');
+            load.classList.remove('hidden');
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch(N8N_NEWSLETTER_WEBHOOK, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        firstname: data.firstname,
+                        lastname: data.lastname, 
+                        email: data.email,
+                        source: 'newsletter_modal_publikationen',
+                        timestamp: new Date().toISOString()
+                    })
+                });
+
+                if(response.ok) {
+                    formDiv.classList.add('hidden');
+                    successDiv.classList.remove('hidden');
+                } else {
+                    throw new Error('API Error');
+                }
+            } catch (err) {
+                console.error(err);
+                alert('Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.');
+            } finally {
+                btn.disabled = false;
+                text.classList.remove('hidden');
+                load.classList.add('hidden');
+            }
+        }
+
+        // Close on Escape Key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                if(!document.getElementById('contact-modal').classList.contains('hidden')) closeContactModal();
+                if(document.getElementById('newsletter-modal') && !document.getElementById('newsletter-modal').classList.contains('hidden')) closeNewsletterModal();
+            }
+        });
+
+    </script>
+    
+    </body>
+</html>

@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <title>Kassel Business Digital | Trust Center</title>
+    <meta name="description" content="Trust Center der Kassel Business Digital. Transparenz über unsere im AVV bezeichneten Dienstleister und deren Funktionen.">
+    
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.kassel-bd.de/trust-center.html">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#071F36">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kassel Business Digital | Trust Center">
+    <meta property="og:description" content="Transparenz über unsere im AVV bezeichneten Dienstleister und deren Funktionen.">
+    <meta property="og:image" content="https://www.kassel-bd.de/icon.png">
+    <meta property="og:url" content="https://www.kassel-bd.de/trust-center.html">
+    <meta property="og:locale" content="de_DE">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.kassel-bd.de/trust-center.html">
+    <meta name="twitter:title" content="Kassel Business Digital | Trust Center">
+    <meta name="twitter:description" content="Transparenz über unsere im AVV bezeichneten Dienstleister und deren Funktionen.">
+    <meta name="twitter:image" content="https://www.kassel-bd.de/icon.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Kassel Business Digital",
+      "url": "https://www.kassel-bd.de",
+      "logo": "https://www.kassel-bd.de/icon.png",
+      "sameAs": [
+        "https://www.linkedin.com/company/kassel-bd",
+        "https://www.instagram.com/kassel_bd/"
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="config.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        kbdBlue: '#071F36',
+                        richGrey: '#2D3748',
+                        softGrey: '#4A5563',
+                        lightGrey: '#F3F5F7',
+                        bracketBlue: '#071F36'
+                    },
+                    boxShadow: {
+                        'premium': '0 20px 40px -5px rgba(7, 31, 54, 0.1)',
+                        'premium-hover': '0 25px 50px -12px rgba(7, 31, 54, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Fonts loaded globally via design-system.css */
+
+        /* --- GLOBAL VARIABLES --- */
+        :root {
+            --kbd-blue: #071F36;
+            --rich-grey: #2D3748;
+            --soft-grey: #4A5563;
+            --white: #FFFFFF;
+            --bracket-blue: #071F36;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--rich-grey);
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.6;
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4, h5, h6 { color: var(--kbd-blue); letter-spacing: -0.01em; line-height: 1.15; }
+        h1 { font-weight: 700; } h2 { font-weight: 700; } h3 { font-weight: 700; /* Changed from 600 */ }
+
+        .text-body { color: var(--rich-grey); font-weight: 400; font-size: 17px; line-height: 1.6; }
+        .eyebrow {
+            font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: 0.02em;
+            text-transform: uppercase; color: var(--soft-grey); font-size: 12px;
+        }
+
+        /* BUTTONS */
+        .btn-primary {
+            background-color: var(--kbd-blue);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500; 
+            font-size: 16px;
+            border-radius: 0px; 
+            padding: 14px 24px;
+            border: 1px solid var(--kbd-blue);
+            transition: all 0.2s ease;
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn-primary:hover {
+            background-color: #0A2A4A;
+            border-color: #0A2A4A;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(7, 31, 54, 0.15);
+        }
+
+        .btn-white {
+            background-color: var(--white);
+            color: var(--kbd-blue);
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            border-radius: 0px;
+            padding: 14px 24px;
+            border: 1px solid var(--white);
+            transition: all 0.2s ease;
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn-white:hover {
+            background-color: #F3F5F7;
+            border-color: #F3F5F7;
+            color: var(--kbd-blue);
+            transform: translateY(-1px);
+        }
+
+        /* UTILITIES */
+        .section-padding { padding-top: 128px; padding-bottom: 128px; }
+        .modal-open { overflow: hidden; }
+        .hp-hidden { display: none !important; visibility: hidden !important; }
+        
+        /* FORM STYLES */
+        .form-input {
+            border-bottom-width: 1px; border-color: #E1E5E9; background-color: transparent; transition: border-color 0.2s;
+        }
+        .form-input:focus { border-color: #071F36; outline: none; }
+        input[type="checkbox"], input[type="radio"] { accent-color: #071F36; cursor: pointer; }
+        input[type="radio"] { width: 1.25em; height: 1.25em; border: 1px solid #D1D5DB; }
+        input[type="radio"]:checked { border-color: #071F36; background-color: #071F36; }
+
+        /* HEADER SCROLL STATE */
+        .nav-scrolled { background-color: rgba(255, 255, 255, 0.98); backdrop-filter: blur(12px); box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05); }
+
+        /* HERO BANNER STYLES */
+        .hero-banner {
+            position: relative;
+            height: 400px;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+        }
+        .hero-bg-img {
+            position: absolute; inset: 0; width: 100%; height: 100%;
+            object-fit: cover; object-position: center; z-index: 0;
+        }
+        .hero-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to bottom, rgba(7,31,54,0.3) 0%, rgba(7,31,54,0.6) 100%);
+            z-index: 1;
+        }
+
+        /* TABLE STYLES */
+        .subcontractor-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+        .subcontractor-table thead {
+            background-color: #F3F5F7;
+        }
+        .subcontractor-table th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700; /* Changed from 600 */
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--kbd-blue);
+            border-bottom: 2px solid #E1E5E9;
+        }
+        .subcontractor-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #E1E5E9;
+            color: var(--rich-grey);
+            font-size: 0.95rem;
+            vertical-align: top;
+        }
+        .subcontractor-table tbody tr:hover {
+            background-color: #F9FAFB;
+        }
+        .subcontractor-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* MOBILE CARD LAYOUT */
+        .mobile-card {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .section-padding { padding-top: 80px; padding-bottom: 80px; }
+            
+            /* Hide table on mobile */
+            .subcontractor-table {
+                display: none;
+            }
+            
+            /* Show mobile cards */
+            .mobile-card {
+                display: block;
+                background-color: white;
+                border: 1px solid #E1E5E9;
+                border-radius: 0;
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            }
+            
+            .mobile-card-title {
+                font-size: 1.125rem;
+                font-weight: 700;
+                color: var(--kbd-blue);
+                margin-bottom: 1rem;
+                padding-bottom: 0.75rem;
+                border-bottom: 2px solid #E1E5E9;
+            }
+            
+            .mobile-card-row {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 1rem;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid #F3F5F7;
+            }
+            
+            .mobile-card-row:last-child {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+            
+            .mobile-card-label {
+                font-size: 0.75rem;
+                font-weight: 700; /* Changed from 600 */
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                color: var(--kbd-blue);
+                margin-bottom: 0.5rem;
+            }
+            
+            .mobile-card-value {
+                font-size: 0.95rem;
+                color: var(--rich-grey);
+                line-height: 1.5;
+            }
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-transparent">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20 transition-all duration-300" id="nav-container">
+                
+                <div class="flex items-center gap-3 z-50">
+                    <a href="index.html" class="block relative group" aria-label="Zur Startseite">
+                        <img src="icon.png" alt="KBD Logo" id="nav-logo" width="56" height="56" class="h-10 md:h-12 w-auto object-contain transition-all duration-300 brightness-0 invert" style="will-change: filter;" />
+                    </a>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-8 text-[15px] font-medium tracking-wide text-white" id="nav-links">
+                    <a href="ueberuns.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Über Uns</a>
+                    <a href="leistungen.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Leistungen</a>
+                    <a href="technologie.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Technologie</a>
+                    <a href="erfolge.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Erfolge</a>
+                    <a href="publikationen/index.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Publikationen</a>
+                    
+                    <button type="button" onclick="openContactModal(event)" class="btn-primary ml-2 border-white/10 !py-2 !px-5 !text-[14px]">
+                        Kontakt
+                    </button>
+                </div>
+
+                <button type="button" class="lg:hidden text-white p-2 -mr-2 transition-colors duration-300 focus:outline-none" id="menu-btn" onclick="toggleMobileMenu()" aria-label="Menu öffnen">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-2xl border-t border-gray-100 transform origin-top transition-all duration-300 ease-in-out z-40">
+            <div class="flex flex-col px-6 py-8 space-y-6 font-medium text-[#071F36]">
+                <a href="ueberuns.html" class="block text-lg border-b border-gray-100 pb-4">Über Uns</a>
+                <a href="leistungen.html" class="block text-lg border-b border-gray-100 pb-4">Leistungen</a>
+                <a href="technologie.html" class="block text-lg border-b border-gray-100 pb-4">Technologie</a>
+                <a href="erfolge.html" class="block text-lg border-b border-gray-100 pb-4">Erfolge</a>
+                <a href="publikationen/index.html" class="block text-lg border-b border-gray-100 pb-4">Publikationen</a>
+                <a href="karriere.html" class="block text-lg border-b border-gray-100 pb-4">Karriere</a>
+                
+                <button type="button" onclick="openContactModal(event)" class="w-full text-left text-lg font-bold text-[#071F36] pt-2">
+                    Kontakt
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+        
+        <div class="hero-banner">
+            <img src="images/unterauftragnehmer.jpeg" 
+                 alt="Transparenz und Verantwortung" 
+                 class="hero-bg-img" 
+                 loading="eager" />
+            <div class="hero-overlay"></div>
+            
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full relative z-10 pb-12">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight drop-shadow-md">
+                    Trust Center
+                </h1>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+            <div class="max-w-4xl mx-auto">
+                <!-- Datenschutz Info-Box -->
+                <div class="bg-[#071F36] text-white p-8 md:p-10 mb-12 border-l-4 border-white/20">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 mt-1">
+                            <i data-lucide="shield-check" class="w-6 h-6 md:w-8 md:h-8 text-white"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl md:text-2xl font-bold text-white mb-4">Datenschutz als Standard, nicht als Option</h3>
+                            <p class="text-white/90 text-base md:text-lg leading-relaxed mb-4">
+                                Wir nehmen Datenschutz <strong>extrem ernst</strong>. Unsere KI-Implementierungen, Lösungen und Automatisierungen 
+                                liegen <strong>ausschließlich in Deutschland</strong> und verlassen <strong>niemals den deutschen oder EU-Raum</strong>.
+                            </p>
+                            <div class="space-y-3 text-white/90 text-sm md:text-base leading-relaxed">
+                                <p class="flex items-start gap-2">
+                                    <span class="text-white mt-1">✓</span>
+                                    <span>Bei KI-Nutzung (Vertex AI Server Frankfurt) werden Daten <strong>nur anonymisiert</strong> verarbeitet.</span>
+                                </p>
+                                <p class="flex items-start gap-2">
+                                    <span class="text-white mt-1">✓</span>
+                                    <span>Wir garantieren <strong>höchste Sicherheitsstandards</strong> und vollständige DSGVO-Konformität.</span>
+                                </p>
+                                <p class="flex items-start gap-2">
+                                    <span class="text-white mt-1">✓</span>
+                                    <span><strong>DSGVO als Standard, nicht als Option</strong> – das ist unsere Verpflichtung.</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-12">
+                    <span class="eyebrow">Transparenz</span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-[#071F36] mb-6">Im AVV bezeichnete Unterauftragnehmer</h2>
+                    <p class="text-body text-[16px] text-[#4A5563] leading-relaxed mb-4">
+                        Im Rahmen unserer Auftragsverarbeitungsverträge (AVV) arbeiten wir mit verschiedenen Dienstleistern zusammen. 
+                        Nachfolgend finden Sie eine vollständige Übersicht unserer Unterauftragnehmer, deren Funktionen, 
+                        den Orten der Datenverarbeitung sowie den jeweiligen Rechtsgrundlagen.
+                    </p>
+                    <p class="text-sm text-[#9CA3AF] italic">
+                        Stand: 05.01.2026
+                    </p>
+                </div>
+
+                <!-- Desktop Table -->
+                <div class="hidden md:block overflow-x-auto">
+                    <table class="subcontractor-table">
+                        <thead>
+                            <tr>
+                                <th>Unterauftragnehmer</th>
+                                <th>Sitz</th>
+                                <th>Funktion</th>
+                                <th>Ort der Verarbeitung</th>
+                                <th>Rechtsgrundlage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Hetzner Online GmbH</strong></td>
+                                <td>DE</td>
+                                <td>Hosting der n8n-Kundeninstanzen</td>
+                                <td>DE (Nürnberg/Falkenstein)</td>
+                                <td>AVV (DE)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Google Cloud EMEA Ltd.</strong></td>
+                                <td>IE</td>
+                                <td>KI-Infrastruktur (Vertex AI)</td>
+                                <td>DE (Region Frankfurt)</td>
+                                <td>AVV + EU-SCC</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Microsoft Ireland Ltd.</strong></td>
+                                <td>IE</td>
+                                <td>Cloud-Collaboration (M365)</td>
+                                <td>EU (Irland / DE)</td>
+                                <td>AVV + EU-SCC</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Supabase Inc.</strong></td>
+                                <td>USA</td>
+                                <td>Datenbank & Auth-Middleware</td>
+                                <td>EU (Frankfurt)</td>
+                                <td>AVV + EU-SCC</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Notion Labs Inc.</strong></td>
+                                <td>USA</td>
+                                <td>CRM & Projektmanagement</td>
+                                <td>USA</td>
+                                <td>AVV + SCC / TIA</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Slack Technologies</strong></td>
+                                <td>USA</td>
+                                <td>Error-Handling, Monitoring & Interne Kommunikation</td>
+                                <td>USA</td>
+                                <td>AVV + SCC / TIA</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cohere Inc.</strong></td>
+                                <td>USA</td>
+                                <td>KI-Optimierung (Rerank)</td>
+                                <td>USA / EU</td>
+                                <td>AVV + SCC / TIA</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Documentero</strong></td>
+                                <td>PL</td>
+                                <td>PDF-Automatisierung</td>
+                                <td>EU / USA</td>
+                                <td>AVV + EU-SCC</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Softr Platforms Inc.</strong></td>
+                                <td>USA</td>
+                                <td>Frontend für Kunden-Apps & Kundendashboard</td>
+                                <td>USA</td>
+                                <td>AVV + SCC / TIA</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Calendly LLC</strong></td>
+                                <td>USA</td>
+                                <td>Termin-Automatisierung</td>
+                                <td>USA</td>
+                                <td>AVV + SCC / TIA</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Figma Inc.</strong></td>
+                                <td>USA</td>
+                                <td>Prozessmodellierung</td>
+                                <td>USA</td>
+                                <td>AVV + SCC / TIA</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Strato AG / Hostinger</strong></td>
+                                <td>DE / EU</td>
+                                <td>Webhosting & Interne Systeme</td>
+                                <td>DE / EU</td>
+                                <td>AVV (DE/EU)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Mobile Cards -->
+                <div class="md:hidden space-y-4">
+                    <div class="mobile-card">
+                        <div class="mobile-card-title">Hetzner Online GmbH</div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Sitz</div>
+                            <div class="mobile-card-value">DE</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Funktion</div>
+                            <div class="mobile-card-value">Hosting der n8n-Kundeninstanzen</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Ort der Verarbeitung</div>
+                            <div class="mobile-card-value">DE (Nürnberg/Falkenstein)</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Rechtsgrundlage</div>
+                            <div class="mobile-card-value">AVV (DE)</div>
+                        </div>
+                    </div>
+
+                    <div class="mobile-card">
+                        <div class="mobile-card-title">Google Cloud EMEA Ltd.</div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Sitz</div>
+                            <div class="mobile-card-value">IE</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Funktion</div>
+                            <div class="mobile-card-value">KI-Infrastruktur (Vertex AI)</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Ort der Verarbeitung</div>
+                            <div class="mobile-card-value">DE (Region Frankfurt)</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Rechtsgrundlage</div>
+                            <div class="mobile-card-value">AVV + EU-SCC</div>
+                        </div>
+                    </div>
+
+                    <div class="mobile-card">
+                        <div class="mobile-card-title">Microsoft Ireland Ltd.</div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Sitz</div>
+                            <div class="mobile-card-value">IE</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Funktion</div>
+                            <div class="mobile-card-value">Cloud-Collaboration (M365)</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Ort der Verarbeitung</div>
+                            <div class="mobile-card-value">EU (Irland / DE)</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Rechtsgrundlage</div>
+                            <div class="mobile-card-value">AVV + EU-SCC</div>
+                        </div>
+                    </div>
+
+                    <div class="mobile-card">
+                        <div class="mobile-card-title">Supabase Inc.</div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Sitz</div>
+                            <div class="mobile-card-value">USA</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Funktion</div>
+                            <div class="mobile-card-value">Datenbank & Auth-Middleware</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Ort der Verarbeitung</div>
+                            <div class="mobile-card-value">EU (Frankfurt)</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Rechtsgrundlage</div>
+                            <div class="mobile-card-value">AVV + EU-SCC</div>
+                        </div>
+                    </div>
+
+                    <div class="mobile-card">
+                        <div class="mobile-card-title">Notion Labs Inc.</div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Sitz</div>
+                            <div class="mobile-card-value">USA</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Funktion</div>
+                            <div class="mobile-card-value">CRM & Projektmanagement</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Ort der Verarbeitung</div>
+                            <div class="mobile-card-value">USA</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Rechtsgrundlage</div>
+                            <div class="mobile-card-value">AVV + SCC / TIA</div>
+                        </div>
+                    </div>
+
+                    <div class="mobile-card">
+                        <div class="mobile-card-title">Slack Technologies</div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Sitz</div>
+                            <div class="mobile-card-value">USA</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Funktion</div>
+                            <div class="mobile-card-value">Error-Handling, Monitoring & Interne Kommunikation</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Ort der Verarbeitung</div>
+                            <div class="mobile-card-value">USA</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Rechtsgrundlage</div>
+                            <div class="mobile-card-value">AVV + SCC / TIA</div>
+                        </div>
+                    </div>
+
+                    <div class="mobile-card">
+                        <div class="mobile-card-title">Cohere Inc.</div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Sitz</div>
+                            <div class="mobile-card-value">USA</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Funktion</div>
+                            <div class="mobile-card-value">KI-Optimierung (Rerank)</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Ort der Verarbeitung</div>
+                            <div class="mobile-card-value">USA / EU</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Rechtsgrundlage</div>
+                            <div class="mobile-card-value">AVV + SCC / TIA</div>
+                        </div>
+                    </div>
+
+                    <div class="mobile-card">
+                        <div class="mobile-card-title">Documentero</div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Sitz</div>
+                            <div class="mobile-card-value">PL</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Funktion</div>
+                            <div class="mobile-card-value">PDF-Automatisierung</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Ort der Verarbeitung</div>
+                            <div class="mobile-card-value">EU / USA</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Rechtsgrundlage</div>
+                            <div class="mobile-card-value">AVV + EU-SCC</div>
+                        </div>
+                    </div>
+
+                    <div class="mobile-card">
+                        <div class="mobile-card-title">Softr Platforms Inc.</div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Sitz</div>
+                            <div class="mobile-card-value">USA</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Funktion</div>
+                            <div class="mobile-card-value">Frontend für Kunden-Apps & Kundendashboard</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Ort der Verarbeitung</div>
+                            <div class="mobile-card-value">USA</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Rechtsgrundlage</div>
+                            <div class="mobile-card-value">AVV + SCC / TIA</div>
+                        </div>
+                    </div>
+
+                    <div class="mobile-card">
+                        <div class="mobile-card-title">Calendly LLC</div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Sitz</div>
+                            <div class="mobile-card-value">USA</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Funktion</div>
+                            <div class="mobile-card-value">Termin-Automatisierung</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Ort der Verarbeitung</div>
+                            <div class="mobile-card-value">USA</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Rechtsgrundlage</div>
+                            <div class="mobile-card-value">AVV + SCC / TIA</div>
+                        </div>
+                    </div>
+
+                    <div class="mobile-card">
+                        <div class="mobile-card-title">Figma Inc.</div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Sitz</div>
+                            <div class="mobile-card-value">USA</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Funktion</div>
+                            <div class="mobile-card-value">Prozessmodellierung</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Ort der Verarbeitung</div>
+                            <div class="mobile-card-value">USA</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Rechtsgrundlage</div>
+                            <div class="mobile-card-value">AVV + SCC / TIA</div>
+                        </div>
+                    </div>
+
+                    <div class="mobile-card">
+                        <div class="mobile-card-title">Strato AG / Hostinger</div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Sitz</div>
+                            <div class="mobile-card-value">DE / EU</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Funktion</div>
+                            <div class="mobile-card-value">Webhosting & Interne Systeme</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Ort der Verarbeitung</div>
+                            <div class="mobile-card-value">DE / EU</div>
+                        </div>
+                        <div class="mobile-card-row">
+                            <div class="mobile-card-label">Rechtsgrundlage</div>
+                            <div class="mobile-card-value">AVV (DE/EU)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 pt-8 border-t border-[#E1E5E9]">
+                    <p class="text-sm text-[#4A5563] leading-relaxed mb-8">
+                        <strong>Hinweis:</strong> Alle genannten Unterauftragnehmer unterliegen vertraglichen Vereinbarungen gemäß 
+                        Art. 28 DSGVO (Auftragsverarbeitungsverträge). Bei Datenübertragungen in Drittländer (z.B. USA) 
+                        werden zusätzlich Standardvertragsklauseln (SCC) und gegebenenfalls Transfer Impact Assessments (TIA) verwendet.
+                    </p>
+                </div>
+
+                <div class="mt-12 pt-8 border-t border-[#E1E5E9]">
+                    <span class="eyebrow">Sicherheit</span>
+                    <h3 class="text-xl md:text-2xl font-bold text-[#071F36] mb-6 mt-2">4. Technisch-Organisatorische Maßnahmen (TOMs)</h3>
+                    <p class="text-body text-[16px] text-[#4A5563] leading-relaxed mb-6">
+                        KBD gewährleistet die Sicherheit der Verarbeitung gemäß Art. 32 DSGVO durch 
+                        folgende Maßnahmen (Auszug):
+                    </p>
+                    <ul class="space-y-4 text-body text-[16px] text-[#4A5563] leading-relaxed">
+                        <li class="flex items-start">
+                            <span class="text-[#071F36] mr-3 mt-1">•</span>
+                            <div>
+                                <strong class="text-[#071F36]">Vertraulichkeit:</strong> Umfassendes Secret-Management und Passwort-Sicherheit 
+                                über 1Password; strikte Erzwingung von Multi-Faktor-Authentifizierung (MFA) für 
+                                alle administrativen Zugänge.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-[#071F36] mr-3 mt-1">•</span>
+                            <div>
+                                <strong class="text-[#071F36]">Integrität & Trennungsgebot:</strong> Bereitstellung dedizierter n8n-Instanzen auf 
+                                zertifizierten Servern zur physischen oder strikten logischen Datentrennung 
+                                zwischen Kundenprojekten.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-[#071F36] mr-3 mt-1">•</span>
+                            <div>
+                                <strong class="text-[#071F36]">Verschlüsselung:</strong> Einsatz von TLS 1.2+ für alle Datentransfers; Encryption-at-Rest für Datenbanken (Supabase/Postgres).
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-[#071F36] mr-3 mt-1">•</span>
+                            <div>
+                                <strong class="text-[#071F36]">Verfügbarkeit:</strong> Hosting auf Hochverfügbarkeits-Infrastrukturen mit 
+                                automatisierten Backup-Szenarien.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-12 pt-8 border-t border-[#E1E5E9]">
+                    <span class="eyebrow">Dokumente</span>
+                    <h3 class="text-xl md:text-2xl font-bold text-[#071F36] mb-6 mt-2">Vertragsunterlagen</h3>
+                    <p class="text-body text-[16px] text-[#4A5563] leading-relaxed mb-8">
+                        Laden Sie unsere wichtigsten Vertragsunterlagen herunter:
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <a href="Dokumente/Rechtliches/KBD_MSA_v1.1_2025-12.pdf" download class="group border border-[#E1E5E9] p-6 hover:border-[#071F36] transition-all hover:shadow-lg">
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0">
+                                    <i data-lucide="file-text" class="w-8 h-8 text-[#071F36] group-hover:scale-110 transition-transform"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="text-lg font-bold text-[#071F36] mb-2 group-hover:underline">Standard-Servicebedingungen (MSA)</h4>
+                                    <p class="text-sm text-[#4A5563] leading-relaxed">Unsere Grundlage für eine strukturierte und faire Zusammenarbeit.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="Dokumente/Rechtliches/KBD_AVV_v1.1_2025-12.pdf" download class="group border border-[#E1E5E9] p-6 hover:border-[#071F36] transition-all hover:shadow-lg">
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0">
+                                    <i data-lucide="shield-check" class="w-8 h-8 text-[#071F36] group-hover:scale-110 transition-transform"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="text-lg font-bold text-[#071F36] mb-2 group-hover:underline">Auftragsverarbeitungsvertrag (AVV)</h4>
+                                    <p class="text-sm text-[#4A5563] leading-relaxed">Maximale Transparenz und Sicherheit für Ihre Daten.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="py-12 bg-gradient-to-r from-[#020B14] via-[#071F36] to-[#020B14] border-t border-white/10 relative overflow-hidden shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                <h2 class="text-xl md:text-2xl font-bold text-white m-0 tracking-wide drop-shadow-sm text-center md:text-left">
+                    Sie haben Fragen an uns?
+                </h2>
+                
+                <button onclick="openContactModal(event)" class="btn-white">
+                    Kontakt
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-white text-[#071F36] border-t border-[#E1E5E9] font-inter mt-auto relative z-10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20 items-start">
+                
+                <div class="lg:col-span-3 flex flex-col items-start">
+                    <a href="index.html" class="block mb-8 group" aria-label="Zur Startseite">
+                        <img src="icon.png" alt="KBD Logo" width="56" height="56" class="h-12 md:h-14 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity" />
+                    </a>
+                    <p class="text-[#4A5563] text-sm leading-relaxed max-w-md mb-8">
+                        Wir automatisieren Ihre Abläufe intelligent, damit Ihre Mitarbeiter mehr Zeit für echte Wertschöpfung haben.   </p>
+                    <div class="flex items-center gap-6">
+                        <a href="https://www.linkedin.com/company/kassel-bd" target="_blank" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="KBD auf LinkedIn"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        <a href="https://www.instagram.com/kassel_bd/" target="_blank" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="KBD auf Instagram"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Unternehmen</h4>
+                    <ul class="space-y-3 text-[#2D3748] text-sm">
+                        <li><a href="ueberuns.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Über Uns</a></li>
+                        <li><a href="karriere.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Karriere</a></li>
+                        <li><a href="partner.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Partner</a></li>
+                        <li><a href="kontakt.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Expertise</h4>
+                    <ul class="space-y-3 text-[#2D3748] text-sm">
+                        <li><a href="leistungen.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Leistungen</a></li>
+                        <li><a href="technologie.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Technologie</a></li>
+                        <li><a href="erfolge.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Erfolge</a></li>
+                        <li><a href="publikationen/index.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Publikationen</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Werte & Recht</h4>
+                    <ul class="space-y-3 text-[#2D3748] text-sm">
+                        <li><a href="verantwortung.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Verantwortung</a></li>
+                        <li><a href="impressum.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Impressum</a></li>
+                        <li><a href="datenschutz.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Datenschutz</a></li>
+                        <li><a href="trust-center.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all text-[#071F36] font-semibold">Trust Center</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-3">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Insights</h4>
+                    <p class="text-[#4A5563] text-xs mb-4 leading-relaxed max-w-xs">Exklusive Marktanalysen und strategische Impulse. Substanz für Ihre Entscheidungen.</p>
+                    <button onclick="openNewsletterModal(event)" class="btn-primary w-full max-w-xs !py-3">Anmelden</button>
+                </div>
+            </div>
+
+            <div class="border-t border-[#E1E5E9] pt-8 flex flex-col md:flex-row justify-between items-center text-[#9CA3AF] text-xs">
+                <p>&copy; 2026 Kassel Business Digital.</p>
+                <p class="mt-2 md:mt-0 font-medium">Excellence in Process Architecture.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="contact-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-[#071F36]/90 backdrop-blur-sm transition-opacity opacity-0" id="contact-backdrop" onclick="closeContactModal()"></div>
+        <div class="relative bg-white w-full max-w-2xl shadow-2xl transform transition-all scale-95 opacity-0 translate-y-4 flex flex-col max-h-[90vh]" id="contact-content">
+            <div class="p-4 border-b border-[#E1E5E9] flex justify-between items-center bg-[#F3F5F7] shrink-0">
+                <span class="text-xs font-bold uppercase text-[#071F36] tracking-wider ml-2">Kontakt aufnehmen</span>
+                <button onclick="closeContactModal()" class="text-[#4A5563] hover:text-[#071F36] transition-colors p-2 hover:bg-[#E1E5E9]">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <div class="p-6 overflow-y-auto bg-white">
+                <div id="contact-success" class="hidden flex flex-col items-center justify-center py-12 text-center h-full">
+                    <div class="w-16 h-16 bg-[#071F36] flex items-center justify-center mb-6 rounded-full">
+                        <i data-lucide="check" class="text-white w-8 h-8"></i>
+                    </div>
+                    <h2 class="text-[#071F36] text-2xl font-bold tracking-tight mb-4">Vielen Dank</h2>
+                    <p class="text-[#2D3748] text-base leading-relaxed max-w-md">
+                        Ihre Anfrage wurde erfolgreich übermittelt. Ein Berater wird sich in Kürze bei Ihnen melden.
+                    </p>
+                    <button onclick="closeContactModal()" class="mt-8 btn-primary">
+                        Schließen
+                    </button>
+                </div>
+
+                <div id="contact-form-container">
+                    <form id="contact-form" onsubmit="handleContactFormSubmit(event)" class="space-y-6">
+                        <div class="hp-hidden">
+                            <input type="text" name="b_address" tabindex="-1" value="" autocomplete="off">
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-1">
+                                <label for="firstname" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Vorname *</label>
+                                <input type="text" name="firstname" id="firstname" required class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="Max" />
+                            </div>
+                            <div class="space-y-1">
+                                <label for="lastname" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Nachname *</label>
+                                <input type="text" name="lastname" id="lastname" required class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="Mustermann" />
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-1">
+                                <label for="email" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">E-Mail *</label>
+                                <input type="email" name="email" id="email" required class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="max@unternehmen.de" />
+                            </div>
+                            <div class="space-y-1">
+                                <label for="phone" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Telefon</label>
+                                <input type="tel" name="phone" id="phone" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="+49 123 456789" />
+                            </div>
+                        </div>
+
+                        <div class="space-y-1">
+                            <label for="company" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Unternehmen</label>
+                            <input type="text" name="company" id="company" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="Firma GmbH" />
+                        </div>
+
+                        <div class="space-y-3 pt-2">
+                            <label class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Ihr Thema *</label>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <label class="flex items-center space-x-3 cursor-pointer group p-2 -ml-2 rounded hover:bg-[#F3F5F7] transition-colors">
+                                    <input type="radio" name="topic" value="beratung" class="form-radio text-[#071F36] focus:ring-[#071F36]" required>
+                                    <span class="text-[#2D3748] text-sm font-medium group-hover:text-[#071F36]">Beratung</span>
+                                </label>
+                                <label class="flex items-center space-x-3 cursor-pointer group p-2 -ml-2 rounded hover:bg-[#F3F5F7] transition-colors">
+                                    <input type="radio" name="topic" value="karriere" class="form-radio text-[#071F36] focus:ring-[#071F36]">
+                                    <span class="text-[#2D3748] text-sm font-medium group-hover:text-[#071F36]">Karriere</span>
+                                </label>
+                                <label class="flex items-center space-x-3 cursor-pointer group p-2 -ml-2 rounded hover:bg-[#F3F5F7] transition-colors">
+                                    <input type="radio" name="topic" value="partner" class="form-radio text-[#071F36] focus:ring-[#071F36]">
+                                    <span class="text-[#2D3748] text-sm font-medium group-hover:text-[#071F36]">Partnerkooperation</span>
+                                </label>
+                                <label class="flex items-center space-x-3 cursor-pointer group p-2 -ml-2 rounded hover:bg-[#F3F5F7] transition-colors">
+                                    <input type="radio" name="topic" value="sonstige" class="form-radio text-[#071F36] focus:ring-[#071F36]">
+                                    <span class="text-[#2D3748] text-sm font-medium group-hover:text-[#071F36]">Sonstiges</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="message" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Nachricht</label>
+                            <textarea name="message" id="message" rows="3" class="block w-full border border-[#E1E5E9] p-3 text-[#2D3748] placeholder-[#A0AEC0] focus:border-[#071F36] focus:outline-none transition-colors bg-[#F3F5F7] resize-none text-sm" placeholder="Wie können wir Sie unterstützen?"></textarea>
+                        </div>
+
+                        <div class="flex items-start">
+                            <input id="contact-consent" name="consent" type="checkbox" required class="mt-1 h-4 w-4 border-gray-300 text-[#071F36] focus:ring-[#071F36] rounded-none cursor-pointer" />
+                            <label for="contact-consent" class="ml-3 text-xs text-[#4A5563] leading-snug">
+                                Ich stimme der Verarbeitung meiner Daten gemäß der <a href="datenschutz.html" target="_blank" class="underline hover:text-[#071F36]">Datenschutzerklärung</a> zu.
+                            </label>
+                        </div>
+
+                        <button type="submit" id="contact-submit-btn" class="btn-primary w-full">
+                            <span id="contact-btn-text">Anfrage absenden</span>
+                            <span id="contact-btn-loading" class="hidden flex items-center">
+                                <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                                Wird gesendet...
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="newsletter-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-[#071F36]/90 backdrop-blur-sm transition-opacity opacity-0" id="newsletter-backdrop" onclick="closeNewsletterModal()"></div>
+        
+        <div class="relative bg-white w-full max-w-md shadow-2xl transform transition-all scale-95 opacity-0 translate-y-4 flex flex-col" id="newsletter-content">
+            
+            <div class="p-8 pb-0 flex justify-between items-start">
+                <div class="flex flex-col">
+                    <span class="text-xs font-bold uppercase text-[#071F36] tracking-wider mb-2">KBD Insights</span>
+                    <h3 class="text-2xl font-bold text-[#071F36] leading-tight">Exklusives Update</h3>
+                </div>
+                <button onclick="closeNewsletterModal()" class="text-[#4A5563] hover:text-[#071F36] transition-colors p-1 hover:bg-[#F3F5F7] -mr-2 -mt-2">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <div class="p-8 pt-6">
+                <div id="newsletter-success" class="hidden flex flex-col items-center justify-center py-8 text-center">
+                    <div class="w-12 h-12 bg-[#F3F5F7] flex items-center justify-center mb-4 rounded-none">
+                        <i data-lucide="check" class="text-[#071F36] w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-[#071F36] mb-2">Anmeldung erfolgreich</h4>
+                    <p class="text-[#4A5563] text-sm">Bitte prüfen Sie Ihren Posteingang zur Bestätigung.</p>
+                    <button onclick="closeNewsletterModal()" class="mt-6 text-sm underline text-[#071F36]">Schließen</button>
+                </div>
+
+                <form id="newsletter-form" onsubmit="handleNewsletterSubmit(event)" class="space-y-6">
+                    <p class="text-sm text-[#4A5563] leading-relaxed">
+                        Erhalten Sie kuratierte Einblicke in Prozessarchitektur und Automatisierung. Kein Spam, nur Substanz.
+                    </p>
+
+                    <div class="space-y-1">
+                        <label htmlFor="nl-firstname" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Vorname *</label>
+                        <input type="text" id="nl-firstname" name="firstname" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent text-base focus:border-[#071F36] transition-colors" placeholder="Max" required>
+                    </div>
+
+                    <div class="space-y-1">
+                        <label htmlFor="nl-lastname" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Nachname *</label>
+                        <input type="text" id="nl-lastname" name="lastname" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent text-base focus:border-[#071F36] transition-colors" placeholder="Mustermann" required>
+                    </div>
+
+                    <div class="space-y-1">
+                        <label htmlFor="nl-email" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">E-Mail *</label>
+                        <input type="email" id="nl-email" name="email" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent text-base focus:border-[#071F36] transition-colors" placeholder="max@unternehmen.de" required>
+                    </div>
+
+                    <div class="flex items-start pt-2">
+                        <input id="nl-consent" name="consent" type="checkbox" required class="mt-1 h-4 w-4 border-gray-300 text-[#071F36] focus:ring-[#071F36] rounded-none cursor-pointer accent-[#071F36]">
+                        <label htmlFor="nl-consent" class="ml-3 text-xs text-[#4A5563] leading-snug">
+                            Ich stimme der Verarbeitung meiner Daten gemäß der <a href="datenschutz.html" class="underline hover:text-[#071F36]" target="_blank">Datenschutzerklärung</a> zu.
+                        </label>
+                    </div>
+
+                    <button type="submit" id="nl-submit-btn" class="btn-primary w-full !py-3 mt-4">
+                        <span id="nl-btn-text">Jetzt anmelden</span>
+                        <span id="nl-btn-loading" class="hidden flex items-center">
+                            <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                            Verarbeite...
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Icons init
+        lucide.createIcons();
+
+        // --- WEBHOOK URLS ---
+        // Werte werden aus config.js geladen (window.KBD_CONFIG)
+        const N8N_CONTACT_WEBHOOK = (window.KBD_CONFIG && window.KBD_CONFIG.N8N_CONTACT_WEBHOOK) || '';
+        const N8N_NEWSLETTER_WEBHOOK = (window.KBD_CONFIG && window.KBD_CONFIG.N8N_NEWSLETTER_WEBHOOK) || '';
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const nav = document.getElementById('navbar');
+            menu.classList.toggle('hidden');
+            
+            if (!menu.classList.contains('hidden')) {
+                nav.classList.add('bg-white');
+                nav.classList.remove('bg-transparent');
+                const logo = document.getElementById('nav-logo');
+                if(logo) { logo.classList.remove('invert', 'brightness-0'); logo.style.filter = "none"; }
+                const btn = document.getElementById('menu-btn');
+                if(btn) { btn.classList.remove('text-white'); btn.classList.add('text-[#071F36]'); }
+            } else {
+                updateHeaderState();
+            }
+        }
+
+        // --- SCROLL HANDLER (Header Design) ---
+        function updateHeaderState() {
+            const nav = document.getElementById('navbar');
+            const logo = document.getElementById('nav-logo');
+            const navLinks = document.getElementById('nav-links');
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) return;
+
+            if (window.scrollY > 10) {
+                // SCROLLED DOWN
+                nav.classList.add('nav-scrolled');
+                nav.classList.remove('bg-transparent');
+                
+                if(logo) { logo.classList.remove('invert', 'brightness-0'); logo.style.filter = "none"; }
+                if(navLinks) { 
+                    navLinks.classList.remove('text-white'); 
+                    navLinks.classList.add('text-[#071F36]');
+                    navLinks.querySelectorAll('a').forEach(l => {
+                        if(l.style.borderBottom) l.style.borderColor = "#071F36";
+                    });
+                }
+                if(menuBtn) { menuBtn.classList.remove('text-white'); menuBtn.classList.add('text-[#071F36]'); }
+
+            } else {
+                // TOP OF PAGE
+                nav.classList.remove('nav-scrolled');
+                nav.classList.add('bg-transparent');
+
+                if(logo) { logo.classList.add('invert', 'brightness-0'); logo.style.filter = "brightness(0) invert(1)"; }
+                if(navLinks) { 
+                    navLinks.classList.add('text-white'); 
+                    navLinks.classList.remove('text-[#071F36]');
+                    navLinks.querySelectorAll('a').forEach(l => {
+                        if(l.style.borderBottom) l.style.borderColor = "#FFFFFF";
+                    });
+                }
+                if(menuBtn) { menuBtn.classList.add('text-white'); menuBtn.classList.remove('text-[#071F36]'); }
+            }
+        }
+        
+        const nav = document.getElementById('navbar');
+        if(nav) {
+            nav.style.transition = 'none';
+            updateHeaderState();
+            setTimeout(() => { nav.style.transition = ''; }, 100);
+        }
+        
+        window.addEventListener('scroll', updateHeaderState);
+
+        // --- MODAL LOGIC (CONTACT FORM) ---
+        function openContactModal(e) {
+            if(e) e.preventDefault();
+            const modal = document.getElementById('contact-modal');
+            const backdrop = document.getElementById('contact-backdrop');
+            const content = document.getElementById('contact-content');
+            
+            // Reset
+            document.getElementById('contact-form').reset();
+            document.getElementById('contact-form-container').classList.remove('hidden');
+            document.getElementById('contact-success').classList.add('hidden');
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; 
+
+            setTimeout(() => {
+                backdrop.classList.remove('opacity-0');
+                content.classList.remove('scale-95', 'opacity-0', 'translate-y-4');
+                content.classList.add('scale-100', 'opacity-100', 'translate-y-0');
+            }, 10);
+        }
+
+        function closeContactModal() {
+            const modal = document.getElementById('contact-modal');
+            const backdrop = document.getElementById('contact-backdrop');
+            const content = document.getElementById('contact-content');
+            
+            backdrop.classList.add('opacity-0');
+            content.classList.remove('scale-100', 'opacity-100', 'translate-y-0');
+            content.classList.add('scale-95', 'opacity-0', 'translate-y-4');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        async function handleContactFormSubmit(e) {
+            e.preventDefault();
+            const submitBtn = document.getElementById('contact-submit-btn');
+            const btnText = document.getElementById('contact-btn-text');
+            const btnLoading = document.getElementById('contact-btn-loading');
+            const form = e.target;
+            
+            if (form.b_address.value !== "") return; // Honeypot
+
+            submitBtn.disabled = true;
+            btnText.classList.add('hidden');
+            btnLoading.classList.remove('hidden');
+            
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch(N8N_CONTACT_WEBHOOK, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ ...data, submittedAt: new Date().toISOString(), url: window.location.href, type: 'contact_request_trust_center' }),
+                });
+
+                if (response.ok) {
+                    document.getElementById('contact-form-container').classList.add('hidden');
+                    document.getElementById('contact-success').classList.remove('hidden');
+                } else { throw new Error('Fehler'); }
+            } catch (error) {
+                console.error(error);
+                alert('Fehler bei der Übertragung. Bitte versuchen Sie es später erneut.');
+            } finally {
+                submitBtn.disabled = false;
+                btnText.classList.remove('hidden');
+                btnLoading.classList.add('hidden');
+            }
+        }
+
+        // --- MODAL LOGIC (NEWSLETTER) ---
+        function openNewsletterModal(e) {
+            if(e) e.preventDefault();
+            const modal = document.getElementById('newsletter-modal');
+            const backdrop = document.getElementById('newsletter-backdrop');
+            const content = document.getElementById('newsletter-content');
+            
+            // Reset state
+            document.getElementById('newsletter-form').reset();
+            document.getElementById('newsletter-form').classList.remove('hidden');
+            document.getElementById('newsletter-success').classList.add('hidden');
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; 
+
+            setTimeout(() => {
+                backdrop.classList.remove('opacity-0');
+                content.classList.remove('scale-95', 'opacity-0', 'translate-y-4');
+                content.classList.add('scale-100', 'opacity-100', 'translate-y-0');
+            }, 10);
+        }
+
+        function closeNewsletterModal() {
+            const modal = document.getElementById('newsletter-modal');
+            const backdrop = document.getElementById('newsletter-backdrop');
+            const content = document.getElementById('newsletter-content');
+            
+            backdrop.classList.add('opacity-0');
+            content.classList.remove('scale-100', 'opacity-100', 'translate-y-0');
+            content.classList.add('scale-95', 'opacity-0', 'translate-y-4');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        async function handleNewsletterSubmit(e) {
+            e.preventDefault();
+            const btn = document.getElementById('nl-submit-btn');
+            const text = document.getElementById('nl-btn-text');
+            const load = document.getElementById('nl-btn-loading');
+            const form = e.target;
+            const successDiv = document.getElementById('newsletter-success');
+            const formDiv = document.getElementById('newsletter-form');
+
+            btn.disabled = true;
+            text.classList.add('hidden');
+            load.classList.remove('hidden');
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch(N8N_NEWSLETTER_WEBHOOK, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        firstname: data.firstname,
+                        lastname: data.lastname, 
+                        email: data.email,
+                        source: 'newsletter_modal_trust_center',
+                        timestamp: new Date().toISOString()
+                    })
+                });
+
+                if(response.ok) {
+                    formDiv.classList.add('hidden');
+                    successDiv.classList.remove('hidden');
+                } else {
+                    throw new Error('API Error');
+                }
+            } catch (err) {
+                console.error(err);
+                alert('Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.');
+            } finally {
+                btn.disabled = false;
+                text.classList.remove('hidden');
+                load.classList.add('hidden');
+            }
+        }
+
+        // Close on Escape Key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                if(!document.getElementById('contact-modal').classList.contains('hidden')) closeContactModal();
+                if(!document.getElementById('newsletter-modal').classList.contains('hidden')) closeNewsletterModal();
+            }
+        });
+
+    </script>
+</body>
+</html>
+

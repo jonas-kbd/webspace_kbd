@@ -1,0 +1,21 @@
+# robots.txt für kassel-bd.de
+# Alle Suchmaschinen-Crawler sind willkommen
+
+User-agent: *
+Allow: /
+
+# Verzeichnisse, die nicht gecrawlt werden sollen
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+
+# Newsletter-Abmeldung nicht indexieren
+Disallow: /abmelden.html
+
+# Sitemap-Referenz für Suchmaschinen
+Sitemap: https://www.kassel-bd.de/sitemap.xml
+
+# Crawl-Delay (optional, höflich gegenüber Servern)
+Crawl-delay: 1
+
+

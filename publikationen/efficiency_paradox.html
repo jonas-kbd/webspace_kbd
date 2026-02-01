@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <title>KBD Research | Recruiting im Mittelstand 2025</title>
+    <meta name="description" content="Warum Fachkräfte lieber digital arbeiten als Zettel zu suchen. Ein Whitepaper von Kassel Business Digital zur Mitarbeitergewinnung.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.kassel-bd.de/publikationen/efficiency_paradox.html">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="KBD Research: Recruiting im Mittelstand 2025">
+    <meta property="og:description" content="Vergessen Sie den Obstkorb. Warum junge Talente analoge Betriebe meiden.">
+    <meta property="og:image" content="https://www.kassel-bd.de/icon.png">
+    <meta property="og:url" content="https://www.kassel-bd.de/publikationen/efficiency_paradox.html">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#071F36">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../config.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        kbdBlue: '#071F36',
+                        richGrey: '#2D3748',
+                        softGrey: '#4A5563',
+                        lightGrey: '#F3F5F7',
+                        borderGrey: '#E1E5E9',
+                        alertRed: '#E74C3C',
+                        successGreen: '#2ECC71',
+                    },
+                    boxShadow: {
+                        'premium': '0 20px 40px -5px rgba(7, 31, 54, 0.1)',
+                        'premium-hover': '0 25px 50px -12px rgba(7, 31, 54, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Fonts loaded globally via design-system.css (../../css/design-system.css) */
+
+        :root {
+            --kbd-blue: #071F36;
+            --rich-grey: #2D3748;
+            --soft-grey: #4A5563;
+            --white: #FFFFFF;
+        }
+
+        body {
+            background-color: #FFFFFF;
+            color: var(--rich-grey);
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.6;
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3 { color: var(--kbd-blue); letter-spacing: -0.01em; line-height: 1.2; }
+        h1 { font-size: 36px; md:font-size: 48px; lg:font-size: 56px; font-weight: 700; }
+        h2 { font-size: 28px; md:font-size: 36px; font-weight: 700; }
+        h3 { font-size: 24px; md:font-size: 28px; font-weight: 700; /* Changed from 600 */ }
+        h4 { font-size: 18px; md:font-size: 20px; font-weight: 700; /* Changed from 600 */ color: var(--rich-grey); line-height: 1.3; }
+
+        .text-body { color: var(--rich-grey); font-weight: 400; font-size: 17px; line-height: 1.65; }
+        .text-lead { font-size: 20px; line-height: 1.5; font-weight: 500; color: var(--kbd-blue); }
+
+        .eyebrow {
+            font-family: 'Inter', sans-serif; 
+            font-weight: 500; /* Changed from 600 */ 
+            font-size: 12px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase; 
+            color: var(--soft-grey); 
+            display: block; 
+            margin-bottom: 12px;
+        }
+
+        .quote-box {
+            border-left: 4px solid var(--kbd-blue);
+            padding-left: 24px;
+            margin: 32px 0;
+            font-style: italic;
+            color: var(--kbd-blue);
+            font-size: 19px;
+            background: #F9FAFB;
+            padding: 24px;
+        }
+
+        /* BUTTONS */
+        .btn-primary {
+            background-color: var(--kbd-blue);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500; 
+            font-size: 15px;
+            border-radius: 0px; 
+            padding: 12px 24px;
+            border: 1px solid var(--kbd-blue);
+            transition: all 0.2s ease;
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .btn-primary:hover {
+            background-color: #0A2A4A;
+            border-color: #0A2A4A;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(7, 31, 54, 0.15);
+        }
+
+        /* FORM STYLES */
+        .form-input {
+            border-bottom-width: 1px; border-color: #E1E5E9; background-color: transparent; transition: border-color 0.2s;
+        }
+        .form-input:focus { border-color: #071F36; outline: none; }
+        input[type="checkbox"], input[type="radio"] { accent-color: #071F36; cursor: pointer; }
+        .hp-hidden { display: none !important; visibility: hidden !important; }
+
+        /* NAV STYLES */
+        #navbar { background-color: #FFFFFF; border-bottom: 1px solid #E1E5E9; }
+        .nav-scrolled { box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05); }
+
+        .share-dropdown {
+            position: absolute; top: 100%; right: 0; margin-top: 8px; width: 220px;
+            background: white; border: 1px solid #E1E5E9; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            z-index: 60; padding: 8px 0; opacity: 0; transform: translateY(-10px);
+            pointer-events: none; transition: all 0.2s ease-out;
+        }
+        .share-dropdown.open { opacity: 1; transform: translateY(0); pointer-events: auto; }
+        .dropdown-item {
+            display: flex; align-items: center; gap: 12px; padding: 10px 16px;
+            color: #4A5563; font-size: 13px; transition: background-color 0.2s;
+            width: 100%; text-align: left;
+        }
+        .dropdown-item:hover { background-color: #F3F5F7; color: #071F36; }
+        .tool-btn {
+            display: flex; align-items: center; gap: 6px; padding: 8px 12px;
+            color: #4A5563; font-size: 12px; font-weight: 500; transition: all 0.2s; border-radius: 4px;
+        }
+        .tool-btn:hover, .tool-btn.active { background-color: #F3F5F7; color: #071F36; }
+
+        @media print {
+            #navbar, #contact, #contact-modal, #newsletter-modal { display: none !important; }
+            body { font-size: 12pt; color: black; }
+            main { padding-top: 0; }
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 h-16 md:h-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 h-full relative">
+            
+            <div id="nav-default" class="flex justify-between items-center h-full transition-all duration-300 ease-in-out absolute inset-x-0 px-6 lg:px-8 top-0">
+                <div class="flex items-center gap-3 z-50">
+                    <a href="../index.html" class="block relative group" aria-label="Zur Startseite">
+                        <img src="../icon.png" alt="KBD Logo" id="nav-logo" width="56" height="56" class="h-10 md:h-12 w-auto object-contain" />
+                    </a>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-8 text-[15px] font-medium tracking-wide text-[#071F36]" id="nav-links">
+                    <a href="../ueberuns.html" class="hover:opacity-80 transition-opacity">Über Uns</a>
+                    <a href="../leistungen.html" class="hover:opacity-80 transition-opacity">Leistungen</a>
+                    <a href="../technologie.html" class="hover:opacity-80 transition-opacity">Technologie</a>
+                    <a href="../erfolge.html" class="hover:opacity-80 transition-opacity">Erfolge</a>
+                    <a href="index.html" class="opacity-100 border-b-2 border-[#071F36] pb-1">Publikationen</a>
+                    <button type="button" onclick="openContactModal(event)" class="btn-primary ml-2 border-transparent !py-2 !px-5 !text-[14px]">
+                        Kontakt
+                    </button>
+                </div>
+
+                <button type="button" class="lg:hidden p-2 -mr-2 text-[#071F36]" onclick="toggleMobileMenu()" aria-label="Menu öffnen">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+
+            <div id="nav-reading" class="flex justify-between items-center h-full transition-all duration-300 ease-in-out opacity-0 pointer-events-none absolute inset-x-0 px-6 lg:px-8 top-0 bg-white">
+                <div class="flex items-center gap-4 overflow-hidden mr-4">
+                     <a href="index.html" class="text-[#071F36] hover:opacity-70 group flex items-center gap-2" aria-label="Zur Übersicht">
+                        <i data-lucide="arrow-left" class="w-5 h-5 group-hover:-translate-x-1 transition-transform"></i>
+                        <span class="text-sm font-medium hidden sm:inline">Übersicht</span>
+                    </a>
+                    <div class="h-8 w-px bg-[#E1E5E9]"></div>
+                    <span class="font-bold text-[#071F36] text-sm md:text-[15px] truncate max-w-[200px] md:max-w-md lg:max-w-xl">
+                        Recruiting im Mittelstand 2025
+                    </span>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <div class="hidden md:flex items-center gap-1">
+                        
+                        <div class="relative">
+                            <button onclick="toggleShareMenu(event)" class="tool-btn" id="share-trigger">
+                                <i data-lucide="share-2" class="w-4 h-4"></i>
+                                <span class="uppercase tracking-wide text-[10px] font-bold">Teilen</span>
+                            </button>
+                            <div id="share-dropdown" class="share-dropdown text-left">
+                                <button onclick="copyLink(this)" class="dropdown-item"><i data-lucide="link"></i> <span>Link kopieren</span></button>
+                                <a href="mailto:?subject=Leseempfehlung%3A%20Recruiting%20im%20Mittelstand&body=Hier%20ist%20eine%20spannende%20Analyse%20von%20KBD%3A%20https%3A%2F%2Fwww.kassel-bd.de%2Fpublikationen%2Fefficiency_paradox.html" class="dropdown-item"><i data-lucide="mail"></i> <span>Per E-Mail teilen</span></a>
+                                <a href="https://wa.me/?text=Leseempfehlung%3A%20Recruiting%20im%20Mittelstand%20https%3A%2F%2Fwww.kassel-bd.de%2Fpublikationen%2Fefficiency_paradox.html" target="_blank" class="dropdown-item"><i data-lucide="message-circle"></i> <span>WhatsApp</span></a>
+                                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.kassel-bd.de%2Fpublikationen%2Fefficiency_paradox.html" target="_blank" class="dropdown-item"><i data-lucide="linkedin"></i> <span>LinkedIn</span></a>
+                            </div>
+                        </div>
+
+                        <div class="h-4 w-px bg-[#E1E5E9] mx-2"></div>
+                        
+                        <button onclick="window.print()" class="tool-btn" title="Als PDF speichern">
+                            <i data-lucide="download" class="w-4 h-4"></i>
+                            <span class="uppercase tracking-wide text-[10px] font-bold">PDF</span>
+                        </button>
+                    </div>
+
+                    <button type="button" onclick="openContactModal(event)" class="btn-primary ml-2 border-transparent !py-2 !px-5 !text-[14px] hidden md:flex">
+                        Kontakt
+                    </button>
+                </div>
+
+                <div class="absolute bottom-0 left-0 h-[3px] bg-[#F3F5F7] w-full">
+                    <div id="reading-progress" class="h-full bg-[#071F36] w-0 transition-all duration-100 ease-out"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-2xl border-t border-gray-100 transform origin-top transition-all duration-300 ease-in-out z-40">
+            <div class="flex flex-col px-6 py-8 space-y-6 font-medium text-[#071F36]">
+                <a href="../ueberuns.html" class="block text-lg border-b border-gray-100 pb-4">Über Uns</a>
+                <a href="../leistungen.html" class="block text-lg border-b border-gray-100 pb-4">Leistungen</a>
+                <a href="../technologie.html" class="block text-lg border-b border-gray-100 pb-4">Technologie</a>
+                <a href="../erfolge.html" class="block text-lg border-b border-gray-100 pb-4">Erfolge</a>
+                <a href="index.html" class="block text-lg border-b border-gray-100 pb-4 font-bold text-[#071F36]">Publikationen</a>
+                <a href="../karriere.html" class="block text-lg border-b border-gray-100 pb-4">Karriere</a>
+                <button type="button" onclick="openContactModal(event)" class="w-full text-left text-lg font-bold text-[#071F36] pt-2">
+                    Kontakt
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-32 pb-20">
+        <article class="max-w-3xl mx-auto px-6 lg:px-8">
+            
+            <div class="mb-8 flex items-center gap-2 text-sm text-[#9CA3AF]">
+                <a href="index.html" class="hover:text-[#071F36] transition-colors">Publikationen</a>
+                <span class="text-[#E1E5E9]">/</span>
+                <span class="text-[#071F36] font-medium">Fachbericht</span>
+            </div>
+
+            <div class="mb-12">
+                <h1 class="mb-6 leading-tight tracking-tight text-[#071F36]">Recruiting im Mittelstand 2025: Warum Fachkräfte lieber digital arbeiten als Zettel zu suchen.</h1>
+                <p class="text-lead mb-8">Vergessen Sie den Obstkorb. Wer heute gute Fachkräfte gewinnen will, muss aufhören, sie mit Verwaltungsprozessen aus den 90ern zu quälen.</p>
+
+                <div class="flex flex-wrap items-center gap-y-4 gap-x-6 text-sm text-[#4A5563] border-t border-[#E1E5E9] pt-6 mb-12">
+                    <div class="flex items-center gap-2">
+                        <img src="../images/ueberuns/dayanueberuns.jpg" class="w-8 h-8 rounded-full grayscale object-cover object-top" alt="Dayan Hindermann">
+                        <a href="../ueberuns.html#gruender" class="font-medium text-[#071F36] hover:underline decoration-1 underline-offset-2">Dayan Hindermann</a>
+                    </div>
+                    <div class="hidden sm:block h-1 w-1 rounded-full bg-[#E1E5E9]"></div>
+                    <div>26. Dezember 2025</div>
+                    <div class="hidden sm:block h-1 w-1 rounded-full bg-[#E1E5E9]"></div>
+                    <div class="flex items-center gap-1"><i data-lucide="clock" class="w-3 h-3"></i> 5 Min. Lesezeit</div>
+                </div>
+            </div>
+
+            <div class="bg-[#F9FAFB] border border-[#E1E5E9] p-8 md:p-10 mb-16 relative shadow-sm">
+                <div class="absolute top-0 left-0 w-1 h-full bg-[#071F36]"></div>
+                <h4 class="eyebrow mb-6 flex items-center gap-2 text-[#071F36]"><i data-lucide="zap" class="w-4 h-4"></i> Management Abstract</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="mb-2 text-[#071F36]">Das Problem</h4>
+                        <p class="text-body text-sm">Der Markt ist leergefegt. Doch junge Talente kündigen nicht wegen des Geldes, sondern wegen "Kulturschocks": Analoge Zettelwirtschaft signalisiert Rückschritt und Zeitverschwendung.</p>
+                    </div>
+                    <div>
+                        <h4 class="mb-2 text-[#071F36]">Die Lösung</h4>
+                        <p class="text-body text-sm">Das Tablet ist das neue Aushängeschild. Digitale Prozesse sind kein IT-Thema, sondern das stärkste Recruiting-Argument für eine Generation, die privat alles per App regelt.</p>
+                    </div>
+                </div>
+            </div>
+
+            <section class="mb-16">
+                <span class="eyebrow">01 / Analyse</span>
+                <h2 class="mb-6">Es liegt nicht am Stundenlohn.</h2>
+                <p class="text-body mb-6">
+                    Es ist Zeit, digitale Tools als genauso wichtiges Werkzeug zu begreifen wie die traditionellen Arbeitsmittel. Der Markt ist leergefegt. <strong>Die aktuellen Zahlen bestätigen den anhaltenden Bewerbermangel dramatisch.</strong> Aber woran scheitern die wenigen Gespräche wirklich? Oder warum kündigen junge Talente in der Probezeit? Es liegt oft gar nicht am Stundenlohn.
+                </p>
+                <p class="text-body mb-8">
+                    Es liegt daran, dass junge Fachkräfte eine völlig andere Erwartung an Arbeit haben als etablierte Mitarbeiter, die seit Jahren mit analogen Prozessen arbeiten. Wer privat alles per App regelt, von der Überweisung bis zur Essensbestellung, für den ist ein analoger Mittelstandsbetrieb kein Arbeitsplatz, sondern ein Kulturschock.
+                </p>
+                
+                <div class="quote-box">
+                    "Wer heute noch sagt 'Das haben wir schon immer so gemacht', entscheidet sich aktiv gegen den Nachwuchs. Das Faxgerät ist keine Tradition, sondern ein Wettbewerbsnachteil."
+                </div>
+            </section>
+
+            <section class="mb-16">
+                <span class="eyebrow">02 / Die Realität</span>
+                <h2 class="mb-6">Die stumpfe Säge im Büro.</h2>
+                <p class="text-body mb-6">
+                    Kein vernünftiger Vorgesetzter würde seinem Mitarbeiter unbrauchbare Werkzeuge in die Hand drücken und Top-Ergebnisse erwarten. Das wäre respektlos gegenüber der Arbeitszeit des Mitarbeiters. Doch genau das passiert täglich. <strong>Analysen warnen explizit vor dieser "Zettelwirtschaft", die moderne KI-Potenziale im Keim erstickt.</strong> Stundenzettel werden handschriftlich ausgefüllt, Projektdaten auf Schmierzettel gekritzelt und Urlaubsanträge verstauben in Ablagen.
+                </p>
+                <p class="text-body mb-8">
+                    Für junge Mitarbeiter ist diese Zettelwirtschaft wie die stumpfe Säge. Die Botschaft, die bei ihnen ankommt: <strong>"Deine Zeit ist uns nichts wert. Quäl dich ruhig mit ineffizienten Abläufen."</strong>
+                </p>
+                <p class="text-body mb-8">
+                    Man hört oft den Vorwurf, die jungen Leute seien nicht mehr belastbar. Das ist falsch. Sie sind sehr wohl belastbar, wenn die Arbeit Sinn ergibt. Was sie nicht tolerieren, ist sinnlose Zeitverschwendung. Wenn ein Mitarbeiter nach einem harten Tag noch 30 Minuten im Büro sitzen muss, um Rapportzettel abzutippen, ist das purer Frust. Wenn er stattdessen vor Ort am Tablet auf "Senden" drückt und um 16:30 Uhr wirklich Feierabend hat, ist das Lebensqualität.
+                </p>
+            </section>
+
+            <section class="mb-20">
+                <span class="eyebrow">03 / Strategie</span>
+                <h2 class="mb-6">Digitalisierung ist das stärkste Argument.</h2>
+                <p class="text-body mb-6">
+                    Ein Betrieb, der digital sauber aufgestellt ist, hat im Bewerbungsgespräch Argumente, die mehr wiegen als 50 Cent mehr Lohn. <strong>Laut aktueller Bitkom-Studie (2025) bestätigen 70% der Betriebe, dass digitale Tools ihre Attraktivität als Arbeitgeber direkt steigern.</strong> Es geht um echte Pünktlichkeit und weniger Stress. Digitale Prozesse verhindern Fehler, bevor sie passieren. Niemand wird gerne angeranzt, weil er eine Ziffer vergessen hat oder eine Handschrift nicht lesen kann.
+                </p>
+                <ul class="list-none space-y-4 mb-8">
+                    <li class="flex items-start gap-3">
+                        <div class="w-6 h-6 rounded-full bg-[#E1E5E9] flex items-center justify-center shrink-0 mt-1 text-[#071F36] font-bold text-xs"><i data-lucide="check" class="w-3 h-3"></i></div>
+                        <div>
+                            <strong class="text-[#071F36]">Stolz statt Scham.</strong>
+                            <span class="text-sm text-[#4A5563] block mt-1">Einem Kunden Projektdaten digital zu präsentieren erzeugt Stolz. Mit verknittertem Papier zu hantieren erzeugt Scham. Und Mitarbeiter wollen stolz auf ihre Firma sein.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div class="w-6 h-6 rounded-full bg-[#E1E5E9] flex items-center justify-center shrink-0 mt-1 text-[#071F36] font-bold text-xs"><i data-lucide="check" class="w-3 h-3"></i></div>
+                        <div>
+                            <strong class="text-[#071F36]">Investition in Abläufe.</strong>
+                            <span class="text-sm text-[#4A5563] block mt-1">Investieren Sie nicht nur in neue Transporter, sondern in saubere Abläufe. Zeigen Sie dem Bewerber im ersten Gespräch Ihre Software. Die Botschaft ist klar: Hier arbeiten Profis. Und genau dort wird er unterschreiben.</span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="mb-20">
+                <div class="bg-[#071F36] text-white p-10 md:p-12 text-center rounded-[0px] relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-3xl -mr-10 -mt-10"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-bold mb-4 text-white">Lassen Sie uns den Status Quo prüfen.</h3>
+                        <p class="text-white/80 mb-8 max-w-xl mx-auto text-sm md:text-base leading-relaxed">
+                            Sie wissen oft selbst am besten, wo es im Getriebe knirscht, finden aber im Tagesgeschäft keine Zeit für die Lösung. Wir werfen gemeinsam einen Blick in Ihren "Maschinenraum", analysieren Ihre aktuellen Abläufe und zeigen Ihnen ganz konkrete Möglichkeiten, wie Sie Ihren Betrieb digital attraktiver machen.
+                        </p>
+                        <button onclick="openContactModal(event)" class="bg-white text-[#071F36] font-bold py-3 px-8 hover:bg-[#F3F5F7] transition-all hover:scale-105 shadow-lg border border-transparent">
+                            Digital-Check vereinbaren
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-16 pt-8 border-t border-[#E1E5E9]">
+                <h4 class="text-xs font-bold uppercase tracking-widest text-[#9CA3AF] mb-6">Quellen & Referenzen</h4>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3 text-sm text-[#4A5563]">
+                        <span class="text-[#071F36] font-semibold min-w-[24px]">[1]</span>
+                        <a href="https://www.bitkom.org/Presse/Presseinformation/Digitale-Services-Handwerk" target="_blank" class="hover:text-[#071F36] hover:underline transition-colors leading-relaxed">
+                            Bitkom e. V.: "Digitale Services im Mittelstand", Presseinformation vom 14.03.2025. (7 von 10 Betrieben sehen Digitalisierung als Hebel für Arbeitgeberattraktivität).
+                        </a>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-[#4A5563]">
+                        <span class="text-[#071F36] font-semibold min-w-[24px]">[2]</span>
+                        <a href="https://ifh.wiwi.uni-goettingen.de" target="_blank" class="hover:text-[#071F36] hover:underline transition-colors leading-relaxed">
+                            ifh Göttingen (2024): "Digitalisierung im Mittelstand zwischen Zettelwirtschaft und KI: Eine Status Quo-Analyse", Forschungsbericht Nr. 23.
+                        </a>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-[#4A5563]">
+                        <span class="text-[#071F36] font-semibold min-w-[24px]">[3]</span>
+                        <a href="https://www.zdh.de" target="_blank" class="hover:text-[#071F36] hover:underline transition-colors leading-relaxed">
+                            Studien zur Digitalisierung im deutschen Mittelstand: "Sonderumfrage Digitalisierung 2024", Berlin.
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="mb-24 pt-16 border-t border-[#E1E5E9]">
+                <span class="eyebrow mb-12">Über den Autor</span>
+                <div class="max-w-2xl">
+                    
+                    <div class="flex flex-col sm:flex-row gap-6 items-start border border-[#E1E5E9] p-8 hover:border-[#071F36] transition-colors group cursor-pointer">
+                        <a href="../ueberuns.html#gruender" class="flex-shrink-0">
+                            <img src="../images/ueberuns/dayanueberuns.jpg" 
+                                 class="w-20 h-20 rounded-full object-cover grayscale object-[center_20%] group-hover:grayscale-0 transition-all duration-300 shadow-md" 
+                                 alt="Dayan Hindermann">
+                        </a>
+                        <div>
+                            <div class="mb-3">
+                                <a href="../ueberuns.html#gruender" class="text-lg font-bold text-[#071F36] group-hover:text-blue-700 transition-colors">Dayan Hindermann</a>
+                                <p class="text-xs uppercase tracking-wider text-[#9CA3AF] font-medium mt-1">CTO & Co-Founder</p>
+                            </div>
+                            <p class="text-sm text-[#4A5563] leading-relaxed">Leitet die technologische Entwicklung und Systemarchitektur. Spezialisiert auf Middleware-Lösungen und API-Design.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer id="contact" class="bg-white text-[#071F36] border-t border-[#E1E5E9] font-inter mt-auto relative z-10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20 items-start">
+                
+                <div class="lg:col-span-3 flex flex-col items-start">
+                    <a href="../index.html" class="block mb-8 group" aria-label="Zur Startseite">
+                        <img src="../icon.png" alt="KBD Logo" width="56" height="56" class="h-12 md:h-14 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity" />
+                    </a>
+                    <p class="text-[#4A5563] text-sm leading-relaxed max-w-md mb-8">
+                        Wir automatisieren Ihre Abläufe intelligent, damit Ihre Mitarbeiter mehr Zeit für echte Wertschöpfung haben.     </p>
+                    <div class="flex items-center gap-6">
+                        <a href="https://www.linkedin.com/company/kassel-bd" target="_blank" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="KBD auf LinkedIn"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        <a href="https://www.instagram.com/kassel_bd/" target="_blank" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="KBD auf Instagram"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Unternehmen</h4>
+                    <ul class="space-y-3 text-[#2D3748] text-sm">
+                        <li><a href="../ueberuns.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Über Uns</a></li>
+                        <li><a href="../karriere.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Karriere</a></li>
+                        <li><a href="../partner.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Partner</a></li>
+                        <li><a href="../kontakt.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Expertise</h4>
+                    <ul class="space-y-3 text-[#2D3748] text-sm">
+                        <li><a href="../leistungen.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Leistungen</a></li>
+                        <li><a href="../technologie.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Technologie</a></li>
+                        <li><a href="../erfolge.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Erfolge</a></li>
+                        <li><a href="index.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all font-bold text-[#071F36]">Publikationen</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Werte & Recht</h4>
+                    <ul class="space-y-3 text-[#2D3748] text-sm">
+                        <li><a href="../verantwortung.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Verantwortung</a></li>
+                        <li><a href="../impressum.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Impressum</a></li>
+                        <li><a href="../datenschutz.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Datenschutz</a></li>
+                        <li><a href="../trust-center.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Trust Center</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-3">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Insights</h4>
+                    <p class="text-[#4A5563] text-xs mb-4 leading-relaxed max-w-xs">Exklusive Marktanalysen und strategische Impulse. Substanz für Ihre Entscheidungen.</p>
+                    <button onclick="openNewsletterModal(event)" class="btn-primary w-full max-w-xs !py-3">Anmelden</button>
+                </div>
+            </div>
+
+            <div class="border-t border-[#E1E5E9] pt-8 flex flex-col md:flex-row justify-between items-center text-[#9CA3AF] text-xs">
+                <p>&copy; 2025 Kassel Business Digital.</p>
+                <p class="mt-2 md:mt-0 font-medium">Excellence in Process Architecture.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="contact-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-[#071F36]/90 backdrop-blur-sm transition-opacity opacity-0" id="contact-backdrop" onclick="closeContactModal()"></div>
+        <div class="relative bg-white w-full max-w-2xl shadow-2xl transform transition-all scale-95 opacity-0 translate-y-4 flex flex-col max-h-[90vh]" id="contact-content">
+            <div class="p-4 border-b border-[#E1E5E9] flex justify-between items-center bg-[#F3F5F7] shrink-0">
+                <span class="text-xs font-bold uppercase text-[#071F36] tracking-wider ml-2">Kontakt aufnehmen</span>
+                <button onclick="closeContactModal()" class="text-[#4A5563] hover:text-[#071F36] transition-colors p-2 hover:bg-[#E1E5E9]">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <div class="p-6 overflow-y-auto bg-white">
+                <div id="contact-success" class="hidden flex flex-col items-center justify-center py-12 text-center h-full">
+                    <div class="w-16 h-16 bg-[#071F36] flex items-center justify-center mb-6 rounded-full">
+                        <i data-lucide="check" class="text-white w-8 h-8"></i>
+                    </div>
+                    <h2 class="text-[#071F36] text-2xl font-bold tracking-tight mb-4">Vielen Dank</h2>
+                    <p class="text-[#2D3748] text-base leading-relaxed max-w-md">
+                        Ihre Anfrage wurde erfolgreich übermittelt. Ein Berater wird sich in Kürze bei Ihnen melden.
+                    </p>
+                    <button onclick="closeContactModal()" class="mt-8 btn-primary">
+                        Schließen
+                    </button>
+                </div>
+
+                <div id="contact-form-container">
+                    <form id="contact-form" onsubmit="handleContactFormSubmit(event)" class="space-y-6">
+                        <div class="hp-hidden">
+                            <input type="text" name="b_address" tabindex="-1" value="" autocomplete="off">
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-1">
+                                <label for="firstname" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Vorname *</label>
+                                <input type="text" name="firstname" id="firstname" required class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="Max" />
+                            </div>
+                            <div class="space-y-1">
+                                <label for="lastname" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Nachname *</label>
+                                <input type="text" name="lastname" id="lastname" required class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="Mustermann" />
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-1">
+                                <label for="email" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">E-Mail *</label>
+                                <input type="email" name="email" id="email" required class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="max@unternehmen.de" />
+                            </div>
+                            <div class="space-y-1">
+                                <label for="phone" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Telefon</label>
+                                <input type="tel" name="phone" id="phone" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="+49 123 456789" />
+                            </div>
+                        </div>
+
+                        <div class="space-y-1">
+                            <label for="company" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Unternehmen</label>
+                            <input type="text" name="company" id="company" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="Firma GmbH" />
+                        </div>
+
+                        <div class="space-y-3 pt-2">
+                            <label class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Ihr Thema *</label>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <label class="flex items-center space-x-3 cursor-pointer group p-2 -ml-2 rounded hover:bg-[#F3F5F7] transition-colors">
+                                    <input type="radio" name="topic" value="beratung" class="form-radio text-[#071F36] focus:ring-[#071F36]" required>
+                                    <span class="text-[#2D3748] text-sm font-medium group-hover:text-[#071F36]">Beratung</span>
+                                </label>
+                                <label class="flex items-center space-x-3 cursor-pointer group p-2 -ml-2 rounded hover:bg-[#F3F5F7] transition-colors">
+                                    <input type="radio" name="topic" value="karriere" class="form-radio text-[#071F36] focus:ring-[#071F36]">
+                                    <span class="text-[#2D3748] text-sm font-medium group-hover:text-[#071F36]">Karriere</span>
+                                </label>
+                                <label class="flex items-center space-x-3 cursor-pointer group p-2 -ml-2 rounded hover:bg-[#F3F5F7] transition-colors">
+                                    <input type="radio" name="topic" value="partner" class="form-radio text-[#071F36] focus:ring-[#071F36]">
+                                    <span class="text-[#2D3748] text-sm font-medium group-hover:text-[#071F36]">Partnerkooperation</span>
+                                </label>
+                                <label class="flex items-center space-x-3 cursor-pointer group p-2 -ml-2 rounded hover:bg-[#F3F5F7] transition-colors">
+                                    <input type="radio" name="topic" value="sonstige" class="form-radio text-[#071F36] focus:ring-[#071F36]">
+                                    <span class="text-[#2D3748] text-sm font-medium group-hover:text-[#071F36]">Sonstiges</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="message" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Nachricht</label>
+                            <textarea name="message" id="message" rows="3" class="block w-full border border-[#E1E5E9] p-3 text-[#2D3748] placeholder-[#A0AEC0] focus:border-[#071F36] focus:outline-none transition-colors bg-[#F3F5F7] resize-none text-sm" placeholder="Wie können wir Sie unterstützen?"></textarea>
+                        </div>
+
+                        <div class="flex items-start">
+                            <input id="contact-consent" name="consent" type="checkbox" required class="mt-1 h-4 w-4 border-gray-300 text-[#071F36] focus:ring-[#071F36] rounded-none cursor-pointer" />
+                            <label for="contact-consent" class="ml-3 text-xs text-[#4A5563] leading-snug">
+                                Ich stimme der Verarbeitung meiner Daten gemäß der <a href="../datenschutz.html" target="_blank" class="underline hover:text-[#071F36]">Datenschutzerklärung</a> zu.
+                            </label>
+                        </div>
+
+                        <button type="submit" id="contact-submit-btn" class="btn-primary w-full">
+                            <span id="contact-btn-text">Anfrage absenden</span>
+                            <span id="contact-btn-loading" class="hidden flex items-center">
+                                <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                                Wird gesendet...
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="newsletter-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-[#071F36]/90 backdrop-blur-sm transition-opacity opacity-0" id="newsletter-backdrop" onclick="closeNewsletterModal()"></div>
+        
+        <div class="relative bg-white w-full max-w-md shadow-2xl transform transition-all scale-95 opacity-0 translate-y-4 flex flex-col" id="newsletter-content">
+            
+            <div class="p-8 pb-0 flex justify-between items-start">
+                <div class="flex flex-col">
+                    <span class="text-xs font-bold uppercase text-[#071F36] tracking-wider mb-2">KBD Insights</span>
+                    <h3 class="text-2xl font-bold text-[#071F36] leading-tight">Exklusives Update</h3>
+                </div>
+                <button onclick="closeNewsletterModal()" class="text-[#4A5563] hover:text-[#071F36] transition-colors p-1 hover:bg-[#F3F5F7] -mr-2 -mt-2">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <div class="p-8 pt-6">
+                <div id="newsletter-success" class="hidden flex flex-col items-center justify-center py-8 text-center">
+                    <div class="w-12 h-12 bg-[#F3F5F7] flex items-center justify-center mb-4 rounded-none">
+                        <i data-lucide="check" class="text-[#071F36] w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-[#071F36] mb-2">Anmeldung erfolgreich</h4>
+                    <p class="text-[#4A5563] text-sm">Bitte prüfen Sie Ihren Posteingang zur Bestätigung.</p>
+                    <button onclick="closeNewsletterModal()" class="mt-6 text-sm underline text-[#071F36]">Schließen</button>
+                </div>
+
+                <form id="newsletter-form" onsubmit="handleNewsletterSubmit(event)" class="space-y-6">
+                    <p class="text-sm text-[#4A5563] leading-relaxed">
+                        Erhalten Sie kuratierte Einblicke in Prozessarchitektur und Automatisierung. Kein Spam, nur Substanz.
+                    </p>
+
+                    <div class="space-y-1">
+                        <label htmlFor="nl-firstname" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Vorname *</label>
+                        <input type="text" id="nl-firstname" name="firstname" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent text-base focus:border-[#071F36] transition-colors" placeholder="Max" required>
+                    </div>
+
+                    <div class="space-y-1">
+                        <label htmlFor="nl-lastname" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Nachname *</label>
+                        <input type="text" id="nl-lastname" name="lastname" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent text-base focus:border-[#071F36] transition-colors" placeholder="Mustermann" required>
+                    </div>
+
+                    <div class="space-y-1">
+                        <label htmlFor="nl-email" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">E-Mail *</label>
+                        <input type="email" id="nl-email" name="email" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent text-base focus:border-[#071F36] transition-colors" placeholder="max@unternehmen.de" required>
+                    </div>
+
+                    <div class="flex items-start pt-2">
+                        <input id="nl-consent" name="consent" type="checkbox" required class="mt-1 h-4 w-4 border-gray-300 text-[#071F36] focus:ring-[#071F36] rounded-none cursor-pointer accent-[#071F36]">
+                        <label htmlFor="nl-consent" class="ml-3 text-xs text-[#4A5563] leading-snug">
+                            Ich stimme der Verarbeitung meiner Daten gemäß der <a href="../datenschutz.html" class="underline hover:text-[#071F36]" target="_blank">Datenschutzerklärung</a> zu.
+                        </label>
+                    </div>
+
+                    <button type="submit" id="nl-submit-btn" class="btn-primary w-full !py-3 mt-4">
+                        <span id="nl-btn-text">Jetzt anmelden</span>
+                        <span id="nl-btn-loading" class="hidden flex items-center">
+                            <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                            Verarbeite...
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        // --- WEBHOOK URLS ---
+        // Werte werden aus config.js geladen (window.KBD_CONFIG)
+        const N8N_CONTACT_WEBHOOK = (window.KBD_CONFIG && window.KBD_CONFIG.N8N_CONTACT_WEBHOOK) || '';
+        const N8N_NEWSLETTER_WEBHOOK = (window.KBD_CONFIG && window.KBD_CONFIG.N8N_NEWSLETTER_WEBHOOK) || '';
+        
+        // --- SCROLL LOGIC ---
+        function handleScroll() {
+            const nav = document.getElementById('navbar');
+            const navDefault = document.getElementById('nav-default');
+            const navReading = document.getElementById('nav-reading');
+            const progressBar = document.getElementById('reading-progress');
+            const footer = document.getElementById('contact');
+            const winScroll = window.scrollY;
+
+            // Reading Progress Bar logic
+            if (footer) {
+                const maxScroll = Math.max(0, footer.offsetTop - window.innerHeight);
+                const percentage = Math.min(100, Math.max(0, (winScroll / maxScroll) * 100));
+                if(progressBar) progressBar.style.width = percentage + "%";
+            }
+
+            // Shadow on Scroll
+            if (winScroll > 20) { nav.classList.add('nav-scrolled'); } 
+            else { nav.classList.remove('nav-scrolled'); }
+
+            // Switch to Reading Header
+            if (winScroll > 120) {
+                navDefault.classList.add('opacity-0', 'pointer-events-none');
+                navReading.classList.add('opacity-100', 'pointer-events-auto');
+            } else {
+                navDefault.classList.remove('opacity-0', 'pointer-events-none');
+                navReading.classList.remove('opacity-100', 'pointer-events-auto');
+            }
+        }
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+
+        // --- MODAL LOGIC ---
+        function toggleModal(id, open) {
+            const modal = document.getElementById(id);
+            const backdrop = document.getElementById(id.replace('modal', 'backdrop'));
+            const content = document.getElementById(id.replace('modal', 'content'));
+            
+            if(open) {
+                if(id === 'contact-form') document.getElementById('contact-form').reset();
+                if(id === 'newsletter-form') document.getElementById('newsletter-form').reset();
+                
+                modal.classList.remove('hidden'); 
+                document.body.style.overflow = 'hidden';
+                setTimeout(() => { 
+                    backdrop.classList.remove('opacity-0'); 
+                    content.classList.remove('scale-95', 'opacity-0', 'translate-y-4');
+                    content.classList.add('scale-100', 'opacity-100', 'translate-y-0');
+                }, 10);
+            } else {
+                backdrop.classList.add('opacity-0'); 
+                content.classList.remove('scale-100', 'opacity-100', 'translate-y-0');
+                content.classList.add('scale-95', 'opacity-0', 'translate-y-4');
+                setTimeout(() => { 
+                    modal.classList.add('hidden'); 
+                    document.body.style.overflow = ''; 
+                }, 300);
+            }
+        }
+
+        function openContactModal(e) { if(e) e.preventDefault(); toggleModal('contact-modal', true); }
+        function closeContactModal() { toggleModal('contact-modal', false); }
+        function openNewsletterModal(e) { if(e) e.preventDefault(); toggleModal('newsletter-modal', true); }
+        function closeNewsletterModal() { toggleModal('newsletter-modal', false); }
+        
+        // --- MOBILE MENU ---
+        function toggleMobileMenu() { 
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // --- SHARE LOGIC ---
+        function toggleShareMenu(e) { 
+            e.stopPropagation(); 
+            document.getElementById('share-dropdown').classList.toggle('open'); 
+            document.getElementById('share-trigger').classList.toggle('active'); 
+        }
+        window.onclick = () => { 
+            const d = document.getElementById('share-dropdown'); 
+            if(d) { d.classList.remove('open'); document.getElementById('share-trigger').classList.remove('active'); } 
+        };
+        function copyLink(btn) { 
+            const el = document.createElement('textarea'); 
+            el.value = window.location.href; 
+            document.body.appendChild(el); 
+            el.select(); 
+            document.execCommand('copy'); 
+            document.body.removeChild(el); 
+            const orig = btn.innerHTML; 
+            btn.innerHTML = `<i data-lucide="check" class="text-[#2ECC71]"></i> <span class="text-[#2ECC71]">Kopiert!</span>`; 
+            lucide.createIcons(); 
+            setTimeout(() => { btn.innerHTML = orig; lucide.createIcons(); }, 2000); 
+        }
+
+        // --- FORM HANDLING (N8N) ---
+        async function handleContactFormSubmit(e) {
+            e.preventDefault();
+            const submitBtn = document.getElementById('contact-submit-btn');
+            const btnText = document.getElementById('contact-btn-text');
+            const btnLoading = document.getElementById('contact-btn-loading');
+            const form = e.target;
+            
+            if (form.b_address.value !== "") return; // Honeypot
+
+            submitBtn.disabled = true;
+            btnText.classList.add('hidden');
+            btnLoading.classList.remove('hidden');
+            
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch(N8N_CONTACT_WEBHOOK, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ ...data, submittedAt: new Date().toISOString(), url: window.location.href, type: 'contact_request_article' }),
+                });
+
+                if (response.ok) {
+                    document.getElementById('contact-form-container').classList.add('hidden');
+                    document.getElementById('contact-success').classList.remove('hidden');
+                } else { throw new Error('Fehler'); }
+            } catch (error) {
+                console.error(error);
+                alert('Fehler bei der Übertragung.');
+            } finally {
+                submitBtn.disabled = false;
+                btnText.classList.remove('hidden');
+                btnLoading.classList.add('hidden');
+            }
+        }
+
+        async function handleNewsletterSubmit(e) {
+            e.preventDefault();
+            const btn = document.getElementById('nl-submit-btn');
+            const text = document.getElementById('nl-btn-text');
+            const load = document.getElementById('nl-btn-loading');
+            const form = e.target;
+            const successDiv = document.getElementById('newsletter-success');
+            const formDiv = document.getElementById('newsletter-form');
+
+            btn.disabled = true;
+            text.classList.add('hidden');
+            load.classList.remove('hidden');
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch(N8N_NEWSLETTER_WEBHOOK, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        firstname: data.firstname,
+                        lastname: data.lastname, 
+                        email: data.email,
+                        source: 'newsletter_modal_article',
+                        timestamp: new Date().toISOString()
+                    })
+                });
+
+                if(response.ok) {
+                    formDiv.classList.add('hidden');
+                    successDiv.classList.remove('hidden');
+                } else { throw new Error('API Error'); }
+            } catch (err) {
+                console.error(err);
+                alert('Ein Fehler ist aufgetreten.');
+            } finally {
+                btn.disabled = false;
+                text.classList.remove('hidden');
+                load.classList.add('hidden');
+            }
+        }
+
+        // Close on Escape Key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                if(!document.getElementById('contact-modal').classList.contains('hidden')) closeContactModal();
+                if(document.getElementById('newsletter-modal') && !document.getElementById('newsletter-modal').classList.contains('hidden')) closeNewsletterModal();
+            }
+        });
+    </script>
+</body>
+</html>

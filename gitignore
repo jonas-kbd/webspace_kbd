@@ -1,0 +1,23 @@
+# Konfigurationsdateien mit sensiblen Daten
+config.js
+
+# Umgebungsvariablen
+.env
+.env.local
+.env.*.local
+
+# Editor-Dateien
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS-Dateien
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+

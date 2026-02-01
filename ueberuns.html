@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    
+    <title>Kassel Business Digital | Über Uns & Team</title>
+    <meta name="description" content="Jonas Meyer und Dayan Hindermann – Wir verstehen Betriebswirtschaft und Technologie. Intelligente Automatisierung für den Mittelstand. Keine Berater-Folien, funktionierende Lösungen.">
+    
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.kassel-bd.de/ueberuns.html">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#071F36">
+
+    <!-- Performance: Preconnect to external resources -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kassel Business Digital | Über Uns & Team">
+    <meta property="og:description" content="Betriebswirtschaft trifft Technologie. Automatisierung, die funktioniert. Lernen Sie unser Team kennen.">
+    <meta property="og:image" content="https://www.kassel-bd.de/icon.png">
+    <meta property="og:url" content="https://www.kassel-bd.de/ueberuns.html">
+    <meta property="og:locale" content="de_DE">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.kassel-bd.de/ueberuns.html">
+    <meta name="twitter:title" content="Kassel Business Digital | Über Uns & Team">
+    <meta name="twitter:description" content="Betriebswirtschaft trifft Technologie. Automatisierung, die funktioniert.">
+    <meta name="twitter:image" content="https://www.kassel-bd.de/icon.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Kassel Business Digital",
+      "url": "https://www.kassel-bd.de",
+      "logo": "https://www.kassel-bd.de/icon.png",
+      "sameAs": [
+        "https://www.linkedin.com/company/kassel-bd",
+        "https://www.instagram.com/kassel_bd/"
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="config.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        kbdBlue: '#071F36',
+                        richGrey: '#2D3748',
+                        softGrey: '#4A5563',
+                        lightGrey: '#F3F5F7',
+                        bracketBlue: '#071F36'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Fonts loaded globally via design-system.css */
+
+        /* --- GLOBAL VARIABLES --- */
+        :root {
+            --kbd-blue: #071F36;
+            --rich-grey: #2D3748;
+            --soft-grey: #4A5563;
+            --white: #FFFFFF;
+            --bracket-blue: #071F36;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--rich-grey);
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.6;
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4, h5, h6 { color: var(--kbd-blue); letter-spacing: -0.01em; line-height: 1.15; }
+        h1 { font-weight: 700; } h2 { font-weight: 700; } h3 { font-weight: 700; /* Changed from 600 */ }
+
+        .text-body { color: var(--rich-grey); font-weight: 400; font-size: 17px; line-height: 1.6; }
+        .text-lead { font-size: 24px; font-weight: 400; line-height: 1.4; color: var(--kbd-blue); }
+        .eyebrow {
+            font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: 0.02em;
+            text-transform: uppercase; color: var(--soft-grey); font-size: 13px;
+        }
+
+        /* BUTTONS */
+        .btn-primary {
+            background-color: var(--kbd-blue);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500; 
+            font-size: 16px;
+            border-radius: 0px; 
+            padding: 14px 24px;
+            border: 1px solid var(--kbd-blue);
+            transition: all 0.2s ease;
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            cursor: pointer;
+            text-align: center;
+            min-height: 44px; /* Touch target minimum */
+            touch-action: manipulation; /* Disable double-tap zoom */
+        }
+        .btn-primary:hover {
+            background-color: #0A2A4A;
+            border-color: #0A2A4A;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(7, 31, 54, 0.15);
+        }
+        .btn-primary:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--kbd-blue);
+            border: 1px solid var(--kbd-blue);
+            font-weight: 500;
+            font-size: 16px;
+            border-radius: 0px;
+            padding: 14px 24px;
+            transition: all 0.3s ease;
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            min-height: 44px; /* Touch target minimum */
+            touch-action: manipulation; /* Disable double-tap zoom */
+        }
+        .btn-outline:hover { background-color: #F3F5F7; }
+
+        .btn-white {
+            background-color: var(--white);
+            color: var(--kbd-blue);
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            border-radius: 0px;
+            padding: 14px 24px;
+            border: 1px solid var(--white);
+            transition: all 0.2s ease;
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            cursor: pointer;
+            text-align: center;
+            min-height: 44px; /* Touch target minimum */
+            touch-action: manipulation; /* Disable double-tap zoom */
+        }
+        .btn-white:hover {
+            background-color: #F3F5F7;
+            border-color: #F3F5F7;
+            color: var(--kbd-blue);
+            transform: translateY(-1px);
+        }
+
+        /* HERO BRACKETS */
+        .mckinsey-bracket-bl-container {
+            position: absolute; top: 20px; left: -12px; bottom: -12px; width: calc(100% + 200px); pointer-events: none; z-index: 0;
+        }
+        .mckinsey-bracket-bl-vertical { position: absolute; left: 0; top: 0; bottom: 0; width: 12px; background-color: var(--bracket-blue); }
+        .mckinsey-bracket-bl-horizontal { position: absolute; left: 0; bottom: 0; height: 12px; width: 100%; background-color: var(--bracket-blue); }
+
+        .mckinsey-bracket-tr-container {
+            position: absolute; top: -12px; right: -12px; width: 180px; height: 120px; pointer-events: none; z-index: 0;
+        }
+        .mckinsey-bracket-tr-horizontal { position: absolute; top: 0; right: 0; width: 100%; height: 12px; background-color: var(--bracket-blue); }
+        .mckinsey-bracket-tr-vertical { position: absolute; top: 0; right: 0; height: 100%; width: 12px; background-color: var(--bracket-blue); }
+
+        /* UTILITIES */
+        .section-padding { padding-top: 128px; padding-bottom: 128px; }
+        .modal-open { overflow: hidden; }
+        
+        /* HEADER SCROLL STATE */
+        .nav-scrolled { background-color: rgba(255, 255, 255, 0.98); backdrop-filter: blur(12px); box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05); }
+
+        @media (max-width: 768px) {
+            .section-padding { padding-top: 80px; padding-bottom: 80px; }
+            .mckinsey-bracket-bl-container, .mckinsey-bracket-tr-container { display: none; }
+            .mobile-reset-margin { margin-top: 0 !important; }
+        }
+
+        /* FORM INPUT STYLES (NEW) */
+        .form-input {
+            border-bottom-width: 1px;
+            border-color: #E1E5E9;
+            background-color: transparent;
+            transition: border-color 0.2s;
+        }
+        .form-input:focus {
+            border-color: #071F36;
+            outline: none;
+        }
+        input[type="checkbox"], input[type="radio"] {
+            accent-color: #071F36;
+            cursor: pointer;
+        }
+        input[type="radio"] {
+            width: 1.25em;
+            height: 1.25em;
+            border: 1px solid #D1D5DB;
+        }
+        input[type="radio"]:checked {
+            border-color: #071F36;
+            background-color: #071F36;
+        }
+        .hp-hidden { display: none !important; visibility: hidden !important; }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen selection:bg-[#071F36] selection:text-white">
+
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-transparent">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20 transition-all duration-300" id="nav-container">
+                
+                <div class="flex items-center gap-3 z-50">
+                    <a href="index.html" class="block relative group" aria-label="Zur Startseite">
+                        <img src="icon.png" alt="KBD Logo" id="nav-logo" width="56" height="56" class="h-10 md:h-12 w-auto object-contain transition-all duration-300 brightness-0 invert" style="will-change: filter;" />
+                    </a>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-8 text-[15px] font-medium tracking-wide text-white" id="nav-links">
+                    
+                    <a href="ueberuns.html" class="nav-item relative py-2 opacity-100 border-b-2 border-white pb-1 font-semibold">Über Uns</a>
+                    
+                    <a href="leistungen.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Leistungen</a>
+                    <a href="technologie.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Technologie</a>
+                    <a href="erfolge.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Erfolge</a>
+                    <a href="publikationen/index.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Publikationen</a>
+                    
+                    <button type="button" onclick="openContactModal(event)" class="btn-primary ml-2 border-white/10 !py-2 !px-5 !text-[14px]">
+                        Kontakt
+                    </button>
+                </div>
+
+                <button type="button" class="lg:hidden text-white p-3 -mr-2 transition-colors duration-300 focus:outline-none min-h-[44px] min-w-[44px]" style="touch-action: manipulation;" id="menu-btn" onclick="toggleMobileMenu()" aria-label="Menu öffnen">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-2xl border-t border-gray-100 transform origin-top transition-all duration-300 ease-in-out z-40">
+            <div class="flex flex-col px-6 py-8 space-y-6 font-medium text-[#071F36]">
+                <a href="ueberuns.html" class="block text-lg border-b border-gray-100 pb-4 font-bold text-[#071F36]">Über Uns</a>
+                <a href="leistungen.html" class="block text-lg border-b border-gray-100 pb-4">Leistungen</a>
+                <a href="technologie.html" class="block text-lg border-b border-gray-100 pb-4">Technologie</a>
+                <a href="erfolge.html" class="block text-lg border-b border-gray-100 pb-4">Erfolge</a>
+                <a href="publikationen/index.html" class="block text-lg border-b border-gray-100 pb-4">Publikationen</a>
+                <a href="karriere.html" class="block text-lg border-b border-gray-100 pb-4">Karriere</a>
+                
+                <button type="button" onclick="openContactModal(event)" class="w-full text-left text-lg font-bold text-[#071F36] pt-2">
+                    Kontakt
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+        
+        <div class="relative w-full bg-[#F3F5F7]">
+            <div class="relative w-full h-[65vh] min-h-[600px] overflow-hidden z-0">
+                <img src="images/ueberuns/jonasdayanueberuns.png" 
+                     alt="Kassel Business Digital Founders & Team" 
+                     class="absolute inset-0 w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-1000"
+                     loading="eager"
+fetchpriority="high"
+  
+                     style="z-index: 1;" />
+                
+                <div class="absolute inset-0 bg-black/30" style="z-index: 2;"></div>
+
+                <div class="absolute inset-0 flex items-center" style="z-index: 3;">
+                    <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+                        <div class="max-w-4xl pb-12 lg:pb-32">
+                            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] drop-shadow-md">
+                                Die Köpfe hinter<br>der Struktur.
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white relative z-10">
+                <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                        <div class="lg:col-span-6 relative -mt-24 lg:-mt-32 mb-20 z-10 mobile-reset-margin">
+                            
+                            <div class="mckinsey-bracket-bl-container">
+                                <div class="mckinsey-bracket-bl-vertical"></div>
+                                <div class="mckinsey-bracket-bl-horizontal"></div>
+                            </div>
+                            <div class="mckinsey-bracket-tr-container">
+                                <div class="mckinsey-bracket-tr-horizontal"></div>
+                                <div class="mckinsey-bracket-tr-vertical"></div>
+                            </div>
+
+                            <div class="bg-white p-10 lg:p-12 shadow-sm relative z-20">
+                                <span class="eyebrow mb-4 block text-[#071F36]">Unternehmensprofil</span>
+                                <h3 class="text-2xl font-bold text-[#071F36] mb-6 leading-tight">
+                                    Technische Expertise. Zwei Rollen.
+                                </h3>
+                                <p class="text-base text-[#4A5563] leading-relaxed mb-8">
+                                    KBD wurde von zwei angehenden Wirtschaftsinformatikern gegründet, die beide technische Experten sind: Einer analysiert und konzipiert die Lösung, der andere entwickelt und integriert die Systeme. Wir verstehen die Technik vollständig – von der Analyse bis zur Implementierung.
+                                </p>
+                                
+                                <button onclick="openContactModal(event)" class="text-[#071F36] font-semibold text-sm border-b border-[#071F36] pb-0.5 hover:opacity-70 transition-opacity">
+                                    Kennenlernen vereinbaren
+                                </button>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-6"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="section-padding bg-white border-t border-[#E1E5E9]" id="founders">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="mb-16 max-w-2xl">
+                    <span class="eyebrow mb-4 block">Gründer & Geschäftsführung</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#071F36]">Zwei Technik-Experten. Zwei Rollen.</h2>
+                    <p class="mt-4 text-[#4A5563]">Zwei angehende Wirtschaftsinformatiker mit technischer Expertise. Einer analysiert und strukturiert Prozesse, der andere entwickelt und integriert Systeme. Beide verstehen Technologie – mit unterschiedlichen Schwerpunkten.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-start">
+                    
+                    <div class="group">
+                        <div class="aspect-[4/5] w-full bg-[#F3F5F7] mb-8 overflow-hidden relative">
+                            <img src="images/ueberuns/jonasueberuns.jpg" 
+                                 alt="Jonas Meyer" 
+                                 class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out grayscale hover:grayscale-0">
+                        </div>
+                        <h3 class="text-2xl font-bold text-[#071F36] mb-2">Jonas Meyer</h3>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-[#4A5563] mb-6 block border-l-2 border-[#071F36] pl-3">Prozess-Analyse & Konzeption</span>
+                        
+                        <div class="space-y-4 text-body">
+                            <p>
+                                Angehender Wirtschaftsinformatiker mit Fokus auf Prozess-Analyse und technische Konzeption. Ich identifiziere, welche Abläufe automatisiert werden sollten und wie die technische Lösung aussehen muss.
+                            </p>
+                            <p>
+                                Meine Aufgabe: Ich analysiere Ihre Prozesse, definiere die Anforderungen und konzipiere die technische Lösung. Ich sorge dafür, dass wir das richtige Problem mit der richtigen Technik lösen.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-6 border-t border-[#E1E5E9] flex items-center gap-6">
+                            <a href="https://www.linkedin.com/in/jonas-meyer-28a0a7381/" target="_blank" rel="noopener noreferrer" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="Jonas Meyer auf LinkedIn">
+                                <i data-lucide="linkedin" class="w-5 h-5"></i>
+                            </a>
+                            <a href="https://www.instagram.com/jonas.msy/" target="_blank" rel="noopener noreferrer" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="Jonas Meyer auf Instagram">
+                                <i data-lucide="instagram" class="w-5 h-5"></i>
+                            </a>
+                            <a href="mailto:meyer@kassel-bd.de" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="E-Mail an Jonas Meyer">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </a>
+                            <a href="https://wa.me/491738548529" target="_blank" rel="noopener noreferrer" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="WhatsApp an Jonas Meyer">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="group md:mt-16">
+                        <div class="aspect-[4/5] w-full bg-[#F3F5F7] mb-8 overflow-hidden relative">
+                            <img src="images/ueberuns/dayanueberuns.jpg" 
+                                 alt="Dayan Hindermann" 
+                                 class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out grayscale hover:grayscale-0">
+                        </div>
+                        <h3 class="text-2xl font-bold text-[#071F36] mb-2">Dayan Hindermann</h3>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-[#4A5563] mb-6 block border-l-2 border-[#071F36] pl-3">Software-Entwicklung & Integration</span>
+                        
+                        <div class="space-y-4 text-body">
+                            <p>
+                                Angehender Wirtschaftsinformatiker mit Schwerpunkt auf Software-Entwicklung und System-Integration. Ich setze die Automatisierungen technisch um und verbinde Ihre bestehenden Systeme.
+                            </p>
+                            <p>
+                                Meine Aufgabe: Ich entwickle die Schnittstellen, baue die Workflows und integriere Ihre Tools. Clean Code, wartbare Architektur und funktionierende Lösungen – keine aufgeblähten Theoriekonstrukte.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-6 border-t border-[#E1E5E9] flex items-center gap-6">
+                            <a href="https://www.linkedin.com/in/dayan-hindermann-76714b37b/" target="_blank" rel="noopener noreferrer" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="Dayan Hindermann auf LinkedIn">
+                                <i data-lucide="linkedin" class="w-5 h-5"></i>
+                            </a>
+                            <a href="mailto:hindermann@kassel-bd.de" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="E-Mail an Dayan Hindermann">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </a>
+                            <a href="https://wa.me/491726186987" target="_blank" rel="noopener noreferrer" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="WhatsApp an Dayan Hindermann">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-white border-t border-[#E1E5E9]">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="mb-16 max-w-3xl">
+                    <span class="eyebrow mb-4 block">Unser Anspruch</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#071F36] mb-4">Wir übernehmen Verantwortung. Auch durch Verzicht.</h2>
+                    <p class="text-[#4A5563] text-lg leading-relaxed">
+                        In einer Branche, die von "schnellen Lösungen" lebt, erlauben wir uns den Luxus der Sorgfalt. Wir nehmen Mandate nur an, wenn wir einen signifikanten Mehrwert garantieren können.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                    
+                    <div class="border-l-4 border-[#E1E5E9] pl-8 py-4">
+                        <h3 class="text-xl font-bold text-[#071F36] mb-6">Wann wir der richtige Partner sind</h3>
+                        <ul class="space-y-6">
+                            <li class="flex items-start gap-4">
+                                <div class="w-1.5 h-1.5 bg-[#071F36] mt-2 flex-shrink-0"></div>
+                                <p class="text-base text-[#4A5563] leading-relaxed">Sie suchen nach operativer Exzellenz und stabilen Prozessen, nicht nur nach "neuer Software".</p>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="w-1.5 h-1.5 bg-[#071F36] mt-2 flex-shrink-0"></div>
+                                <p class="text-base text-[#4A5563] leading-relaxed">Sie sind bereit, etablierte Abläufe kritisch zu hinterfragen, um echte Effizienz zu gewinnen.</p>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="w-1.5 h-1.5 bg-[#071F36] mt-2 flex-shrink-0"></div>
+                                <p class="text-base text-[#4A5563] leading-relaxed">Sie legen Wert auf Unabhängigkeit von großen Software-Herstellern.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="border-l-4 border-[#E1E5E9] pl-8 py-4">
+                        <h3 class="text-xl font-bold text-[#071F36] mb-6">Wann Sie nicht mit uns arbeiten sollten</h3>
+                        <ul class="space-y-6">
+                            <li class="flex items-start gap-4">
+                                <div class="w-1.5 h-1.5 bg-[#071F36] mt-2 flex-shrink-0"></div>
+                                <p class="text-base text-[#4A5563] leading-relaxed">Sie suchen eine Werbeagentur für Social Media Marketing oder reines Webdesign.</p>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="w-1.5 h-1.5 bg-[#071F36] mt-2 flex-shrink-0"></div>
+                                <p class="text-base text-[#4A5563] leading-relaxed">Sie wollen "schnell mal eine App" entwickeln, ohne die zugrunde liegenden Prozesse anzupassen.</p>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="w-1.5 h-1.5 bg-[#071F36] mt-2 flex-shrink-0"></div>
+                                <p class="text-base text-[#4A5563] leading-relaxed">Sie erwarten Dienstleister, die Ihre Entscheidungen nur abnicken und keine Widerworte geben.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-white">
+            <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#071F36] mb-6">Prüfen Sie die Substanz.</h2>
+                <p class="text-[#4A5563] text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+                    Lassen Sie uns herausfinden, wo Sie stehen. In einem ersten Gespräch ordnen wir Ihre Herausforderungen strategisch ein – ohne Vertriebsdruck, dafür mit fachlicher Substanz.
+                </p>
+                <div class="flex justify-center">
+                    <button onclick="openContactModal(event)" class="btn-primary">
+                        Gespräch vereinbaren
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact" class="bg-white text-[#071F36] border-t border-[#E1E5E9] font-inter mt-auto relative z-10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20 items-start">
+                
+                <div class="lg:col-span-3 flex flex-col items-start">
+                    <a href="index.html" class="block mb-8 group" aria-label="Zur Startseite">
+                        <img src="icon.png" alt="KBD Logo" width="56" height="56" class="h-12 md:h-14 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity" />
+                    </a>
+                    <p class="text-[#4A5563] text-sm leading-relaxed max-w-md mb-8">
+                        Wir automatisieren Ihre Abläufe intelligent, damit Ihre Mitarbeiter mehr Zeit für echte Wertschöpfung haben.   <div class="flex items-center gap-6">
+                        <a href="https://www.linkedin.com/company/kassel-bd" target="_blank" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="KBD auf LinkedIn"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        <a href="https://www.instagram.com/kassel_bd/" target="_blank" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="KBD auf Instagram"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Unternehmen</h4>
+                    <ul class="space-y-3 text-[#2D3748] text-sm">
+                        <li><a href="ueberuns.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all font-bold text-[#071F36]">Über Uns</a></li>
+                        <li><a href="karriere.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Karriere</a></li>
+                        <li><a href="partner.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Partner</a></li>
+                        <li><a href="kontakt.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Expertise</h4>
+                    <ul class="space-y-3 text-[#2D3748] text-sm">
+                        <li><a href="leistungen.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Leistungen</a></li>
+                        <li><a href="technologie.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Technologie</a></li>
+                        <li><a href="erfolge.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Erfolge</a></li>
+                        <li><a href="publikationen/index.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Publikationen</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Werte & Recht</h4>
+                    <ul class="space-y-3 text-[#2D3748] text-sm">
+                        <li><a href="verantwortung.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Verantwortung</a></li>
+                        <li><a href="impressum.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Impressum</a></li>
+                        <li><a href="datenschutz.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Datenschutz</a></li>
+                        <li><a href="trust-center.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Trust Center</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-3">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Insights</h4>
+                    <p class="text-[#4A5563] text-xs mb-4 leading-relaxed max-w-xs">Exklusive Marktanalysen und strategische Impulse. Substanz für Ihre Entscheidungen.</p>
+                    <button onclick="openNewsletterModal(event)" class="btn-primary w-full max-w-xs !py-3">Anmelden</button>
+                </div>
+            </div>
+
+            <div class="border-t border-[#E1E5E9] pt-8 flex flex-col md:flex-row justify-between items-center text-[#9CA3AF] text-xs">
+                <p>&copy; 2026 Kassel Business Digital.</p>
+                <p class="mt-2 md:mt-0 font-medium">Excellence in Process Architecture.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="contact-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-[#071F36]/90 backdrop-blur-sm transition-opacity opacity-0" id="contact-backdrop" onclick="closeContactModal()"></div>
+        <div class="relative bg-white w-full max-w-2xl shadow-2xl transform transition-all scale-95 opacity-0 translate-y-4 flex flex-col max-h-[90vh]" id="contact-content">
+            <div class="p-4 border-b border-[#E1E5E9] flex justify-between items-center bg-[#F3F5F7] shrink-0">
+                <span class="text-xs font-bold uppercase text-[#071F36] tracking-wider ml-2">Kontakt aufnehmen</span>
+                <button onclick="closeContactModal()" class="text-[#4A5563] hover:text-[#071F36] transition-colors p-2 hover:bg-[#E1E5E9]">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <div class="p-6 overflow-y-auto bg-white">
+                
+                <div id="contact-success" class="hidden flex flex-col items-center justify-center py-12 text-center h-full">
+                    <div class="w-16 h-16 bg-[#071F36] flex items-center justify-center mb-6 rounded-full">
+                        <i data-lucide="check" class="text-white w-8 h-8"></i>
+                    </div>
+                    <h2 class="text-[#071F36] text-2xl font-bold tracking-tight mb-4">Vielen Dank</h2>
+                    <p class="text-[#2D3748] text-base leading-relaxed max-w-md">
+                        Ihre Anfrage wurde erfolgreich übermittelt. Ein Berater wird sich in Kürze bei Ihnen melden.
+                    </p>
+                    <button onclick="closeContactModal()" class="mt-8 btn-primary">
+                        Schließen
+                    </button>
+                </div>
+
+                <div id="contact-form-container">
+                    <form id="contact-form" onsubmit="handleContactFormSubmit(event)" class="space-y-6">
+                        
+                        <div class="hp-hidden">
+                            <input type="text" name="b_address" tabindex="-1" value="" autocomplete="off">
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-1">
+                                <label for="firstname" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Vorname *</label>
+                                <input type="text" name="firstname" id="firstname" required class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="Max" />
+                            </div>
+                            <div class="space-y-1">
+                                <label for="lastname" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Nachname *</label>
+                                <input type="text" name="lastname" id="lastname" required class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="Mustermann" />
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-1">
+                                <label for="email" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">E-Mail *</label>
+                                <input type="email" name="email" id="email" required class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="max@unternehmen.de" />
+                            </div>
+                            <div class="space-y-1">
+                                <label for="phone" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Telefon</label>
+                                <input type="tel" name="phone" id="phone" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="+49 123 456789" />
+                            </div>
+                        </div>
+
+                        <div class="space-y-1">
+                            <label for="company" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Unternehmen</label>
+                            <input type="text" name="company" id="company" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="Firma GmbH" />
+                        </div>
+
+                        <div class="space-y-3 pt-2">
+                            <label class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Ihr Thema *</label>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <label class="flex items-center space-x-3 cursor-pointer group p-2 -ml-2 rounded hover:bg-[#F3F5F7] transition-colors">
+                                    <input type="radio" name="topic" value="beratung" class="form-radio text-[#071F36] focus:ring-[#071F36]" required>
+                                    <span class="text-[#2D3748] text-sm font-medium group-hover:text-[#071F36]">Beratung</span>
+                                </label>
+                                <label class="flex items-center space-x-3 cursor-pointer group p-2 -ml-2 rounded hover:bg-[#F3F5F7] transition-colors">
+                                    <input type="radio" name="topic" value="karriere" class="form-radio text-[#071F36] focus:ring-[#071F36]">
+                                    <span class="text-[#2D3748] text-sm font-medium group-hover:text-[#071F36]">Karriere</span>
+                                </label>
+                                <label class="flex items-center space-x-3 cursor-pointer group p-2 -ml-2 rounded hover:bg-[#F3F5F7] transition-colors">
+                                    <input type="radio" name="topic" value="partner" class="form-radio text-[#071F36] focus:ring-[#071F36]">
+                                    <span class="text-[#2D3748] text-sm font-medium group-hover:text-[#071F36]">Partnerkooperation</span>
+                                </label>
+                                <label class="flex items-center space-x-3 cursor-pointer group p-2 -ml-2 rounded hover:bg-[#F3F5F7] transition-colors">
+                                    <input type="radio" name="topic" value="sonstige" class="form-radio text-[#071F36] focus:ring-[#071F36]">
+                                    <span class="text-[#2D3748] text-sm font-medium group-hover:text-[#071F36]">Sonstiges</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="message" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Nachricht</label>
+                            <textarea name="message" id="message" rows="3" class="block w-full border border-[#E1E5E9] p-3 text-[#2D3748] placeholder-[#A0AEC0] focus:border-[#071F36] focus:outline-none transition-colors bg-[#F3F5F7] resize-none text-sm" placeholder="Wie können wir Sie unterstützen?"></textarea>
+                        </div>
+
+                        <div class="flex items-start">
+                            <input id="contact-consent" name="consent" type="checkbox" required class="mt-1 h-4 w-4 border-gray-300 text-[#071F36] focus:ring-[#071F36] rounded-none cursor-pointer" />
+                            <label for="contact-consent" class="ml-3 text-xs text-[#4A5563] leading-snug">
+                                Ich stimme der Verarbeitung meiner Daten gemäß der <a href="datenschutz.html" target="_blank" class="underline hover:text-[#071F36]">Datenschutzerklärung</a> zu.
+                            </label>
+                        </div>
+
+                        <button type="submit" id="contact-submit-btn" class="btn-primary w-full">
+                            <span id="contact-btn-text">Anfrage absenden</span>
+                            <span id="contact-btn-loading" class="hidden flex items-center">
+                                <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                                Wird gesendet...
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="newsletter-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-[#071F36]/90 backdrop-blur-sm transition-opacity opacity-0" id="newsletter-backdrop" onclick="closeNewsletterModal()"></div>
+        
+        <div class="relative bg-white w-full max-w-md shadow-2xl transform transition-all scale-95 opacity-0 translate-y-4 flex flex-col" id="newsletter-content">
+            
+            <div class="p-8 pb-0 flex justify-between items-start">
+                <div class="flex flex-col">
+                    <span class="text-xs font-bold uppercase text-[#071F36] tracking-wider mb-2">KBD Insights</span>
+                    <h3 class="text-2xl font-bold text-[#071F36] leading-tight">Exklusives Update</h3>
+                </div>
+                <button onclick="closeNewsletterModal()" class="text-[#4A5563] hover:text-[#071F36] transition-colors p-1 hover:bg-[#F3F5F7] -mr-2 -mt-2">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <div class="p-8 pt-6">
+                <div id="newsletter-success" class="hidden flex flex-col items-center justify-center py-8 text-center">
+                    <div class="w-12 h-12 bg-[#F3F5F7] flex items-center justify-center mb-4 rounded-none">
+                        <i data-lucide="check" class="text-[#071F36] w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-[#071F36] mb-2">Anmeldung erfolgreich</h4>
+                    <p class="text-[#4A5563] text-sm">Bitte prüfen Sie Ihren Posteingang zur Bestätigung.</p>
+                    <button onclick="closeNewsletterModal()" class="mt-6 text-sm underline text-[#071F36]">Schließen</button>
+                </div>
+
+                <form id="newsletter-form" onsubmit="handleNewsletterSubmit(event)" class="space-y-6">
+                    <p class="text-sm text-[#4A5563] leading-relaxed">
+                        Erhalten Sie kuratierte Einblicke in Prozessarchitektur und Automatisierung. Kein Spam, nur Substanz.
+                    </p>
+
+                    <div class="space-y-1">
+                        <label htmlFor="nl-firstname" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Vorname *</label>
+                        <input type="text" id="nl-firstname" name="firstname" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent text-base focus:border-[#071F36] transition-colors" placeholder="Max" required>
+                    </div>
+
+                    <div class="space-y-1">
+                        <label htmlFor="nl-lastname" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Nachname *</label>
+                        <input type="text" id="nl-lastname" name="lastname" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent text-base focus:border-[#071F36] transition-colors" placeholder="Mustermann" required>
+                    </div>
+
+                    <div class="space-y-1">
+                        <label htmlFor="nl-email" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">E-Mail *</label>
+                        <input type="email" id="nl-email" name="email" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent text-base focus:border-[#071F36] transition-colors" placeholder="max@unternehmen.de" required>
+                    </div>
+
+                    <div class="flex items-start pt-2">
+                        <input id="nl-consent" name="consent" type="checkbox" required class="mt-1 h-4 w-4 border-gray-300 text-[#071F36] focus:ring-[#071F36] rounded-none cursor-pointer accent-[#071F36]">
+                        <label htmlFor="nl-consent" class="ml-3 text-xs text-[#4A5563] leading-snug">
+                            Ich stimme der Verarbeitung meiner Daten gemäß der <a href="https://kassel-bd.de/datenschutz.html" class="underline hover:text-[#071F36]" target="_blank">Datenschutzerklärung</a> zu.
+                        </label>
+                    </div>
+
+                    <button type="submit" id="nl-submit-btn" class="btn-primary w-full !py-3 mt-4">
+                        <span id="nl-btn-text">Jetzt anmelden</span>
+                        <span id="nl-btn-loading" class="hidden flex items-center">
+                            <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                            Verarbeite...
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize icons when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+                if (typeof lucide !== 'undefined') lucide.createIcons();
+            });
+        } else {
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const nav = document.getElementById('navbar');
+            menu.classList.toggle('hidden');
+            
+            if (!menu.classList.contains('hidden')) {
+                nav.classList.add('bg-white');
+                nav.classList.remove('bg-transparent');
+                
+                // Switch logo color for white background
+                const logo = document.getElementById('nav-logo');
+                if(logo) { 
+                    logo.classList.remove('invert', 'brightness-0'); 
+                    logo.style.filter = "none"; 
+                }
+
+                const btn = document.getElementById('menu-btn');
+                if(btn) { btn.classList.remove('text-white'); btn.classList.add('text-[#071F36]'); }
+            } else {
+                handleScroll();
+            }
+        }
+
+        function handleScroll() {
+            const nav = document.getElementById('navbar');
+            const logo = document.getElementById('nav-logo');
+            const navLinks = document.getElementById('nav-links');
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) return;
+
+            if (window.scrollY > 10) {
+                nav.classList.add('nav-scrolled');
+                nav.classList.remove('bg-transparent');
+                
+                if(logo) { 
+                    logo.classList.remove('invert', 'brightness-0'); 
+                    logo.style.filter = "none"; 
+                }
+                if(navLinks) { 
+                    navLinks.classList.remove('text-white'); 
+                    navLinks.classList.add('text-[#071F36]');
+                }
+                if(menuBtn) { menuBtn.classList.remove('text-white'); menuBtn.classList.add('text-[#071F36]'); }
+            } else {
+                nav.classList.remove('nav-scrolled');
+                nav.classList.add('bg-transparent');
+                
+                if(logo) { 
+                    logo.classList.add('invert', 'brightness-0'); 
+                    logo.style.filter = "brightness(0) invert(1)"; 
+                }
+                if(navLinks) { 
+                    navLinks.classList.add('text-white'); 
+                    navLinks.classList.remove('text-[#071F36]');
+                }
+                if(menuBtn) { menuBtn.classList.add('text-white'); menuBtn.classList.remove('text-[#071F36]'); }
+            }
+        }
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+
+        // --- N8N WEBHOOKS ---
+        // Werte werden aus config.js geladen (window.KBD_CONFIG)
+        const N8N_CONTACT_WEBHOOK = (window.KBD_CONFIG && window.KBD_CONFIG.N8N_CONTACT_WEBHOOK) || '';
+        const N8N_NEWSLETTER_WEBHOOK = (window.KBD_CONFIG && window.KBD_CONFIG.N8N_NEWSLETTER_WEBHOOK) || '';
+
+        // --- CONTACT MODAL LOGIC ---
+        function openContactModal(e) {
+            if(e) e.preventDefault();
+            const modal = document.getElementById('contact-modal');
+            const backdrop = document.getElementById('contact-backdrop');
+            const content = document.getElementById('contact-content');
+            
+            // Reset
+            document.getElementById('contact-form').reset();
+            document.getElementById('contact-form-container').classList.remove('hidden');
+            document.getElementById('contact-success').classList.add('hidden');
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => {
+                backdrop.classList.remove('opacity-0');
+                content.classList.remove('scale-95', 'opacity-0', 'translate-y-4');
+                content.classList.add('scale-100', 'opacity-100', 'translate-y-0');
+            }, 10);
+        }
+
+        function closeContactModal() {
+            const modal = document.getElementById('contact-modal');
+            const backdrop = document.getElementById('contact-backdrop');
+            const content = document.getElementById('contact-content');
+            
+            backdrop.classList.add('opacity-0');
+            content.classList.remove('scale-100', 'opacity-100', 'translate-y-0');
+            content.classList.add('scale-95', 'opacity-0', 'translate-y-4');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        async function handleContactFormSubmit(e) {
+            e.preventDefault();
+            const submitBtn = document.getElementById('contact-submit-btn');
+            const btnText = document.getElementById('contact-btn-text');
+            const btnLoading = document.getElementById('contact-btn-loading');
+            const form = e.target;
+            
+            // Honeypot check
+            if (form.b_address.value !== "") return;
+
+            submitBtn.disabled = true;
+            btnText.classList.add('hidden');
+            btnLoading.classList.remove('hidden');
+            
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch(N8N_CONTACT_WEBHOOK, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ ...data, submittedAt: new Date().toISOString(), url: window.location.href, type: 'contact_request' }),
+                });
+
+                if (response.ok) {
+                    document.getElementById('contact-form-container').classList.add('hidden');
+                    document.getElementById('contact-success').classList.remove('hidden');
+                } else { throw new Error('Fehler'); }
+            } catch (error) {
+                console.error(error);
+                alert('Fehler bei der Übertragung. Bitte versuchen Sie es später erneut.');
+            } finally {
+                submitBtn.disabled = false;
+                btnText.classList.remove('hidden');
+                btnLoading.classList.add('hidden');
+            }
+        }
+
+        // --- NEWSLETTER MODAL LOGIC (KBD CUSTOM) ---
+        function openNewsletterModal(e) {
+            if(e) e.preventDefault();
+            const modal = document.getElementById('newsletter-modal');
+            const backdrop = document.getElementById('newsletter-backdrop');
+            const content = document.getElementById('newsletter-content');
+            
+            // Reset state
+            document.getElementById('newsletter-form').reset();
+            document.getElementById('newsletter-form').classList.remove('hidden');
+            document.getElementById('newsletter-success').classList.add('hidden');
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; 
+
+            setTimeout(() => {
+                backdrop.classList.remove('opacity-0');
+                content.classList.remove('scale-95', 'opacity-0', 'translate-y-4');
+                content.classList.add('scale-100', 'opacity-100', 'translate-y-0');
+            }, 10);
+        }
+
+        function closeNewsletterModal() {
+            const modal = document.getElementById('newsletter-modal');
+            const backdrop = document.getElementById('newsletter-backdrop');
+            const content = document.getElementById('newsletter-content');
+            
+            backdrop.classList.add('opacity-0');
+            content.classList.remove('scale-100', 'opacity-100', 'translate-y-0');
+            content.classList.add('scale-95', 'opacity-0', 'translate-y-4');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        // NEWSLETTER SUBMIT LOGIC (Automated)
+        async function handleNewsletterSubmit(e) {
+            e.preventDefault();
+            const btn = document.getElementById('nl-submit-btn');
+            const text = document.getElementById('nl-btn-text');
+            const load = document.getElementById('nl-btn-loading');
+            const form = e.target;
+            const successDiv = document.getElementById('newsletter-success');
+            const formDiv = document.getElementById('newsletter-form');
+
+            btn.disabled = true;
+            text.classList.add('hidden');
+            load.classList.remove('hidden');
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                // Send to n8n
+                const response = await fetch(N8N_NEWSLETTER_WEBHOOK, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        firstname: data.firstname,
+                        lastname: data.lastname, 
+                        email: data.email,
+                        source: 'newsletter_modal',
+                        timestamp: new Date().toISOString()
+                    })
+                });
+
+                if(response.ok) {
+                    formDiv.classList.add('hidden');
+                    successDiv.classList.remove('hidden');
+                } else {
+                    throw new Error('API Error');
+                }
+            } catch (err) {
+                console.error(err);
+                alert('Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.');
+            } finally {
+                btn.disabled = false;
+                text.classList.remove('hidden');
+                load.classList.add('hidden');
+            }
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                if(!document.getElementById('contact-modal').classList.contains('hidden')) closeContactModal();
+                if(document.getElementById('newsletter-modal') && !document.getElementById('newsletter-modal').classList.contains('hidden')) closeNewsletterModal();
+            }
+        });
+    </script>
+</body>
+</html>

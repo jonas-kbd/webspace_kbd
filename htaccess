@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# 1. "index.html" aus der URL entfernen
+RewriteCond %{THE_REQUEST} ^.*/index\.html
+RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
+
+# 2. Dateiendung ".html" aus der URL entfernen (für den Nutzer sichtbar)
+RewriteCond %{THE_REQUEST} \.html
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+
+# 3. Interne Weiterleitung: Wenn keine Endung da ist, hänge intern .html an
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]

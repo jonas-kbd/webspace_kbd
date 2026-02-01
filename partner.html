@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <title>Kassel Business Digital | Partner-Programm</title>
+    <meta name="description" content="Partner-Netzwerk für spezialisierte Anforderungen. Wir koordinieren Experten, damit Sie einen Ansprechpartner haben. Intelligente Automatisierung im Verbund.">
+    
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.kassel-bd.de/partner.html">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#071F36">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kassel Business Digital | Partner-Programm">
+    <meta property="og:description" content="Spezialisierte Partner für spezielle Anforderungen. Ein Ansprechpartner. Koordinierte Lösungen.">
+    <meta property="og:image" content="https://www.kassel-bd.de/icon.png">
+    <meta property="og:url" content="https://www.kassel-bd.de/partner.html">
+    <meta property="og:locale" content="de_DE">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.kassel-bd.de/partner.html">
+    <meta name="twitter:title" content="Kassel Business Digital | Partner-Programm">
+    <meta name="twitter:description" content="Spezialisierte Partner. Ein Ansprechpartner. Koordinierte Automatisierung.">
+    <meta name="twitter:image" content="https://www.kassel-bd.de/icon.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Kassel Business Digital",
+      "url": "https://www.kassel-bd.de",
+      "logo": "https://www.kassel-bd.de/icon.png",
+      "sameAs": [
+        "https://www.linkedin.com/company/kassel-bd",
+        "https://www.instagram.com/kassel_bd/"
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="config.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        kbdBlue: '#071F36',
+                        richGrey: '#2D3748',
+                        softGrey: '#4A5563',
+                        lightGrey: '#F3F5F7',
+                        bracketBlue: '#071F36'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Fonts loaded globally via design-system.css */
+
+        /* --- GLOBAL VARIABLES --- */
+        :root {
+            --kbd-blue: #071F36;
+            --rich-grey: #2D3748;
+            --soft-grey: #4A5563;
+            --white: #FFFFFF;
+            --bracket-blue: #071F36;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--rich-grey);
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.6;
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4, h5, h6 { color: var(--kbd-blue); letter-spacing: -0.01em; line-height: 1.15; }
+        h1 { font-weight: 700; } h2 { font-weight: 700; } h3 { font-weight: 700; /* Changed from 600 */ }
+
+        .text-body { color: var(--rich-grey); font-weight: 400; font-size: 17px; line-height: 1.6; }
+        .eyebrow {
+            font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: 0.02em;
+            text-transform: uppercase; color: var(--soft-grey); font-size: 12px;
+        }
+
+        /* BUTTONS */
+        .btn-primary {
+            background-color: var(--kbd-blue);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500; 
+            font-size: 16px;
+            border-radius: 0px; 
+            padding: 14px 24px;
+            border: 1px solid var(--kbd-blue);
+            transition: all 0.2s ease;
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn-primary:hover {
+            background-color: #0A2A4A;
+            border-color: #0A2A4A;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(7, 31, 54, 0.15);
+        }
+
+        .btn-white {
+            background-color: var(--white);
+            color: var(--kbd-blue);
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            border-radius: 0px;
+            padding: 14px 24px;
+            border: 1px solid var(--white);
+            transition: all 0.2s ease;
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn-white:hover {
+            background-color: #F3F5F7;
+            border-color: #F3F5F7;
+            color: var(--kbd-blue);
+            transform: translateY(-1px);
+        }
+
+        /* HERO BRACKETS */
+        .mckinsey-bracket-bl-container {
+            position: absolute; top: 20px; left: -12px; bottom: -12px; width: calc(100% + 200px); pointer-events: none; z-index: 0;
+        }
+        .mckinsey-bracket-bl-vertical { position: absolute; left: 0; top: 0; bottom: 0; width: 12px; background-color: var(--bracket-blue); }
+        .mckinsey-bracket-bl-horizontal { position: absolute; left: 0; bottom: 0; height: 12px; width: 100%; background-color: var(--bracket-blue); }
+
+        .mckinsey-bracket-tr-container {
+            position: absolute; top: -12px; right: -12px; width: 180px; height: 120px; pointer-events: none; z-index: 0;
+        }
+        .mckinsey-bracket-tr-horizontal { position: absolute; top: 0; right: 0; width: 100%; height: 12px; background-color: var(--bracket-blue); }
+        .mckinsey-bracket-tr-vertical { position: absolute; top: 0; right: 0; height: 100%; width: 12px; background-color: var(--bracket-blue); }
+
+        /* UTILITIES */
+        .section-padding { padding-top: 128px; padding-bottom: 128px; }
+        .modal-open { overflow: hidden; }
+        .hs-form-frame { width: 100%; min-height: 500px; }
+        .meetings-iframe-container iframe { min-height: 600px; width: 100% !important; }
+        
+        /* HEADER SCROLL STATE */
+        .nav-scrolled { background-color: rgba(255, 255, 255, 0.98); backdrop-filter: blur(12px); box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05); }
+
+        @media (max-width: 768px) {
+            .section-padding { padding-top: 80px; padding-bottom: 80px; }
+            .mckinsey-bracket-bl-container, .mckinsey-bracket-tr-container { display: none; }
+            .mobile-reset-margin { margin-top: 0 !important; }
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+
+    <!-- HEADER (Einheitlich) -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-transparent">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20 transition-all duration-300" id="nav-container">
+                
+                <div class="flex items-center gap-3 z-50">
+                    <a href="index.html" class="block relative group" aria-label="Zur Startseite">
+                        <img src="icon.png" alt="KBD Logo" id="nav-logo" width="56" height="56" class="h-10 md:h-12 w-auto object-contain transition-all duration-300 brightness-0 invert" style="will-change: filter;" />
+                    </a>
+                </div>
+
+                <!-- NAVIGATIONSSYSTEM -->
+                <div class="hidden lg:flex items-center space-x-8 text-[15px] font-medium tracking-wide text-white" id="nav-links">
+                    <a href="ueberuns.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Über Uns</a>
+                    <a href="leistungen.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Leistungen</a>
+                    <a href="technologie.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Technologie</a>
+                    <a href="erfolge.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Erfolge</a>
+                    <a href="publikationen/index.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Publikationen</a>
+                    
+                    <button type="button" onclick="openContactModal(event)" class="btn-primary ml-2 border-white/10 !py-2 !px-5 !text-[14px]">
+                        Kontakt
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button: Farbe Weiß -->
+                <button type="button" class="lg:hidden text-white p-2 -mr-2 transition-colors duration-300 focus:outline-none" id="menu-btn" onclick="toggleMobileMenu()" aria-label="Menu öffnen">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-2xl border-t border-gray-100 transform origin-top transition-all duration-300 ease-in-out z-40">
+            <div class="flex flex-col px-6 py-8 space-y-6 font-medium text-[#071F36]">
+                <a href="ueberuns.html" class="block text-lg border-b border-gray-100 pb-4">Über Uns</a>
+                <a href="leistungen.html" class="block text-lg border-b border-gray-100 pb-4">Leistungen</a>
+                <a href="technologie.html" class="block text-lg border-b border-gray-100 pb-4">Technologie</a>
+                <a href="erfolge.html" class="block text-lg border-b border-gray-100 pb-4">Erfolge</a>
+                <a href="publikationen/index.html" class="block text-lg border-b border-gray-100 pb-4">Publikationen</a>
+                <a href="karriere.html" class="block text-lg border-b border-gray-100 pb-4">Karriere</a>
+                
+                <button type="button" onclick="openContactModal(event)" class="w-full text-left text-lg font-bold text-[#071F36] pt-2">
+                    Kontakt
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+        
+        <div class="relative w-full bg-[#F3F5F7]">
+            <div class="relative w-full h-[65vh] min-h-[600px] overflow-hidden z-0">
+                <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2301&auto=format&fit=crop" 
+                     alt="Strategic Partnership Structure" 
+                     class="absolute inset-0 w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-1000"
+                     loading="eager"
+                     style="z-index: 1;" />
+                
+                <div class="absolute inset-0 bg-black/20" style="z-index: 2;"></div>
+
+                <div class="absolute inset-0 flex items-center" style="z-index: 3;">
+                    <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+                        <div class="max-w-4xl pb-12 lg:pb-32">
+                            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] drop-shadow-md">
+                                Implementierung<br>mit Substanz.
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white relative z-10">
+                <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                        <div class="lg:col-span-6 relative -mt-24 lg:-mt-32 mb-20 z-10 mobile-reset-margin">
+                            
+                            <div class="mckinsey-bracket-bl-container">
+                                <div class="mckinsey-bracket-bl-vertical"></div>
+                                <div class="mckinsey-bracket-bl-horizontal"></div>
+                            </div>
+                            <div class="mckinsey-bracket-tr-container">
+                                <div class="mckinsey-bracket-tr-horizontal"></div>
+                                <div class="mckinsey-bracket-tr-vertical"></div>
+                            </div>
+
+                            <div class="bg-white p-10 lg:p-12 shadow-sm relative z-20">
+                                <span class="eyebrow mb-4 block text-[#071F36]">Für Software-Vendoren</span>
+                                <h3 class="text-2xl font-bold text-[#071F36] mb-6 leading-tight">
+                                    Sichern Sie den Erfolg Ihrer Software durch prozessuale Exzellenz beim Kunden.
+                                </h3>
+                                <p class="text-base text-[#4A5563] leading-relaxed mb-8">
+                                    Die beste Software scheitert, wenn die Prozesse des Kunden nicht reif sind. KBD saniert das operative Fundament, bevor Ihr Tool zum Einsatz kommt. Das Ergebnis: Minimierter Churn und maximale Adoption.
+                                </p>
+                                
+                                <button onclick="openContactModal(event)" class="text-[#071F36] font-semibold text-sm border-b border-[#071F36] pb-0.5 hover:opacity-70 transition-opacity inline-flex items-center gap-1">
+                                    Partner werden <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-6"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="py-24 bg-white border-t border-[#E1E5E9]">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="mb-20 max-w-3xl">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-[#071F36]">Das "Last Mile" Problem lösen.</h2>
+                    <p class="text-body text-[#4A5563]">
+                        Software-Hersteller liefern exzellente Technologie. Wir liefern die organisatorische Reife, damit diese Technologie im deutschen Mittelstand auch wirklich fliegt.
+                    </p>
+                </div>
+
+                <div class="border-t border-[#E1E5E9]">
+                    <div class="group py-12 border-b border-[#E1E5E9] hover:bg-[#F9FAFB] transition-colors duration-300">
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                            <div class="md:col-span-1">
+                                <span class="text-sm font-bold text-[#071F36]/30 group-hover:text-[#071F36] transition-colors">01</span>
+                            </div>
+                            <div class="md:col-span-4">
+                                <h3 class="text-2xl font-bold text-[#071F36]">Churn Prevention</h3>
+                            </div>
+                            <div class="md:col-span-7">
+                                <p class="text-[#4A5563] text-lg leading-relaxed max-w-2xl">
+                                    Kunden kündigen Software oft nicht wegen fehlender Features, sondern wegen mangelnder Integration in den Alltag. Wir bauen die Prozesse so um, dass Ihre Software zum unverzichtbaren Rückgrat wird.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group py-12 border-b border-[#E1E5E9] hover:bg-[#F9FAFB] transition-colors duration-300">
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                            <div class="md:col-span-1">
+                                <span class="text-sm font-bold text-[#071F36]/30 group-hover:text-[#071F36] transition-colors">02</span>
+                            </div>
+                            <div class="md:col-span-4">
+                                <h3 class="text-2xl font-bold text-[#071F36]">Qualifizierte Implementierung</h3>
+                            </div>
+                            <div class="md:col-span-7">
+                                <p class="text-[#4A5563] text-lg leading-relaxed max-w-2xl">
+                                    Wir empfehlen Ihre Lösung nur, wenn sie exakt passt. Das bedeutet für Sie: Hochqualifizierte Kunden mit realem Bedarf und vorbereitetem Budget. Keine gescheiterten Projekte, keine verbrannte Erde.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group py-12 border-b border-[#E1E5E9] hover:bg-[#F9FAFB] transition-colors duration-300">
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                            <div class="md:col-span-1">
+                                <span class="text-sm font-bold text-[#071F36]/30 group-hover:text-[#071F36] transition-colors">03</span>
+                            </div>
+                            <div class="md:col-span-4">
+                                <h3 class="text-2xl font-bold text-[#071F36]">Entlastung Ihres Supports</h3>
+                            </div>
+                            <div class="md:col-span-7">
+                                <p class="text-[#4A5563] text-lg leading-relaxed max-w-2xl">
+                                    Wir übernehmen das organisatorische Change Management vor Ort. Ihre Support-Tickets sinken drastisch, da Bedienfehler durch Prozessklarheit vermieden werden.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-[#071F36] text-white">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="py-12 lg:py-16 pr-12 flex flex-col justify-center order-2 lg:order-1">
+                        <span class="text-white/60 font-medium tracking-wider text-sm uppercase mb-6 flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+                            Exklusive Neutralität
+                        </span>
+                        <h2 class="text-3xl md:text-5xl font-bold mb-8 leading-tight">
+                            Unsere Empfehlung ist<br>
+                            <!-- KONTRAST ERHÖHT: von text-gray-400 zu text-[#E1E5E9] -->
+                            <span class="text-[#E1E5E9]">Nicht käuflich.</span>
+                        </h2>
+                        <div class="prose prose-lg text-gray-300 mb-10">
+                            <p class="mb-6">
+                                Kunden vertrauen uns, weil wir unabhängig agieren. Um dies zu beweisen, haben wir ein Modell eingeführt, das in der Branche einzigartig ist:
+                            </p>
+                            <p class="text-white font-medium border-l-2 border-white pl-6">
+                                "Wir nehmen Provisionen an, um Partner-Status zu erhalten. Aber wir behalten keinen Cent davon. 100% der Gewinne fließen in gemeinnützige Projekte."
+                            </p>
+                        </div>
+                        
+                        <a href="verantwortung.html" class="inline-flex items-center gap-3 text-white font-semibold hover:gap-4 transition-all">
+                            <span>Mehr zum Spendenmodell</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+
+                    <div class="relative min-h-[400px] lg:h-auto order-1 lg:order-2">
+                        <!-- BILD AUSTAUSCH: partnerbild.png, BLEND-MODES ENTFERNT -->
+                        <img src="partnerbild.png" 
+                             alt="Transparency and Structure" 
+                             class="absolute inset-0 w-full h-full object-cover" />
+                        <div class="absolute top-12 right-12 w-32 h-32 border-t border-r border-white/20"></div>
+                        <div class="absolute bottom-12 left-12 w-32 h-32 border-b border-l border-white/20"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 bg-white">
+            <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+                <span class="eyebrow mb-6 block text-[#071F36]">Growth Partnership</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-[#071F36] mb-8 leading-tight">
+                    Lassen Sie uns gemeinsam<br>Standards setzen.
+                </h2>
+                <p class="text-body mb-12 text-[#4A5563] max-w-2xl mx-auto">
+                    Sie haben die Technologie. Wir haben den Zugang zu den Prozessen des deutschen Mittelstands. Werden Sie Teil unseres Partner-Netzwerks.
+                </p>
+                <div class="flex justify-center">
+                    <button onclick="openContactModal(event)" class="btn-primary min-w-[200px]">
+                        Partner werden
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER (Einheitlich, Active: Partner) -->
+    <footer id="contact" class="bg-white text-[#071F36] border-t border-[#E1E5E9] font-inter mt-auto relative z-10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20 items-start">
+                
+                <div class="lg:col-span-3 flex flex-col items-start">
+                    <a href="index.html" class="block mb-8 group" aria-label="Zur Startseite">
+                        <img src="icon.png" alt="KBD Logo" width="56" height="56" class="h-12 md:h-14 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity" />
+                    </a>
+                    <p class="text-[#4A5563] text-sm leading-relaxed max-w-md mb-8">
+                        Wir automatisieren Ihre Abläufe intelligent, damit Ihre Mitarbeiter mehr Zeit für echte Wertschöpfung haben.     </p>
+                    <div class="flex items-center gap-6">
+                        <a href="https://www.linkedin.com/company/kassel-bd" target="_blank" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="KBD auf LinkedIn"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        <a href="https://www.instagram.com/kassel_bd/" target="_blank" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="KBD auf Instagram"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Unternehmen</h4>
+                    <ul class="space-y-3 text-[#2D3748] text-sm">
+                        <li><a href="ueberuns.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Über Uns</a></li>
+                        <li><a href="karriere.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Karriere</a></li>
+                        <!-- Active State für Partner -->
+                        <li><a href="partner.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all font-semibold text-[#071F36]">Partner</a></li>
+                        <li><a href="kontakt.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Expertise</h4>
+                    <ul class="space-y-3 text-[#2D3748] text-sm">
+                        <li><a href="leistungen.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Leistungen</a></li>
+                        <li><a href="technologie.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Technologie</a></li>
+                        <li><a href="erfolge.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Erfolge</a></li>
+                        <li><a href="publikationen/index.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Publikationen</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Werte & Recht</h4>
+                    <ul class="space-y-3 text-[#2D3748] text-sm">
+                        <li><a href="verantwortung.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Verantwortung</a></li>
+                        <li><a href="impressum.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Impressum</a></li>
+                        <li><a href="datenschutz.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Datenschutz</a></li>
+                        <li><a href="trust-center.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Trust Center</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-3">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Insights</h4>
+                    <p class="text-[#4A5563] text-xs mb-4 leading-relaxed max-w-xs">Exklusive Marktanalysen und strategische Impulse. Substanz für Ihre Entscheidungen.</p>
+                    <button onclick="openNewsletterModal(event)" class="btn-primary w-full max-w-xs !py-3">Anmelden</button>
+                </div>
+            </div>
+
+            <div class="border-t border-[#E1E5E9] pt-8 flex flex-col md:flex-row justify-between items-center text-[#9CA3AF] text-xs">
+                <p>&copy; 2026 Kassel Business Digital.</p>
+                <p class="mt-2 md:mt-0 font-medium">Excellence in Process Architecture.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="contact-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-[#071F36]/90 backdrop-blur-sm transition-opacity opacity-0" id="contact-backdrop" onclick="closeContactModal()"></div>
+        <div class="relative bg-white w-full max-w-2xl shadow-2xl transform transition-all scale-95 opacity-0 translate-y-4 flex flex-col max-h-[90vh]" id="contact-content">
+            <div class="p-4 border-b border-[#E1E5E9] flex justify-between items-center bg-[#F3F5F7] shrink-0">
+                <span class="text-xs font-bold uppercase text-[#071F36] tracking-wider ml-2">Kontakt aufnehmen</span>
+                <button onclick="closeContactModal()" class="text-[#4A5563] hover:text-[#071F36] transition-colors p-2 hover:bg-[#E1E5E9]">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <div class="p-6 overflow-y-auto bg-white">
+                
+                <div id="contact-success" class="hidden flex flex-col items-center justify-center py-12 text-center h-full">
+                    <div class="w-16 h-16 bg-[#071F36] flex items-center justify-center mb-6 rounded-full">
+                        <i data-lucide="check" class="text-white w-8 h-8"></i>
+                    </div>
+                    <h2 class="text-[#071F36] text-2xl font-bold tracking-tight mb-4">Vielen Dank</h2>
+                    <p class="text-[#2D3748] text-base leading-relaxed max-w-md">
+                        Ihre Anfrage wurde erfolgreich übermittelt. Ein Berater wird sich in Kürze bei Ihnen melden.
+                    </p>
+                    <button onclick="closeContactModal()" class="mt-8 btn-primary">
+                        Schließen
+                    </button>
+                </div>
+
+                <div id="contact-form-container">
+                    <form id="contact-form" onsubmit="handleContactFormSubmit(event)" class="space-y-6">
+                        
+                        <div class="hp-hidden">
+                            <input type="text" name="b_address" tabindex="-1" value="" autocomplete="off">
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-1">
+                                <label for="firstname" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Vorname *</label>
+                                <input type="text" name="firstname" id="firstname" required class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="Max" />
+                            </div>
+                            <div class="space-y-1">
+                                <label for="lastname" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Nachname *</label>
+                                <input type="text" name="lastname" id="lastname" required class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="Mustermann" />
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-1">
+                                <label for="email" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">E-Mail *</label>
+                                <input type="email" name="email" id="email" required class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="max@unternehmen.de" />
+                            </div>
+                            <div class="space-y-1">
+                                <label for="phone" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Telefon</label>
+                                <input type="tel" name="phone" id="phone" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="+49 123 456789" />
+                            </div>
+                        </div>
+
+                        <div class="space-y-1">
+                            <label for="company" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Unternehmen</label>
+                            <input type="text" name="company" id="company" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="Firma GmbH" />
+                        </div>
+
+                        <div class="space-y-3 pt-2">
+                            <label class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Ihr Thema *</label>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <label class="flex items-center space-x-3 cursor-pointer group p-2 -ml-2 rounded hover:bg-[#F3F5F7] transition-colors">
+                                    <input type="radio" name="topic" value="beratung" class="form-radio text-[#071F36] focus:ring-[#071F36]" required>
+                                    <span class="text-[#2D3748] text-sm font-medium group-hover:text-[#071F36]">Beratung</span>
+                                </label>
+                                <label class="flex items-center space-x-3 cursor-pointer group p-2 -ml-2 rounded hover:bg-[#F3F5F7] transition-colors">
+                                    <input type="radio" name="topic" value="karriere" class="form-radio text-[#071F36] focus:ring-[#071F36]">
+                                    <span class="text-[#2D3748] text-sm font-medium group-hover:text-[#071F36]">Karriere</span>
+                                </label>
+                                <label class="flex items-center space-x-3 cursor-pointer group p-2 -ml-2 rounded hover:bg-[#F3F5F7] transition-colors">
+                                    <input type="radio" name="topic" value="partner" class="form-radio text-[#071F36] focus:ring-[#071F36]">
+                                    <span class="text-[#2D3748] text-sm font-medium group-hover:text-[#071F36]">Partnerkooperation</span>
+                                </label>
+                                <label class="flex items-center space-x-3 cursor-pointer group p-2 -ml-2 rounded hover:bg-[#F3F5F7] transition-colors">
+                                    <input type="radio" name="topic" value="sonstige" class="form-radio text-[#071F36] focus:ring-[#071F36]">
+                                    <span class="text-[#2D3748] text-sm font-medium group-hover:text-[#071F36]">Sonstiges</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="message" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Nachricht</label>
+                            <textarea name="message" id="message" rows="3" class="block w-full border border-[#E1E5E9] p-3 text-[#2D3748] placeholder-[#A0AEC0] focus:border-[#071F36] focus:outline-none transition-colors bg-[#F3F5F7] resize-none text-sm" placeholder="Wie können wir Sie unterstützen?"></textarea>
+                        </div>
+
+                        <div class="flex items-start">
+                            <input id="contact-consent" name="consent" type="checkbox" required class="mt-1 h-4 w-4 border-gray-300 text-[#071F36] focus:ring-[#071F36] rounded-none cursor-pointer" />
+                            <label for="contact-consent" class="ml-3 text-xs text-[#4A5563] leading-snug">
+                                Ich stimme der Verarbeitung meiner Daten gemäß der <a href="datenschutz.html" target="_blank" class="underline hover:text-[#071F36]">Datenschutzerklärung</a> zu.
+                            </label>
+                        </div>
+
+                        <button type="submit" id="contact-submit-btn" class="btn-primary w-full">
+                            <span id="contact-btn-text">Anfrage absenden</span>
+                            <span id="contact-btn-loading" class="hidden flex items-center">
+                                <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                                Wird gesendet...
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NEW: Newsletter Modal (Kopiert aus Index) -->
+    <div id="newsletter-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-[#071F36]/90 backdrop-blur-sm transition-opacity opacity-0" id="newsletter-backdrop" onclick="closeNewsletterModal()"></div>
+        
+        <div class="relative bg-white w-full max-w-xl shadow-2xl transform transition-all scale-95 opacity-0 translate-y-4 flex flex-col max-h-[90vh]" id="newsletter-content">
+            <div class="p-4 border-b border-[#E1E5E9] flex justify-between items-center bg-[#F3F5F7]">
+                <span class="text-xs font-bold uppercase text-[#071F36] tracking-wider ml-2">Insights abonnieren</span>
+                <button onclick="closeNewsletterModal()" class="text-[#4A5563] hover:text-[#071F36] transition-colors p-2 hover:bg-[#E1E5E9]">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <div class="p-4 overflow-y-auto bg-white min-h-[500px]">
+                <div class="hs-form-frame" data-region="eu1" data-form-id="dad8cc2f-479b-4fe9-a726-c42b4710de74" data-portal-id="147389520"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="meeting-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-[#071F36]/90 backdrop-blur-sm transition-opacity opacity-0" id="meeting-backdrop" onclick="closeMeetingModal()"></div>
+        <div class="relative bg-white w-full max-w-5xl shadow-2xl transform transition-all scale-95 opacity-0 translate-y-4 flex flex-col max-h-[90vh] h-[800px]" id="meeting-content">
+            <div class="p-4 border-b border-[#E1E5E9] flex justify-between items-center bg-[#F3F5F7]">
+                <span class="text-xs font-bold uppercase text-[#071F36] tracking-wider ml-2">Termin vereinbaren</span>
+                <button onclick="closeMeetingModal()" class="text-[#4A5563] hover:text-[#071F36] transition-colors p-2 hover:bg-[#E1E5E9]">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <div class="flex-1 w-full h-full overflow-hidden bg-white">
+                <iframe src="https://meetings-eu1.hubspot.com/werkblokk/termin-kbd?embed=true" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://js-eu1.hsforms.net/forms/embed/147389520.js" defer></script>
+    
+    <script>
+        lucide.createIcons();
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const nav = document.getElementById('navbar');
+            menu.classList.toggle('hidden');
+            
+            if (!menu.classList.contains('hidden')) {
+                nav.classList.add('bg-white');
+                nav.classList.remove('bg-transparent');
+                
+                // Switch logo color for white background
+                const logo = document.getElementById('nav-logo');
+                if(logo) { 
+                    logo.classList.remove('invert', 'brightness-0'); 
+                    logo.style.filter = "none"; 
+                }
+
+                const btn = document.getElementById('menu-btn');
+                if(btn) { btn.classList.remove('text-white'); btn.classList.add('text-[#071F36]'); }
+            } else {
+                handleScroll();
+            }
+        }
+
+        function handleScroll() {
+            const nav = document.getElementById('navbar');
+            const logo = document.getElementById('nav-logo');
+            const navLinks = document.getElementById('nav-links');
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) return;
+
+            if (window.scrollY > 10) {
+                nav.classList.add('nav-scrolled');
+                nav.classList.remove('bg-transparent');
+                
+                if(logo) { 
+                    logo.classList.remove('invert', 'brightness-0'); 
+                    logo.style.filter = "none"; 
+                }
+                if(navLinks) { 
+                    navLinks.classList.remove('text-white'); 
+                    navLinks.classList.add('text-[#071F36]');
+                }
+                if(menuBtn) { menuBtn.classList.remove('text-white'); menuBtn.classList.add('text-[#071F36]'); }
+            } else {
+                nav.classList.remove('nav-scrolled');
+                nav.classList.add('bg-transparent');
+                
+                if(logo) { 
+                    logo.classList.add('invert', 'brightness-0'); 
+                    logo.style.filter = "brightness(0) invert(1)"; 
+                }
+                if(navLinks) { 
+                    navLinks.classList.add('text-white'); 
+                    navLinks.classList.remove('text-[#071F36]');
+                }
+                if(menuBtn) { menuBtn.classList.add('text-white'); menuBtn.classList.remove('text-[#071F36]'); }
+            }
+        }
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+
+        // --- N8N WEBHOOKS ---
+        // Werte werden aus config.js geladen (window.KBD_CONFIG)
+        const N8N_CONTACT_WEBHOOK = (window.KBD_CONFIG && window.KBD_CONFIG.N8N_CONTACT_WEBHOOK) || '';
+
+        // --- CONTACT MODAL LOGIC ---
+        function openContactModal(e) {
+            if(e) e.preventDefault();
+            const modal = document.getElementById('contact-modal');
+            const backdrop = document.getElementById('contact-backdrop');
+            const content = document.getElementById('contact-content');
+            
+            // Reset
+            document.getElementById('contact-form').reset();
+            document.getElementById('contact-form-container').classList.remove('hidden');
+            document.getElementById('contact-success').classList.add('hidden');
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => {
+                backdrop.classList.remove('opacity-0');
+                content.classList.remove('scale-95', 'opacity-0', 'translate-y-4');
+                content.classList.add('scale-100', 'opacity-100', 'translate-y-0');
+            }, 10);
+        }
+
+        function closeContactModal() {
+            const modal = document.getElementById('contact-modal');
+            const backdrop = document.getElementById('contact-backdrop');
+            const content = document.getElementById('contact-content');
+            
+            backdrop.classList.add('opacity-0');
+            content.classList.remove('scale-100', 'opacity-100', 'translate-y-0');
+            content.classList.add('scale-95', 'opacity-0', 'translate-y-4');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        async function handleContactFormSubmit(e) {
+            e.preventDefault();
+            const submitBtn = document.getElementById('contact-submit-btn');
+            const btnText = document.getElementById('contact-btn-text');
+            const btnLoading = document.getElementById('contact-btn-loading');
+            const form = e.target;
+            
+            // Honeypot check
+            if (form.b_address.value !== "") return;
+
+            submitBtn.disabled = true;
+            btnText.classList.add('hidden');
+            btnLoading.classList.remove('hidden');
+            
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch(N8N_CONTACT_WEBHOOK, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ ...data, submittedAt: new Date().toISOString(), url: window.location.href, type: 'contact_request' }),
+                });
+
+                if (response.ok) {
+                    document.getElementById('contact-form-container').classList.add('hidden');
+                    document.getElementById('contact-success').classList.remove('hidden');
+                } else { throw new Error('Fehler'); }
+            } catch (error) {
+                console.error(error);
+                alert('Fehler bei der Übertragung. Bitte versuchen Sie es später erneut.');
+            } finally {
+                submitBtn.disabled = false;
+                btnText.classList.remove('hidden');
+                btnLoading.classList.add('hidden');
+            }
+        }
+
+        function openMeetingModal(e) {
+            if(e) e.preventDefault();
+            const modal = document.getElementById('meeting-modal');
+            const backdrop = document.getElementById('meeting-backdrop');
+            const content = document.getElementById('meeting-content');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => {
+                backdrop.classList.remove('opacity-0');
+                content.classList.remove('scale-95', 'opacity-0', 'translate-y-4');
+                content.classList.add('scale-100', 'opacity-100', 'translate-y-0');
+            }, 10);
+        }
+
+        function closeMeetingModal() {
+            const modal = document.getElementById('meeting-modal');
+            const backdrop = document.getElementById('meeting-backdrop');
+            const content = document.getElementById('meeting-content');
+            backdrop.classList.add('opacity-0');
+            content.classList.remove('scale-100', 'opacity-100', 'translate-y-0');
+            content.classList.add('scale-95', 'opacity-0', 'translate-y-4');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        // --- NEWSLETTER MODAL LOGIC (NEU) ---
+        function openNewsletterModal(e) {
+            if(e) e.preventDefault();
+            const modal = document.getElementById('newsletter-modal');
+            const backdrop = document.getElementById('newsletter-backdrop');
+            const content = document.getElementById('newsletter-content');
+            
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; 
+
+            setTimeout(() => {
+                backdrop.classList.remove('opacity-0');
+                content.classList.remove('scale-95', 'opacity-0', 'translate-y-4');
+                content.classList.add('scale-100', 'opacity-100', 'translate-y-0');
+            }, 10);
+        }
+
+        function closeNewsletterModal() {
+            const modal = document.getElementById('newsletter-modal');
+            const backdrop = document.getElementById('newsletter-backdrop');
+            const content = document.getElementById('newsletter-content');
+            
+            backdrop.classList.add('opacity-0');
+            content.classList.remove('scale-100', 'opacity-100', 'translate-y-0');
+            content.classList.add('scale-95', 'opacity-0', 'translate-y-4');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                if(!document.getElementById('contact-modal').classList.contains('hidden')) closeContactModal();
+                if(!document.getElementById('meeting-modal').classList.contains('hidden')) closeMeetingModal();
+                if(document.getElementById('newsletter-modal') && !document.getElementById('newsletter-modal').classList.contains('hidden')) closeNewsletterModal();
+            }
+        });
+    </script>
+    
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147389520.js"></script>
+    </body>
+</html>
