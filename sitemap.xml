@@ -37,7 +37,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
+  <!-- Expertise -->
+  <url>
+    <loc>https://www.kassel-bd.de/versicherungsmakler.html</loc>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Publikationen -->
   <url>
     <loc>https://www.kassel-bd.de/publikationen/index.html</loc>
