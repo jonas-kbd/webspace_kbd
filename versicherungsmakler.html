@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+
+    <title>KBD | Versicherungsmakler – Intelligente Systeme für die Versicherungsbranche</title>
+    <meta name="description" content="Intelligente Systeme für Versicherungsmakler: Weniger Papierkram, automatische Datenverarbeitung, IDD-Compliance auf Autopilot. Wir demokratisieren, was bisher nur Großkonzernen vorbehalten war. Von jemandem gebaut, der selbst 1,5 Jahre Makler war.">
+
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Versicherungsmakler intelligente Systeme, Maklerverwaltungsprogramm Integration, IDD Dokumentation automatisch, KFZ Wechselsaison, Demokratisierung Versicherung, Systemarchitektur">
+    <meta name="author" content="Kassel Business Digital">
+    <meta name="language" content="de">
+    <link rel="canonical" href="https://www.kassel-bd.de/versicherungsmakler.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.kassel-bd.de/versicherungsmakler.html">
+    <meta property="og:title" content="KBD | Versicherungsmakler – Intelligente Systeme">
+    <meta property="og:description" content="Weniger Papierkram. Mehr Zeit für Kunden. Intelligente Systeme für Versicherungsmakler.">
+    <meta property="og:image" content="https://www.kassel-bd.de/icon.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Kassel Business Digital">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.kassel-bd.de/versicherungsmakler.html">
+    <meta name="twitter:title" content="KBD | Versicherungsmakler – Intelligente Systeme">
+    <meta name="twitter:description" content="Weniger Papierkram. Mehr Zeit für Kunden. Intelligente Systeme für Versicherungsmakler.">
+    <meta name="twitter:image" content="https://www.kassel-bd.de/icon.png">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#071F36">
+
+    <!-- Performance: Preconnect to external resources -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Intelligente Systeme für Versicherungsmakler",
+      "provider": {
+        "@type": "Organization",
+        "name": "Kassel Business Digital"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Deutschland"
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "name": "Versicherungsmakler"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.kassel-bd.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Expertise"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Versicherungsmakler"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Design System CSS -->
+    <link rel="stylesheet" href="css/design-system.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="config.js"></script>
+    <script src="js/components.js" defer></script>
+    <script src="js/button-animation.js" defer></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        kbdBlue: '#071F36',
+                        richGrey: '#2D3748',
+                        softGrey: '#4A5563',
+                        lightGrey: '#F3F5F7',
+                        borderGrey: '#E1E5E9',
+                    },
+                    screens: {
+                        '3xl': '1600px',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Fonts loaded globally via design-system.css */
+
+        :root {
+            --kbd-blue: #071F36;
+            --rich-grey: #2D3748;
+            --soft-grey: #4A5563;
+            --white: #FFFFFF;
+        }
+
+        body {
+            background-color: #FFFFFF;
+            color: var(--rich-grey);
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.6;
+            text-rendering: optimizeLegibility;
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4, h5, h6 { color: var(--kbd-blue); letter-spacing: -0.01em; line-height: 1.15; }
+        h1 { font-weight: 700; } h2 { font-weight: 700; } h3 { font-weight: 700; }
+
+        .text-body { color: var(--rich-grey); font-weight: 400; font-size: 17px; line-height: 1.6; }
+        .text-lead { font-size: 24px; font-weight: 400; line-height: 1.4; color: var(--kbd-blue); }
+        .eyebrow {
+            font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: 0.02em;
+            text-transform: uppercase; color: var(--soft-grey); font-size: 13px;
+        }
+
+        /* UTILITIES */
+        .section-padding { padding-top: 128px; padding-bottom: 128px; }
+        .modal-open { overflow: hidden; }
+
+        /* HEADER SCROLL STATE */
+        .nav-scrolled { background-color: rgba(255, 255, 255, 0.98); backdrop-filter: blur(12px); box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05); }
+        .nav-transparent { background: transparent; padding-top: 1rem; padding-bottom: 1rem; }
+
+        /* PAIN POINT CARDS */
+        .pain-card {
+            border-left: 3px solid var(--kbd-blue);
+            padding-left: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .pain-card:hover {
+            border-left-width: 4px;
+            padding-left: 1.75rem;
+        }
+
+        /* PULL QUOTE */
+        .pull-quote {
+            border-left: 3px solid rgba(255,255,255,0.3);
+            padding-left: 1.5rem;
+            font-style: italic;
+            color: rgba(255,255,255,0.9);
+        }
+
+        @media (max-width: 768px) {
+            .section-padding { padding-top: 80px; padding-bottom: 80px; }
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen selection:bg-[#071F36] selection:text-white">
+
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-transparent">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20 transition-all duration-300" id="nav-container">
+
+                <div class="flex items-center gap-3 z-50">
+                    <a href="index.html" class="block relative group" aria-label="Zur Startseite">
+                        <img src="icon.png" alt="KBD Logo" id="nav-logo" width="56" height="56" class="h-10 md:h-12 w-auto object-contain transition-all duration-300 brightness-0 invert" style="will-change: filter;" />
+                    </a>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-8 text-[15px] font-medium tracking-wide text-white" id="nav-links">
+                    <a href="ueberuns.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Über Uns</a>
+                    <a href="leistungen.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Leistungen</a>
+                    <a href="technologie.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Technologie</a>
+                    <a href="erfolge.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Erfolge</a>
+
+                    <!-- Expertise Dropdown -->
+                    <div class="nav-dropdown active">
+                        <span class="nav-dropdown-trigger nav-item relative py-2 opacity-100 border-b-2 border-white pb-1 font-semibold"
+                              tabindex="0"
+                              role="button"
+                              aria-expanded="true"
+                              aria-haspopup="true">
+                            Expertise
+                            <i data-lucide="chevron-down" class="nav-dropdown-icon"></i>
+                        </span>
+                        <div class="nav-dropdown-menu" role="menu">
+                            <a href="versicherungsmakler.html" class="nav-dropdown-item active" role="menuitem">Versicherungsmakler</a>
+                        </div>
+                    </div>
+
+                    <a href="publikationen/index.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Publikationen</a>
+
+                    <button type="button" onclick="openContactModal(event)" class="btn-primary ml-2 border-white/10 !py-2 !px-5 !text-[14px]">
+                        Kontakt
+                    </button>
+                </div>
+
+                <button type="button" class="lg:hidden text-white p-3 -mr-2 transition-colors duration-300 focus:outline-none min-h-[44px] min-w-[44px]" style="touch-action: manipulation;" id="menu-btn" onclick="toggleMobileMenu()" aria-label="Menu öffnen">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-2xl border-t border-gray-100 transform origin-top transition-all duration-300 ease-in-out z-40">
+            <div class="flex flex-col px-6 py-8 space-y-6 font-medium text-[#071F36]">
+                <a href="ueberuns.html" class="block text-lg border-b border-gray-100 pb-4">Über Uns</a>
+                <a href="leistungen.html" class="block text-lg border-b border-gray-100 pb-4">Leistungen</a>
+                <a href="technologie.html" class="block text-lg border-b border-gray-100 pb-4">Technologie</a>
+                <a href="erfolge.html" class="block text-lg border-b border-gray-100 pb-4">Erfolge</a>
+
+                <!-- Expertise Mobile Dropdown -->
+                <div class="border-b border-gray-100 pb-4">
+                    <div class="mobile-dropdown-trigger text-lg font-bold flex justify-between items-center"
+                         onclick="toggleMobileDropdown('mobile-expertise-dropdown')">
+                        <span>Expertise</span>
+                        <i data-lucide="chevron-down" class="mobile-dropdown-icon w-5 h-5" style="transition: transform 0.3s ease; transform: rotate(180deg);"></i>
+                    </div>
+                    <div id="mobile-expertise-dropdown" class="mobile-dropdown-content expanded">
+                        <a href="versicherungsmakler.html" class="mobile-dropdown-item block py-3 pl-8 text-[#071F36] font-bold active">
+                            Versicherungsmakler
+                        </a>
+                    </div>
+                </div>
+
+                <a href="publikationen/index.html" class="block text-lg border-b border-gray-100 pb-4">Publikationen</a>
+                <a href="karriere.html" class="block text-lg border-b border-gray-100 pb-4">Karriere</a>
+
+                <button type="button" onclick="openContactModal(event)" class="w-full text-left text-lg font-bold text-[#071F36] pt-2">
+                    Kontakt
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+
+        <!-- Section 1: Hero -->
+        <div class="relative w-full min-h-screen flex items-center justify-center" style="background: linear-gradient(135deg, #071F36 0%, #0A2A4A 100%);">
+            <div class="absolute inset-0 overflow-hidden">
+                <img src="images/index/hero-2.avif"
+                     alt="Intelligente Systeme für Versicherungsmakler"
+                     class="absolute inset-0 w-full h-full object-cover opacity-20"
+                     loading="eager"
+                     fetchpriority="high" />
+            </div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 lg:py-48">
+                <div class="max-w-4xl">
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-8">
+                        Weniger Papierkram.<br>Mehr Zeit für Kunden.
+                    </h1>
+                    <p class="text-xl md:text-2xl text-white/80 leading-relaxed mb-12 max-w-3xl">
+                        Intelligente Systeme für Versicherungsmakler – ohne neue Software kaufen zu müssen. Wir demokratisieren, was bisher nur Großkonzernen vorbehalten war.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="openContactModal(event)" class="btn-white">
+                            Beratungsgespräch vereinbaren
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Founder Story -->
+        <section class="py-20 lg:py-28 bg-white">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                    <div class="lg:col-span-7">
+                        <span class="eyebrow mb-4 block tracking-widest">Warum wir Versicherungsmakler verstehen</span>
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#071F36] mb-6 leading-tight">
+                            Ich war selbst 1,5 Jahre in der Branche.
+                        </h2>
+                        <div class="space-y-4 text-body leading-relaxed mb-8">
+                            <p>
+                                Mein Name ist Jonas Meyer. Bevor ich KBD gegründet habe, habe ich 1,5 Jahre als Versicherungsmakler gearbeitet.
+                            </p>
+                            <p>
+                                Ich habe diese Probleme nicht aus Beraterpräsentationen – ich habe sie selbst gelebt: Post von zehn verschiedenen Stellen, die in drei verschiedene Systeme getippt werden muss. Die KFZ-Aktion Ende des Jahres, bei der man für minimale Provisionen 60-Stunden-Wochen schiebt. IDD-Dokumentation, die niemand gerne macht, aber jeder machen muss.
+                            </p>
+                            <p>
+                                Ich bin nicht gegangen, weil mir die Arbeit nicht gefallen hat. Ich bin gegangen, weil ich gesehen habe, wie veraltet die Systeme sind – und dass es besser geht.
+                            </p>
+                        </div>
+                        <div class="border-l-3 border-[#071F36] pl-6 py-4 bg-[#F3F5F7]">
+                            <p class="text-lg font-medium text-[#071F36] italic">
+                                „Wenn ich Ihnen sage, dass wir Ihre Prozesse automatisieren können, dann weiß ich genau, wovon ich rede. Weil ich an genau diesem Schreibtisch gesessen habe."
+                            </p>
+                            <p class="text-sm text-[#4A5563] mt-2">— Jonas Meyer, Gründer KBD</p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5">
+                        <img src="images/index/jonasdayanlandingpage.webp"
+                             alt="Jonas Meyer, KBD Gründer und ehemaliger Versicherungsmakler"
+                             class="w-full h-auto shadow-lg grayscale hover:grayscale-0 transition-all duration-500"
+                             loading="lazy" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Pain Points -->
+        <section class="py-20 lg:py-28 bg-[#F9FAFB]">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="max-w-3xl mb-16">
+                    <span class="eyebrow mb-4 block tracking-widest">Die Realität</span>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#071F36] mb-4">
+                        Probleme, die nur jemand mit Branchenerfahrung kennt.
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                    <!-- Pain Point 1 -->
+                    <div class="pain-card bg-white p-8">
+                        <h3 class="text-xl font-bold text-[#071F36] mb-3">Stunden für Verwaltung statt Kundenberatung</h3>
+                        <p class="text-body leading-relaxed mb-4">
+                            Neue Verträge anlegen, Änderungen dokumentieren, Unterlagen archivieren. Was eigentlich in 5 Minuten erledigt sein könnte, frisst halbe Tage.
+                        </p>
+                        <p class="text-sm font-semibold text-[#071F36]">↳ 40% Ihrer Zeit geht für repetitive Administrationsarbeit drauf</p>
+                    </div>
+
+                    <!-- Pain Point 2 -->
+                    <div class="pain-card bg-white p-8">
+                        <h3 class="text-xl font-bold text-[#071F36] mb-3">Kunden erwarten sofortige Antworten</h3>
+                        <p class="text-body leading-relaxed mb-4">
+                            WhatsApp, E-Mail, Telefon, Portal – Anfragen kommen aus allen Richtungen. Wer nicht innerhalb von 2 Stunden antwortet, wirkt unprofessionell.
+                        </p>
+                        <p class="text-sm font-semibold text-[#071F36]">↳ Verlorene Kunden, weil die Konkurrenz schneller antwortet</p>
+                    </div>
+
+                    <!-- Pain Point 3 -->
+                    <div class="pain-card bg-white p-8">
+                        <h3 class="text-xl font-bold text-[#071F36] mb-3">IDD-Dokumentation: Pflicht, aber zeitintensiv</h3>
+                        <p class="text-body leading-relaxed mb-4">
+                            Beratungsprotokolle, Eignungsprüfungen, Produktinformationen – alles muss dokumentiert werden. Manuell. Bei jedem einzelnen Kunden.
+                        </p>
+                        <p class="text-sm font-semibold text-[#071F36]">↳ 15-20 Minuten pro Abschluss nur für Compliance</p>
+                    </div>
+
+                    <!-- Pain Point 4 (KFZ) -->
+                    <div class="pain-card bg-white p-8">
+                        <h3 class="text-xl font-bold text-[#071F36] mb-3">November/Dezember: Massiver Stress, minimale Provision</h3>
+                        <p class="text-body leading-relaxed mb-4">
+                            Die KFZ-Wechselsaison im Herbst: Hunderte Anfragen gleichzeitig, niedrige Provisionen, aber wenn Sie nicht verfügbar sind, geht der Kunde woanders hin.
+                        </p>
+                        <p class="text-sm font-semibold text-[#071F36]">↳ 60-Stunden-Wochen für Provisionen, die kaum die Zeit decken</p>
+                    </div>
+
+                    <!-- Pain Point 5 (Multi-System) -->
+                    <div class="pain-card bg-white p-8">
+                        <h3 class="text-xl font-bold text-[#071F36] mb-3">Daten abtippen, abtippen, abtippen</h3>
+                        <p class="text-body leading-relaxed mb-4">
+                            Versichererpost kommt per Brief, E-Mail und Portal. Jede Information muss manuell ins Maklerverwaltungsprogramm, ins CRM und manchmal noch in Excel eingetragen werden.
+                        </p>
+                        <p class="text-sm font-semibold text-[#071F36]">↳ 2-3 Stunden täglich nur fürs Daten übertragen</p>
+                    </div>
+
+                    <!-- Spacer for grid alignment -->
+                    <div class="hidden md:block"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Solution -->
+        <section class="py-20 lg:py-28" style="background: linear-gradient(135deg, #020B14 0%, #071F36 100%);">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-white/50 text-xs font-medium uppercase tracking-widest mb-4 block">Die Lösung</span>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                        Intelligente Systeme, die für Sie arbeiten.
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-6 bg-white/10 flex items-center justify-center">
+                            <i data-lucide="database" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Automatische Datenverarbeitung</h3>
+                        <p class="text-white/70 leading-relaxed">
+                            Post wird automatisch eingelesen, erkannt und ins richtige System übertragen. Kein manuelles Abtippen mehr.
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-6 bg-white/10 flex items-center justify-center">
+                            <i data-lucide="message-circle" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Intelligente Kundenkommunikation</h3>
+                        <p class="text-white/70 leading-relaxed">
+                            Standardanfragen werden automatisch beantwortet. Komplexe Fragen landen direkt bei Ihnen – mit Kontext.
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-6 bg-white/10 flex items-center justify-center">
+                            <i data-lucide="shield-check" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Compliance auf Autopilot</h3>
+                        <p class="text-white/70 leading-relaxed">
+                            IDD-Dokumentation wird automatisch erstellt und archiviert. Rechtssicher, vollständig, ohne Aufwand.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Methodology -->
+        <section class="py-20 lg:py-28 bg-white">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="max-w-3xl mb-16">
+                    <span class="eyebrow mb-4 block tracking-widest">Unser Ansatz</span>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#071F36] mb-4">
+                        So funktioniert die Zusammenarbeit.
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                    <div class="relative">
+                        <div class="text-6xl font-bold text-[#F3F5F7] mb-4">01</div>
+                        <h3 class="text-xl font-bold text-[#071F36] mb-4">Strukturanalyse</h3>
+                        <p class="text-body leading-relaxed">
+                            Wir schauen uns Ihre aktuellen Prozesse an – nicht mit Checklisten, sondern mit Branchenkenntnis. Wir wissen, wo es hakt, weil wir selbst dort gestanden haben.
+                        </p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="text-6xl font-bold text-[#F3F5F7] mb-4">02</div>
+                        <h3 class="text-xl font-bold text-[#071F36] mb-4">Blaupausen-Architektur</h3>
+                        <p class="text-body leading-relaxed">
+                            Auf Basis unserer erprobten Systeme bauen wir Ihre individuelle Automatisierung. Keine Experimente – bewährte Strukturen, angepasst an Ihre Bedürfnisse.
+                        </p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="text-6xl font-bold text-[#F3F5F7] mb-4">03</div>
+                        <h3 class="text-xl font-bold text-[#071F36] mb-4">Langfristige Partnerschaft</h3>
+                        <p class="text-body leading-relaxed">
+                            Wir verschwinden nicht nach der Übergabe. Optimierung und Anpassung inklusive. Ihre Systeme wachsen mit Ihrem Geschäft mit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Referenzen & Transparenz -->
+        <section class="py-20 lg:py-28 bg-[#F9FAFB] border-t border-[#E1E5E9]">
+            <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+                <span class="eyebrow mb-4 block tracking-widest">Ehrlichkeit</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#071F36] mb-6">
+                    Versicherungsmakler-Projekte: In Umsetzung
+                </h2>
+                <p class="text-lg text-[#4A5563] leading-relaxed mb-8 max-w-2xl mx-auto">
+                    Wir könnten Ihnen jetzt Erfolgsgeschichten aus anderen Branchen zeigen. Aber das wäre nicht ehrlich. Unsere ersten Versicherungsmakler-Projekte laufen gerade – und werden hier dokumentiert, sobald die Ergebnisse messbar sind. Mit echten Zahlen, ohne Marketing-Versprechen.
+                </p>
+                <button onclick="openContactModal(event)" class="btn-primary">
+                    Beratungsgespräch vereinbaren
+                </button>
+            </div>
+        </section>
+
+        <!-- Section 7: Pay for Results -->
+        <section class="py-16 lg:py-20 border-t border-[#E1E5E9]" style="background: linear-gradient(135deg, #020B14 0%, #071F36 100%);">
+            <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+                <span class="text-white/50 text-xs font-medium uppercase tracking-widest mb-4 block">Unser Prinzip</span>
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6">
+                    Sie zahlen für Ergebnisse. Nicht für Beraterstunden.
+                </h2>
+                <p class="text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+                    Kein Stundensatz, kein Honorar auf Verdacht. Wir definieren vorher, was wir liefern – Sie zahlen nur, wenn wir es tun. Wer an seine Arbeit glaubt, kann so arbeiten.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 8: FAQ -->
+        <section class="py-20 lg:py-28 bg-white">
+            <div class="max-w-4xl mx-auto px-6 lg:px-8">
+                <div class="mb-12">
+                    <span class="eyebrow mb-4 block tracking-widest">Häufige Fragen</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#071F36]">
+                        Was Versicherungsmakler uns fragen.
+                    </h2>
+                </div>
+
+                <div class="space-y-4">
+                    <details class="group border-b border-[#E1E5E9] pb-4">
+                        <summary class="flex justify-between items-center cursor-pointer py-4 text-lg font-semibold text-[#071F36] hover:text-[#0A2A4A] transition-colors list-none">
+                            <span>Muss ich mein Maklerverwaltungsprogramm wechseln?</span>
+                            <i data-lucide="plus" class="icon-plus w-5 h-5 text-[#071F36] transition-transform group-open:rotate-45"></i>
+                        </summary>
+                        <div class="mt-2 text-body leading-relaxed">
+                            Nein. Wir arbeiten mit Ihrer bestehenden Software – egal ob Softfair, VSMA, Adcubum oder andere. Wir verbinden Ihre Systeme intelligent, statt neue einzuführen. Genau das ist intelligente Systemarchitektur.
+                        </div>
+                    </details>
+
+                    <details class="group border-b border-[#E1E5E9] pb-4">
+                        <summary class="flex justify-between items-center cursor-pointer py-4 text-lg font-semibold text-[#071F36] hover:text-[#0A2A4A] transition-colors list-none">
+                            <span>Wie lange dauert die Umsetzung?</span>
+                            <i data-lucide="plus" class="icon-plus w-5 h-5 text-[#071F36] transition-transform group-open:rotate-45"></i>
+                        </summary>
+                        <div class="mt-2 text-body leading-relaxed">
+                            Erste spürbare Verbesserungen nach 2-4 Wochen. Die vollständige Automatisierung steht je nach Umfang in 6-12 Wochen. Wir arbeiten iterativ – Sie sehen Ergebnisse, bevor alles fertig ist.
+                        </div>
+                    </details>
+
+                    <details class="group border-b border-[#E1E5E9] pb-4">
+                        <summary class="flex justify-between items-center cursor-pointer py-4 text-lg font-semibold text-[#071F36] hover:text-[#0A2A4A] transition-colors list-none">
+                            <span>Was kostet das – und was, wenn es nicht funktioniert?</span>
+                            <i data-lucide="plus" class="icon-plus w-5 h-5 text-[#071F36] transition-transform group-open:rotate-45"></i>
+                        </summary>
+                        <div class="mt-2 text-body leading-relaxed">
+                            Pay for Results: Sie zahlen nur, wenn wir liefern. Wir definieren vorher, was Erfolg bedeutet – z.B. 50% weniger Verwaltungszeit oder vollautomatische IDD-Dokumentation. Kein Risiko für Sie.
+                        </div>
+                    </details>
+
+                    <details class="group border-b border-[#E1E5E9] pb-4">
+                        <summary class="flex justify-between items-center cursor-pointer py-4 text-lg font-semibold text-[#071F36] hover:text-[#0A2A4A] transition-colors list-none">
+                            <span>Ist das DSGVO-konform?</span>
+                            <i data-lucide="plus" class="icon-plus w-5 h-5 text-[#071F36] transition-transform group-open:rotate-45"></i>
+                        </summary>
+                        <div class="mt-2 text-body leading-relaxed">
+                            Ja. Alle Daten bleiben in Deutschland, wir arbeiten ausschließlich mit DSGVO-konformen Diensten. Ihre Kundendaten verlassen niemals europäische Server.
+                        </div>
+                    </details>
+
+                    <details class="group border-b border-[#E1E5E9] pb-4">
+                        <summary class="flex justify-between items-center cursor-pointer py-4 text-lg font-semibold text-[#071F36] hover:text-[#0A2A4A] transition-colors list-none">
+                            <span>Was ist mit der KFZ-Aktion im Herbst?</span>
+                            <i data-lucide="plus" class="icon-plus w-5 h-5 text-[#071F36] transition-transform group-open:rotate-45"></i>
+                        </summary>
+                        <div class="mt-2 text-body leading-relaxed">
+                            Genau dafür bauen wir Systeme: Automatische Anfragenbearbeitung, intelligente Priorisierung, und Workflows, die auch bei 100 Anfragen pro Tag funktionieren. Keine 60-Stunden-Wochen mehr.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: Final CTA -->
+        <section class="py-20 lg:py-28 relative overflow-hidden" style="background: linear-gradient(135deg, #020B14 0%, #071F36 100%);">
+            <div class="absolute inset-0">
+                <img src="images/index/landingpagebottom.webp"
+                     alt="Beratungsgespräch vereinbaren"
+                     class="w-full h-full object-cover opacity-10 grayscale"
+                     loading="lazy" />
+            </div>
+            <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                    Bereit, weniger Zeit mit Papierkram zu verbringen?
+                </h2>
+                <p class="text-lg text-white/70 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    In einem kostenlosen Gespräch zeigen wir Ihnen, wo Automatisierung bei Ihnen den größten Hebel hat. Kein Verkaufsgespräch. Eine ehrliche Einschätzung.
+                </p>
+                <div class="flex justify-center">
+                    <button onclick="openContactModal(event)" class="btn-white">
+                        Beratungsgespräch vereinbaren
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact" class="bg-white text-[#071F36] border-t border-[#E1E5E9] font-inter mt-auto relative z-10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20 items-start">
+
+                <div class="lg:col-span-3 flex flex-col items-start">
+                    <a href="index.html" class="block mb-8 group" aria-label="Zur Startseite">
+                        <img src="icon.png" alt="KBD Logo" width="56" height="56" class="h-12 md:h-14 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity" />
+                    </a>
+                    <p class="text-[#4A5563] text-sm leading-relaxed max-w-md mb-8">
+                        Intelligente Systemarchitekturen für den Mittelstand. Erprobte Blaupausen, individuell angepasst. Von angehenden Wirtschaftsinformatikern gebaut.
+                    </p>
+                    <div class="flex items-center gap-6">
+                        <a href="https://www.linkedin.com/company/kassel-bd" target="_blank" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="KBD auf LinkedIn"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        <a href="https://www.instagram.com/kassel_bd/" target="_blank" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="KBD auf Instagram"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Unternehmen</h4>
+                    <ul class="space-y-3 text-[#2D3748] text-sm">
+                        <li><a href="ueberuns.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Über Uns</a></li>
+                        <li><a href="karriere.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Karriere</a></li>
+                        <li><a href="partner.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Partner</a></li>
+                        <li><a href="kontakt.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Expertise</h4>
+                    <ul class="space-y-3 text-[#2D3748] text-sm">
+                        <li><a href="leistungen.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Leistungen</a></li>
+                        <li><a href="technologie.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Technologie</a></li>
+                        <li><a href="erfolge.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Erfolge</a></li>
+                        <li><a href="versicherungsmakler.html" class="text-[#071F36] font-bold">Versicherungsmakler</a></li>
+                        <li><a href="publikationen/index.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Publikationen</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Werte & Recht</h4>
+                    <ul class="space-y-3 text-[#2D3748] text-sm">
+                        <li><a href="verantwortung.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Verantwortung</a></li>
+                        <li><a href="impressum.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Impressum</a></li>
+                        <li><a href="datenschutz.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Datenschutz</a></li>
+                        <li><a href="trust-center.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Trust Center</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-3">
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-[#9CA3AF] mb-6">Insights</h4>
+                    <p class="text-[#4A5563] text-xs mb-4 leading-relaxed max-w-xs">Exklusive Marktanalysen und strategische Impulse. Substanz für Ihre Entscheidungen.</p>
+                    <button onclick="openNewsletterModal(event)" class="btn-primary w-full max-w-xs !py-3">Anmelden</button>
+                </div>
+            </div>
+
+            <div class="border-t border-[#E1E5E9] pt-8 flex flex-col md:flex-row justify-between items-center text-[#9CA3AF] text-xs">
+                <p>&copy; 2026 Kassel Business Digital.</p>
+                <p class="mt-2 md:mt-0 font-medium">Intelligente Systeme für alle.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="contact-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-[#071F36]/90 backdrop-blur-sm transition-opacity opacity-0" id="contact-backdrop" onclick="closeContactModal()"></div>
+        <div class="relative bg-white w-full max-w-2xl shadow-2xl transform transition-all scale-95 opacity-0 translate-y-4 flex flex-col max-h-[90vh]" id="contact-content">
+            <div class="p-4 border-b border-[#E1E5E9] flex justify-between items-center bg-[#F3F5F7] shrink-0">
+                <span class="text-xs font-bold uppercase text-[#071F36] tracking-wider ml-2">Kontakt aufnehmen</span>
+                <button onclick="closeContactModal()" class="text-[#4A5563] hover:text-[#071F36] transition-colors p-2 hover:bg-[#E1E5E9]">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <div class="p-6 overflow-y-auto bg-white">
+
+                <div id="contact-success" class="hidden flex flex-col items-center justify-center py-12 text-center h-full">
+                    <div class="w-16 h-16 bg-[#071F36] flex items-center justify-center mb-6 rounded-full">
+                        <i data-lucide="check" class="text-white w-8 h-8"></i>
+                    </div>
+                    <h2 class="text-[#071F36] text-2xl font-bold tracking-tight mb-4">Vielen Dank</h2>
+                    <p class="text-[#2D3748] text-base leading-relaxed max-w-md">
+                        Ihre Anfrage wurde erfolgreich übermittelt. Ein Berater wird sich in Kürze bei Ihnen melden.
+                    </p>
+                    <button onclick="closeContactModal()" class="mt-8 btn-primary">
+                        Schließen
+                    </button>
+                </div>
+
+                <div id="contact-form-container">
+                    <form id="contact-form" onsubmit="handleContactFormSubmit(event)" class="space-y-6">
+
+                        <div class="hp-hidden">
+                            <input type="text" name="b_address" tabindex="-1" value="" autocomplete="off">
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-1">
+                                <label for="firstname" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Vorname *</label>
+                                <input type="text" name="firstname" id="firstname" required class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="Max" />
+                            </div>
+                            <div class="space-y-1">
+                                <label for="lastname" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Nachname *</label>
+                                <input type="text" name="lastname" id="lastname" required class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="Mustermann" />
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-1">
+                                <label for="email" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">E-Mail *</label>
+                                <input type="email" name="email" id="email" required class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="max@makler.de" />
+                            </div>
+                            <div class="space-y-1">
+                                <label for="phone" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Telefon (Optional)</label>
+                                <input type="tel" name="phone" id="phone" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="+49 123 456789" />
+                            </div>
+                        </div>
+
+                        <div class="space-y-1">
+                            <label for="company" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Unternehmen (Optional)</label>
+                            <input type="text" name="company" id="company" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="Maklerbüro Mustermann" />
+                        </div>
+
+                        <div class="space-y-1">
+                            <label for="message" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Ihre Nachricht *</label>
+                            <textarea name="message" id="message" required rows="4" class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent resize-none" placeholder="Beschreiben Sie kurz, wo aktuell die größten Zeitfresser in Ihren Prozessen liegen..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary w-full" id="contact-submit">
+                            Absenden
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="newsletter-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-[#071F36]/90 backdrop-blur-sm transition-opacity opacity-0" id="newsletter-backdrop" onclick="closeNewsletterModal()"></div>
+        <div class="relative bg-white w-full max-w-lg shadow-2xl transform transition-all scale-95 opacity-0 translate-y-4" id="newsletter-content">
+            <div class="p-4 border-b border-[#E1E5E9] flex justify-between items-center bg-[#F3F5F7]">
+                <span class="text-xs font-bold uppercase text-[#071F36] tracking-wider ml-2">Insights Newsletter</span>
+                <button onclick="closeNewsletterModal()" class="text-[#4A5563] hover:text-[#071F36] transition-colors p-2 hover:bg-[#E1E5E9]">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <div class="p-6">
+                <div id="newsletter-success" class="hidden flex flex-col items-center justify-center py-8 text-center">
+                    <div class="w-16 h-16 bg-[#071F36] flex items-center justify-center mb-6 rounded-full">
+                        <i data-lucide="check" class="text-white w-8 h-8"></i>
+                    </div>
+                    <h2 class="text-[#071F36] text-2xl font-bold tracking-tight mb-4">Willkommen!</h2>
+                    <p class="text-[#2D3748] text-base leading-relaxed max-w-sm">
+                        Sie erhalten ab jetzt exklusive Marktanalysen und strategische Impulse.
+                    </p>
+                    <button onclick="closeNewsletterModal()" class="mt-8 btn-primary">
+                        Schließen
+                    </button>
+                </div>
+
+                <div id="newsletter-form-container">
+                    <form id="newsletter-form" onsubmit="handleNewsletterSubmit(event)" class="space-y-6">
+                        <div class="hp-hidden">
+                            <input type="text" name="b_address" tabindex="-1" value="" autocomplete="off">
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-1">
+                                <label for="newsletter-firstname" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Vorname *</label>
+                                <input type="text" name="firstname" id="newsletter-firstname" required class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="Max" />
+                            </div>
+                            <div class="space-y-1">
+                                <label for="newsletter-lastname" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">Nachname *</label>
+                                <input type="text" name="lastname" id="newsletter-lastname" required class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="Mustermann" />
+                            </div>
+                        </div>
+
+                        <div class="space-y-1">
+                            <label for="newsletter-email" class="block text-[#4A5563] text-xs font-medium tracking-wide uppercase">E-Mail *</label>
+                            <input type="email" name="email" id="newsletter-email" required class="block w-full border-b border-[#E1E5E9] py-2 text-[#2D3748] placeholder-[#A0AEC0] form-input bg-transparent" placeholder="max@makler.de" />
+                        </div>
+
+                        <button type="submit" class="btn-primary w-full" id="newsletter-submit">
+                            Jetzt anmelden
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

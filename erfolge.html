@@ -4,29 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     
-    <title>Erfolge | Kassel Business Digital | Messbare Ergebnisse</title>
-    <meta name="description" content="Messbare Erfolge durch intelligente Automatisierung. Bis zu 50% Zeitersparnis für den Mittelstand. Konkrete Ergebnisse, keine Versprechen.">
-    
+    <title>KBD | Erfolge – Dokumentierte Ergebnisse statt Versprechen</title>
+    <meta name="description" content="80% Effizienzsteigerung in 4 Wochen. Ein Projekt, vollständig dokumentiert. So baut KBD intelligente Systeme – auch für Organisationen ohne IT-Budget.">
+
     <meta name="robots" content="index, follow">
-    <meta name="keywords" content="Automatisierung Erfolge, Zeitersparnis Mittelstand, Effizienzsteigerung, Automatisierung Mittelstand, Messbare Ergebnisse">
+    <meta name="keywords" content="Case Study, Effizienzsteigerung, Digitalisierung Non-Profit, Intelligente Systeme, Messbare Ergebnisse">
     <meta name="author" content="Kassel Business Digital">
     <meta name="language" content="de">
     <link rel="canonical" href="https://www.kassel-bd.de/erfolge.html">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.kassel-bd.de/erfolge.html">
-    <meta property="og:title" content="Erfolge | Kassel Business Digital | Messbare Ergebnisse">
-    <meta property="og:description" content="Messbare Erfolge durch intelligente Automatisierung. Bis zu 50% Zeitersparnis im Mittelstand.">
+    <meta property="og:title" content="KBD | Erfolge – Dokumentierte Ergebnisse">
+    <meta property="og:description" content="80% weniger Verwaltungsaufwand in 4 Wochen. Dokumentierte Ergebnisse statt Versprechen. So arbeitet KBD.">
     <meta property="og:image" content="https://www.kassel-bd.de/icon.png">
     <meta property="og:locale" content="de_DE">
     <meta property="og:site_name" content="Kassel Business Digital">
-    
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.kassel-bd.de/erfolge.html">
-    <meta name="twitter:title" content="Erfolge | KBD | Messbare Ergebnisse">
-    <meta name="twitter:description" content="Intelligente Automatisierung. Bis zu 50% Zeitersparnis. Messbare Erfolge.">
+    <meta name="twitter:title" content="KBD | Erfolge – Dokumentierte Ergebnisse">
+    <meta name="twitter:description" content="80% weniger Verwaltungsaufwand in 4 Wochen. Dokumentierte Ergebnisse statt Versprechen. So arbeitet KBD.">
     <meta name="twitter:image" content="https://www.kassel-bd.de/icon.png">
     
     <!-- Favicons -->
@@ -59,7 +59,27 @@
       }
     }
     </script>
-    
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.kassel-bd.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Erfolge"
+        }
+      ]
+    }
+    </script>
+
     <!-- Design System CSS -->
     <link rel="stylesheet" href="css/design-system.css">
     
@@ -67,6 +87,7 @@
     <script src="https://unpkg.com/lucide@latest" defer></script>
     <script src="config.js"></script>
     <script src="js/components.js" defer></script>
+    <script src="js/button-animation.js" defer></script>
 
     <script>
         tailwind.config = {
@@ -120,90 +141,48 @@
             text-transform: uppercase; color: var(--soft-grey); font-size: 13px;
         }
 
-        /* BUTTONS */
-        .btn-primary {
-            background-color: var(--kbd-blue);
-            color: white;
-            font-family: 'Inter', sans-serif;
-            font-weight: 500; 
-            font-size: 16px;
-            border-radius: 0px; 
-            padding: 14px 24px;
-            border: 1px solid var(--kbd-blue);
-            transition: all 0.2s ease;
-            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-            cursor: pointer;
-            text-align: center;
-            min-height: 44px;
-            touch-action: manipulation;
-        }
-        .btn-primary:hover {
-            background-color: #0A2A4A;
-            border-color: #0A2A4A;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(7, 31, 54, 0.15);
-        }
-        .btn-primary:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+        /* Buttons: global via design-system.css */
 
-        .btn-white {
-            background-color: var(--white);
-            color: var(--kbd-blue);
-            font-family: 'Inter', sans-serif;
-            font-weight: 500;
-            font-size: 16px;
-            border-radius: 0px;
-            padding: 14px 24px;
-            border: 1px solid var(--white);
-            transition: all 0.2s ease;
-            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-            cursor: pointer;
-            text-align: center;
-            min-height: 44px;
-            touch-action: manipulation;
+        /* SCROLL INDICATOR */
+        .scroll-indicator {
+            animation: scrollBounce 2s ease-in-out infinite;
         }
-        .btn-white:hover {
-            background-color: #F3F5F7;
-            border-color: #F3F5F7;
-            color: var(--kbd-blue);
-            transform: translateY(-1px);
+        @keyframes scrollBounce {
+            0%, 100% { transform: translateY(0); opacity: 0.6; }
+            50% { transform: translateY(8px); opacity: 1; }
         }
 
-        /* CASE STUDY CARDS - Smooth Animations */
-        .case-study-card {
+        /* RESULT CARDS */
+        .result-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        .result-card:hover {
+            background: rgba(255,255,255,0.08);
+            transform: translateY(-2px);
+        }
+
+        /* COMING SOON CARDS */
+        .coming-soon-card {
             background: white;
             border: 1px solid #E1E5E9;
-            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            position: relative;
-            overflow: hidden;
+            padding: 2.5rem;
+            opacity: 0.65;
+            transition: all 0.4s ease;
         }
-        .case-study-card:hover {
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-            transform: translateY(-4px);
-        }
-        
-        /* Smooth Gradient Image Backgrounds */
-        .case-gradient-image {
-            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        .case-study-card:hover .case-gradient-image {
-            transform: scale(1.02);
+        .coming-soon-card:hover {
+            opacity: 1;
+            border-color: #071F36;
         }
 
-        /* Smooth Text Scaling */
-        .case-impact-number {
-            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        .case-study-card:hover .case-impact-number {
-            transform: scale(1.05);
-        }
-
-        /* Smooth Hashtag Pills */
-        .hashtag-pill {
-            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        .hashtag-pill:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(7, 31, 54, 0.1);
+        /* PULL QUOTE */
+        .pull-quote {
+            border-left: 3px solid rgba(255,255,255,0.3);
+            padding-left: 1.5rem;
+            font-style: italic;
+            color: rgba(255,255,255,0.8);
         }
 
         /* FORM STYLES */
@@ -246,7 +225,21 @@
                     <a href="ueberuns.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Über Uns</a>
                     <a href="leistungen.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Leistungen</a>
                     <a href="technologie.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Technologie</a>
-                    <a href="erfolge.html" class="nav-item relative py-2 opacity-100 border-b-2 border-white pb-1 font-semibold">Erfolge</a>
+                    <a href="erfolge.html" class="nav-item relative py-2 opacity-100 border-b-2 border-white pb-1 font-semibold">Erfolge</a>                    
+                    <!-- Expertise Dropdown -->
+                    <div class="nav-dropdown">
+                        <span class="nav-dropdown-trigger nav-item relative py-2 hover:opacity-80 transition-opacity"
+                              tabindex="0"
+                              role="button"
+                              aria-expanded="false"
+                              aria-haspopup="true">
+                            Expertise
+                            <i data-lucide="chevron-down" class="nav-dropdown-icon"></i>
+                        </span>
+                        <div class="nav-dropdown-menu" role="menu">
+                            <a href="versicherungsmakler.html" class="nav-dropdown-item" role="menuitem">Versicherungsmakler</a>
+                        </div>
+                    </div>
                     <a href="publikationen/index.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Publikationen</a>
                     
                     <button type="button" onclick="openContactModal(event)" class="btn-primary ml-2 border-white/10 !py-2 !px-5 !text-[14px]">
@@ -265,7 +258,20 @@
                 <a href="ueberuns.html" class="block text-lg border-b border-gray-100 pb-4">Über Uns</a>
                 <a href="leistungen.html" class="block text-lg border-b border-gray-100 pb-4">Leistungen</a>
                 <a href="technologie.html" class="block text-lg border-b border-gray-100 pb-4">Technologie</a>
-                <a href="erfolge.html" class="block text-lg border-b border-gray-100 pb-4 font-bold text-[#071F36]">Erfolge</a>
+                <a href="erfolge.html" class="block text-lg border-b border-gray-100 pb-4 font-bold text-[#071F36]">Erfolge</a>                
+                <!-- Expertise Mobile Dropdown -->
+                <div class="border-b border-gray-100 pb-4">
+                    <div class="mobile-dropdown-trigger text-lg flex justify-between items-center"
+                         onclick="toggleMobileDropdown('mobile-expertise-dropdown')">
+                        <span>Expertise</span>
+                        <i data-lucide="chevron-down" class="mobile-dropdown-icon w-5 h-5" style="transition: transform 0.3s ease;"></i>
+                    </div>
+                    <div id="mobile-expertise-dropdown" class="mobile-dropdown-content">
+                        <a href="versicherungsmakler.html" class="mobile-dropdown-item block py-3 pl-8 text-[#4A5563] hover:text-[#071F36]">
+                            Versicherungsmakler
+                        </a>
+                    </div>
+                </div>
                 <a href="publikationen/index.html" class="block text-lg border-b border-gray-100 pb-4">Publikationen</a>
                 <a href="karriere.html" class="block text-lg border-b border-gray-100 pb-4">Karriere</a>
                 
@@ -277,16 +283,17 @@
     </nav>
 
     <main class="flex-grow">
-        
+
+        <!-- Hero Section -->
         <div class="relative w-full bg-[#F3F5F7]">
             <div class="relative w-full h-[65vh] min-h-[600px] overflow-hidden z-0">
-                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2370&auto=format&fit=crop" 
-                     alt="KBD Erfolge & Case Studies" 
-                     class="absolute inset-0 w-full h-full object-cover object-center grayscale hover:grayscale-0" 
+                <img src="images/erfolge/hero.webp"
+                     alt="KBD Erfolge & Case Studies"
+                     class="absolute inset-0 w-full h-full object-cover object-center grayscale hover:grayscale-0"
                      style="z-index: 1; transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);"
                      loading="eager"
                      fetchpriority="high" />
-                
+
                 <div class="absolute inset-0 bg-black/30" style="z-index: 2;"></div>
 
                 <div class="absolute inset-0 flex items-center" style="z-index: 3;">
@@ -304,7 +311,7 @@
                 <div class="max-w-7xl mx-auto px-6 lg:px-8">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
                         <div class="lg:col-span-6 relative -mt-24 lg:-mt-32 mb-20 z-10 mobile-reset-margin">
-                            
+
                             <div class="mckinsey-bracket-bl-container">
                                 <div class="mckinsey-bracket-bl-vertical"></div>
                                 <div class="mckinsey-bracket-bl-horizontal"></div>
@@ -322,7 +329,7 @@
                                 <p class="text-body leading-relaxed mb-8">
                                     Erfolgreiche Digitalisierung bedeutet mehr als nur neue Software. Wir dokumentieren echte Verbesserungen: Effizienzsteigerungen, Kostenreduktion und nachhaltige Prozessoptimierung für den deutschen Mittelstand.
                                 </p>
-                                
+
                                 <button onclick="openContactModal(event)" class="text-[#071F36] font-semibold text-sm border-b border-[#071F36] pb-0.5 hover:opacity-70 transition-opacity">
                                     Ihre Erfolgsgeschichte starten
                                 </button>
@@ -334,144 +341,93 @@
             </div>
         </div>
 
-        <!-- Intro Section -->
-        <section class="py-16 bg-white border-t border-[#E1E5E9]">
+        <!-- Section 2: Impact-Zahlen -->
+        <section class="w-full py-16 lg:py-20" style="background: linear-gradient(180deg, #071F36 0%, #0A2A4A 100%);">
+            <div class="max-w-5xl mx-auto px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center justify-center md:divide-x md:divide-white/15">
+                    <div class="text-center px-8 lg:px-12 py-6 md:py-0">
+                        <div class="text-5xl lg:text-6xl font-bold text-white leading-none tracking-tight">80<span class="text-3xl lg:text-4xl">%</span></div>
+                        <div class="text-xs text-white/50 mt-3 uppercase tracking-widest">weniger manueller Aufwand</div>
+                    </div>
+                    <div class="text-center px-8 lg:px-12 py-6 md:py-0 border-t border-white/10 md:border-t-0 w-full md:w-auto">
+                        <div class="text-5xl lg:text-6xl font-bold text-white leading-none tracking-tight">4</div>
+                        <div class="text-xs text-white/50 mt-3 uppercase tracking-widest">Wochen bis Go-Live</div>
+                    </div>
+                    <div class="text-center px-8 lg:px-12 py-6 md:py-0 border-t border-white/10 md:border-t-0 w-full md:w-auto">
+                        <div class="text-5xl lg:text-6xl font-bold text-white leading-none tracking-tight">100<span class="text-3xl lg:text-4xl">%</span></div>
+                        <div class="text-xs text-white/50 mt-3 uppercase tracking-widest">papierlos in allen Prozessen</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Case Study Header -->
+        <section class="py-20 lg:py-28 bg-white">
             <div class="max-w-7xl mx-auto px-6 lg:px-8">
-                <div class="max-w-3xl">
-                    <span class="eyebrow mb-4 block">Fallstudien</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-[#071F36] mb-4">Erfolgreiche Transformationen im Mittelstand</h2>
-                    <p class="text-body leading-relaxed">
-                        Jede Erfolgsgeschichte ist einzigartig. Gemeinsam ist ihnen: Struktur vor Software, Prozessoptimierung vor Technologie und messbare Ergebnisse statt Versprechungen.
+                <div class="max-w-4xl">
+                    <span class="eyebrow mb-4 block tracking-widest">Case Study 001</span>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#071F36] mb-6 leading-tight">
+                        Ehrenamtlicher Verein, Nordhessen
+                    </h2>
+                    <p class="text-lg md:text-xl text-[#4A5563] leading-relaxed mb-8">
+                        Wie ein ehrenamtlicher Verein in 4 Wochen eine komplette digitale Infrastruktur bekam – die mancher Mittelständler noch nicht hat.
                     </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- KACHEL 1: Bild LINKS, Text RECHTS -->
-        <section class="bg-white py-12">
-            <div class="max-w-7xl mx-auto px-6 lg:px-8">
-                <div class="case-study-card">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                        
-                        <!-- BILD LINKS (Landscape - breiter als hoch) -->
-                        <div class="relative h-[300px] lg:h-[450px] w-full overflow-hidden">
-                            <div class="case-gradient-image absolute inset-0 bg-gradient-to-br from-[#6B1B2E] via-[#8B2436] to-[#071F36]"></div>
-                            <div class="absolute inset-0 opacity-10">
-                                <div class="absolute top-10 left-10 w-24 h-24 border-2 border-white transform rotate-12"></div>
-                                <div class="absolute bottom-10 right-10 w-28 h-28 border-2 border-white transform -rotate-12"></div>
-                            </div>
-                            <div class="relative h-full flex flex-col items-center justify-center px-8 z-10">
-                                <div class="case-impact-number text-center">
-                                    <div class="text-8xl font-bold text-white leading-none mb-4">80<span class="text-5xl align-super">%</span></div>
-                                    <div class="h-1 w-24 bg-white/40 mx-auto mb-4"></div>
-                                    <div class="text-white text-2xl font-semibold mb-2">Effizienzsteigerung</div>
-                                    <div class="text-white/80 text-sm uppercase tracking-wider">In 4 Wochen</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- TEXT RECHTS -->
-                        <div class="p-8 lg:p-12 flex flex-col justify-center bg-white">
-                            <div class="mb-6">
-                                <span class="inline-block px-4 py-2 bg-gradient-to-r from-[#6B1B2E] to-[#8B2436] text-white text-xs font-bold uppercase tracking-wider">
-                                    Aktuelles Projekt • 4-Wochen-Sprint
-                                </span>
-                            </div>
-
-                            <h3 class="text-3xl lg:text-4xl font-bold mb-4 leading-tight" style="color: #6B1B2E;">
-                                Digitale Transformation<br>Regionaler Verband
-                            </h3>
-
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="hashtag-pill px-3 py-1 bg-[#F3F5F7] text-[#071F36] text-xs font-semibold rounded-full hover:bg-[#071F36] hover:text-white cursor-pointer">#automation</span>
-                                <span class="hashtag-pill px-3 py-1 bg-[#F3F5F7] text-[#071F36] text-xs font-semibold rounded-full hover:bg-[#071F36] hover:text-white cursor-pointer">#nonprofit</span>
-                                <span class="hashtag-pill px-3 py-1 bg-[#F3F5F7] text-[#071F36] text-xs font-semibold rounded-full hover:bg-[#071F36] hover:text-white cursor-pointer">#database</span>
-                            </div>
-
-                            <div class="space-y-4 text-[#4A5563] text-body">
-                                <p class="leading-relaxed">
-                                    <strong class="text-[#071F36]">Ausgangslage:</strong> Vollständiges Fehlen digitaler Infrastruktur. 100% manuelle Administration führte zu massivem Zeitverlust.
-                                </p>
-                                <p class="leading-relaxed">
-                                    <strong class="text-[#071F36]">Lösung:</strong> Zentrale Datenbank, Zero-Entry-Administration, Digital Hub mit IT-Schnittstelle und automatisierte Workflows.
-                                </p>
-                                <p class="leading-relaxed">
-                                    <strong class="text-[#071F36]">Ergebnis:</strong> 80% weniger Aufwand, vollständig papierlos in 4 Wochen.
-                                </p>
-                            </div>
-                        </div>
+                    <div class="flex flex-wrap gap-3 mb-10">
+                        <span class="px-4 py-1.5 bg-[#F3F5F7] text-[#071F36] text-xs font-semibold tracking-wide">Ehrenamt</span>
+                        <span class="px-4 py-1.5 bg-[#F3F5F7] text-[#071F36] text-xs font-semibold tracking-wide">Non-Profit</span>
+                        <span class="px-4 py-1.5 bg-[#F3F5F7] text-[#071F36] text-xs font-semibold tracking-wide">Komplett-Digitalisierung</span>
+                        <span class="px-4 py-1.5 bg-[#F3F5F7] text-[#071F36] text-xs font-semibold tracking-wide">4-Wochen-Sprint</span>
+                    </div>
+                    <div class="border-l-2 border-[#071F36] pl-6">
+                        <p class="text-body leading-relaxed">
+                            Intelligente Systeme sind nicht nur für Konzerne. Dieser Verein hatte null digitale Infrastruktur. Heute läuft alles automatisch. Demokratisierung durch Effizienz – genau dafür stehen wir.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- KACHEL 2: Text LINKS, Bild RECHTS (versetzt!) -->
-        <section class="bg-white py-12">
+        <!-- Section 4A: Ausgangslage -->
+        <section class="py-16 lg:py-24 bg-white border-t border-[#E1E5E9]">
             <div class="max-w-7xl mx-auto px-6 lg:px-8">
-                <div class="case-study-card bg-gradient-to-br from-white to-[#F3F5F7]">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                        
-                        <!-- TEXT LINKS -->
-                        <div class="p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
-                            <div class="mb-6">
-                                <span class="inline-block px-4 py-2 border-2 border-[#071F36] text-[#071F36] text-xs font-bold uppercase tracking-wider">
-                                    Ihr Projekt
-                                </span>
-                            </div>
-
-                            <h3 class="text-3xl lg:text-4xl font-bold mb-4 leading-tight" style="color: #6B1B2E;">
-                                Ihre Erfolgsgeschichte<br>beginnt hier
-                            </h3>
-
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="hashtag-pill px-3 py-1 bg-white text-[#071F36] text-xs font-semibold rounded-full cursor-pointer">#prozessanalyse</span>
-                                <span class="hashtag-pill px-3 py-1 bg-white text-[#071F36] text-xs font-semibold rounded-full cursor-pointer">#automatisierung</span>
-                                <span class="hashtag-pill px-3 py-1 bg-white text-[#071F36] text-xs font-semibold rounded-full cursor-pointer">#mittelstand</span>
-                            </div>
-
-                            <p class="text-body text-[#4A5563] leading-relaxed mb-6">
-                                Lassen Sie uns gemeinsam Ihre Prozesse optimieren und digitalisieren. Mit strukturiertem Ansatz und messbaren Ergebnissen.
-                            </p>
-                            
-                            <div class="space-y-3 mb-8">
-                                <div class="flex items-center gap-3 group cursor-pointer">
-                                    <div class="flex-shrink-0 w-10 h-10 bg-[#071F36] text-white flex items-center justify-center font-bold text-sm transition-all duration-300 group-hover:bg-[#6B1B2E]">01</div>
-                                    <div class="text-sm font-semibold text-[#071F36]">Fundierte Analyse Ihrer Ist-Situation</div>
-                                </div>
-                                <div class="flex items-center gap-3 group cursor-pointer">
-                                    <div class="flex-shrink-0 w-10 h-10 bg-[#071F36] text-white flex items-center justify-center font-bold text-sm transition-all duration-300 group-hover:bg-[#6B1B2E]">02</div>
-                                    <div class="text-sm font-semibold text-[#071F36]">Maßgeschneiderte Automatisierung</div>
-                                </div>
-                                <div class="flex items-center gap-3 group cursor-pointer">
-                                    <div class="flex-shrink-0 w-10 h-10 bg-[#071F36] text-white flex items-center justify-center font-bold text-sm transition-all duration-300 group-hover:bg-[#6B1B2E]">03</div>
-                                    <div class="text-sm font-semibold text-[#071F36]">Messbare Effizienzsteigerungen</div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <div>
+                        <span class="eyebrow mb-3 block tracking-widest">Vorher</span>
+                        <h3 class="text-2xl md:text-3xl font-bold text-[#071F36] mb-6 leading-tight">
+                            Ausgangslage: Null Infrastruktur
+                        </h3>
+                        <p class="text-body leading-relaxed">
+                            Ein Verein mit rein ehrenamtlicher Verwaltung. Mitgliederdaten in Excel-Listen, Kommunikation per WhatsApp-Gruppen, Veranstaltungsplanung auf Papier. Jede administrative Aufgabe manuell. Ehrenamtliche verbrachten mehr Zeit mit Verwaltung als mit dem eigentlichen Vereinszweck.
+                        </p>
+                    </div>
+                    <div class="p-8 lg:p-10" style="background: #0D1B2A;">
+                        <div class="space-y-0">
+                            <div class="flex items-start gap-4 py-4" style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+                                <div class="w-2 h-2 rounded-full bg-red-400 mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <div class="text-white font-semibold text-sm">Mitgliederverwaltung</div>
+                                    <div class="text-white/50 text-sm mt-0.5">Excel-Tabellen, manuell gepflegt</div>
                                 </div>
                             </div>
-
-                            <button onclick="openContactModal(event)" class="btn-primary w-full sm:w-auto">
-                                <span>Gespräch vereinbaren</span>
-                                <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </button>
-                        </div>
-
-                        <!-- BILD RECHTS (Landscape - breiter als hoch) -->
-                        <div class="relative h-[300px] lg:h-[450px] w-full overflow-hidden order-1 lg:order-2">
-                            <div class="case-gradient-image absolute inset-0 bg-gradient-to-br from-[#071F36] via-[#0A2A4A] to-[#071F36] bg-[length:200%_200%] animate-gradient"></div>
-                            <div class="absolute inset-0 opacity-20">
-                                <div class="absolute top-1/4 right-1/4 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
-                                <div class="absolute bottom-1/4 left-1/4 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+                            <div class="flex items-start gap-4 py-4" style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+                                <div class="w-2 h-2 rounded-full bg-red-400 mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <div class="text-white font-semibold text-sm">Kommunikation</div>
+                                    <div class="text-white/50 text-sm mt-0.5">WhatsApp-Chaos ohne Struktur</div>
+                                </div>
                             </div>
-                            <div class="relative h-full flex flex-col items-center justify-center px-8 z-10">
-                                <div class="case-impact-number text-center">
-                                    <div class="mb-6">
-                                        <div class="text-white text-8xl font-bold tracking-tight mb-3 drop-shadow-2xl">KBD</div>
-                                        <div class="h-1 w-32 bg-white/40 mx-auto"></div>
-                                    </div>
-                                    <div class="text-white/90 text-lg max-w-xs mx-auto leading-relaxed font-light">
-                                        Intelligente Automatisierung<br>für den Mittelstand
-                                    </div>
+                            <div class="flex items-start gap-4 py-4" style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+                                <div class="w-2 h-2 rounded-full bg-red-400 mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <div class="text-white font-semibold text-sm">Finanzen</div>
+                                    <div class="text-white/50 text-sm mt-0.5">Manuelle Buchführung auf Papier</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 py-4">
+                                <div class="w-2 h-2 rounded-full bg-red-400 mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <div class="text-white font-semibold text-sm">Veranstaltungen</div>
+                                    <div class="text-white/50 text-sm mt-0.5">Papier-Anmeldungen, keine Übersicht</div>
                                 </div>
                             </div>
                         </div>
@@ -480,59 +436,180 @@
             </div>
         </section>
 
-        <style>
-            @keyframes gradient {
-                0% { background-position: 0% 50%; }
-                50% { background-position: 100% 50%; }
-                100% { background-position: 0% 50%; }
-            }
-            .animate-gradient {
-                animation: gradient 15s ease infinite;
-            }
-        </style>
+        <!-- Section 4B: Lösung -->
+        <section class="py-16 lg:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <div class="p-8 lg:p-10 bg-[#F3F5F7] border border-[#E1E5E9] order-2 lg:order-1">
+                        <div class="space-y-0">
+                            <div class="flex items-start gap-4 py-4 border-b border-[#E1E5E9]">
+                                <div class="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <div class="text-[#071F36] font-semibold text-sm">Zentrale Datenbank</div>
+                                    <div class="text-[#4A5563] text-sm mt-0.5">Single Source of Truth für alle Vereinsdaten</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 py-4 border-b border-[#E1E5E9]">
+                                <div class="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <div class="text-[#071F36] font-semibold text-sm">Automatisierte Workflows</div>
+                                    <div class="text-[#4A5563] text-sm mt-0.5">Zero-Entry-Administration für Routineaufgaben</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 py-4 border-b border-[#E1E5E9]">
+                                <div class="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <div class="text-[#071F36] font-semibold text-sm">Digitaler Hub</div>
+                                    <div class="text-[#4A5563] text-sm mt-0.5">Kommunikation & Veranstaltungsmanagement</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 py-4">
+                                <div class="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <div class="text-[#071F36] font-semibold text-sm">IT-Schnittstelle</div>
+                                    <div class="text-[#4A5563] text-sm mt-0.5">Nahtlose Integration aller Systeme</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <span class="eyebrow mb-3 block tracking-widest">Unser Ansatz</span>
+                        <h3 class="text-2xl md:text-3xl font-bold text-[#071F36] mb-6 leading-tight">
+                            Blaupause für Non-Profits
+                        </h3>
+                        <p class="text-body leading-relaxed">
+                            Auf Basis unserer erprobten Blaupausen haben wir eine individuelle Systemarchitektur entworfen: Zentrale Datenbank als Single Source of Truth, automatisierte Workflows für Mitgliederverwaltung, digitaler Hub für Kommunikation und Veranstaltungsmanagement. Zero-Entry-Administration – das System erledigt die Verwaltung selbst.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <section class="py-24 bg-[#F9FAFB] border-t border-[#E1E5E9]">
+        <!-- Section 4C: Ergebnis -->
+        <section class="py-16 lg:py-24" style="background: linear-gradient(135deg, #020B14 0%, #071F36 100%);">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-white/50 text-xs font-medium uppercase tracking-widest mb-4 block">Ergebnis</span>
+                    <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight">
+                        4 Wochen. Komplett digital.
+                    </h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-16">
+                    <div class="result-card">
+                        <div class="text-3xl font-bold text-white mb-3">80%</div>
+                        <div class="text-white font-semibold text-sm mb-2">Weniger Verwaltungsaufwand</div>
+                        <p class="text-white/60 text-sm leading-relaxed">
+                            Ehrenamtliche können sich auf das konzentrieren, wofür sie angetreten sind.
+                        </p>
+                    </div>
+                    <div class="result-card">
+                        <div class="text-3xl font-bold text-white mb-3">100%</div>
+                        <div class="text-white font-semibold text-sm mb-2">Papierlos</div>
+                        <p class="text-white/60 text-sm leading-relaxed">
+                            Von der Mitglieder-Anmeldung bis zur Finanzübersicht – alles digital.
+                        </p>
+                    </div>
+                    <div class="result-card">
+                        <div class="text-3xl font-bold text-white mb-3">∞</div>
+                        <div class="text-white font-semibold text-sm mb-2">Zukunftssicher</div>
+                        <p class="text-white/60 text-sm leading-relaxed">
+                            Das System wächst mit. Neue Funktionen lassen sich jederzeit ergänzen.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="max-w-3xl mx-auto">
+                    <div class="pull-quote">
+                        <p class="text-lg md:text-xl leading-relaxed">
+                            „Demokratisierung durch Effizienz bedeutet: Auch ein Verein mit null IT-Budget verdient eine Infrastruktur, die funktioniert."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Methodik -->
+        <section class="py-20 lg:py-28 bg-white">
             <div class="max-w-7xl mx-auto px-6 lg:px-8">
                 <div class="mb-16 max-w-3xl">
-                    <span class="eyebrow mb-4 block">Unser Ansatz</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-[#071F36] mb-4">Warum unsere Projekte erfolgreich sind</h2>
-                    <p class="text-body leading-relaxed">
-                        Erfolg entsteht nicht zufällig. Unsere Methodik stellt sicher, dass jeder Schritt fundiert und messbar ist.
-                    </p>
+                    <span class="eyebrow mb-4 block tracking-widest">Warum es funktioniert</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#071F36] mb-4">Struktur vor Software. Immer.</h2>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
                     <div class="border-l-4 border-[#071F36] pl-8 py-4">
-                        <h3 class="text-xl font-bold text-[#071F36] mb-4">Struktur zuerst</h3>
+                        <h3 class="text-xl font-bold text-[#071F36] mb-4">Blaupause zuerst</h3>
                         <p class="text-body leading-relaxed">
-                            Wir optimieren Prozesse grundlegend, bevor wir sie digitalisieren. Schlechte analoge Prozesse werden digital nicht besser.
+                            Jedes Projekt startet mit einer erprobten Architektur aus realen Umsetzungen. Kein Experimentieren auf Ihre Kosten.
                         </p>
                     </div>
                     <div class="border-l-4 border-[#071F36] pl-8 py-4">
-                        <h3 class="text-xl font-bold text-[#071F36] mb-4">Messbare Ergebnisse</h3>
+                        <h3 class="text-xl font-bold text-[#071F36] mb-4">Messbar ab Tag 1</h3>
                         <p class="text-body leading-relaxed">
-                            Jedes Projekt definiert klare KPIs. Wir dokumentieren Fortschritt und Erfolg in konkreten Zahlen, nicht in Versprechungen.
+                            Wir definieren vorher, was Erfolg heißt. Und dokumentieren nachher, ob wir es erreicht haben.
                         </p>
                     </div>
                     <div class="border-l-4 border-[#071F36] pl-8 py-4">
-                        <h3 class="text-xl font-bold text-[#071F36] mb-4">Nachhaltige Lösungen</h3>
+                        <h3 class="text-xl font-bold text-[#071F36] mb-4">Kein Projektende</h3>
                         <p class="text-body leading-relaxed">
-                            Wir bauen Systeme, die langfristig funktionieren. Technische Schulden und kurzfristige Quick Wins sind nicht unser Ansatz.
+                            Wir verschwinden nicht nach der Übergabe. Langfristige Partnerschaft statt einmaliger Dienstleistung.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-24 bg-white border-t border-[#E1E5E9]">
+        <!-- Pay for Results -->
+        <section class="py-16 lg:py-20 border-t border-[#E1E5E9]" style="background: linear-gradient(135deg, #020B14 0%, #071F36 100%);">
             <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#071F36] mb-6">Starten Sie Ihre Erfolgsgeschichte</h2>
-                <p class="text-body mb-10 max-w-xl mx-auto leading-relaxed">
-                    Lassen Sie uns gemeinsam herausfinden, wie wir Ihre Prozesse optimieren und digitalisieren können. Ersteinschätzung ohne Vertriebsdruck, dafür mit fachlicher Substanz.
+                <span class="text-white/50 text-xs font-medium uppercase tracking-widest mb-4 block">Unser Prinzip</span>
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6">
+                    Sie zahlen für Ergebnisse. Nicht für Beraterstunden.
+                </h2>
+                <p class="text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+                    Kein Berater-Honorar, kein Stundensatz. Wir definieren vorher, was wir liefern – und Sie zahlen nur, wenn wir es tun. Pay for Results. Wer an seine Arbeit glaubt, kann so arbeiten.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 6: Nächste Projekte -->
+        <section class="py-20 lg:py-28 bg-[#F9FAFB] border-t border-[#E1E5E9]">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="max-w-3xl mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#071F36] mb-4">Weitere Case Studies folgen.</h2>
+                    <p class="text-body leading-relaxed">
+                        Wir arbeiten aktuell an mehreren Projekten im Mittelstand. Sobald die Ergebnisse dokumentiert sind, veröffentlichen wir sie hier – mit den gleichen Ansprüchen an Transparenz und Messbarkeit.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="coming-soon-card">
+                        <span class="inline-block px-3 py-1 bg-[#F3F5F7] text-[#9CA3AF] text-[11px] font-semibold uppercase tracking-widest mb-4">Coming Soon</span>
+                        <h3 class="text-lg font-bold text-[#071F36] mb-2">Druckerreseller</h3>
+                        <p class="text-sm text-[#9CA3AF]">Prozessautomatisierung · Systemintegration</p>
+                    </div>
+                    <div class="coming-soon-card">
+                        <span class="inline-block px-3 py-1 bg-[#F3F5F7] text-[#9CA3AF] text-[11px] font-semibold uppercase tracking-widest mb-4">Coming Soon</span>
+                        <h3 class="text-lg font-bold text-[#071F36] mb-2">Versicherungsmakler</h3>
+                        <p class="text-sm text-[#9CA3AF]">Systemintegration · Digitale Workflows</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: CTA -->
+        <section class="py-20 lg:py-28" style="background: linear-gradient(135deg, #020B14 0%, #071F36 100%);">
+            <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                    Wird Ihr Unternehmen die nächste Erfolgsgeschichte?
+                </h2>
+                <p class="text-lg text-white/70 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    Lassen Sie uns in einer kostenlosen Strukturanalyse herausfinden, wo Ihre Systeme Potenzial verschenken.
                 </p>
                 <div class="flex justify-center">
-                    <button onclick="openContactModal(event)" class="btn-primary">
-                        Gespräch vereinbaren
+                    <button onclick="openContactModal(event)" class="btn-white">
+                        Strukturanalyse anfragen
                     </button>
                 </div>
             </div>
@@ -549,7 +626,7 @@
                         <img src="icon.png" alt="KBD Logo" width="56" height="56" class="h-12 md:h-14 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity" />
                     </a>
                     <p class="text-[#4A5563] text-sm leading-relaxed max-w-md mb-8">
-                        Wir automatisieren Ihre Abläufe intelligent, damit Ihre Mitarbeiter mehr Zeit für echte Wertschöpfung haben.
+                        Intelligente Systemarchitekturen für den Mittelstand. Erprobte Blaupausen, individuell angepasst. Von angehenden Wirtschaftsinformatikern gebaut.
                     </p>
                     <div class="flex items-center gap-6">
                         <a href="https://www.linkedin.com/company/kassel-bd" target="_blank" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="KBD auf LinkedIn"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
@@ -573,6 +650,7 @@
                         <li><a href="leistungen.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Leistungen</a></li>
                         <li><a href="technologie.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Technologie</a></li>
                         <li><a href="erfolge.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all font-bold text-[#071F36]">Erfolge</a></li>
+                        <li><a href="versicherungsmakler.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Versicherungsmakler</a></li>
                         <li><a href="publikationen/index.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Publikationen</a></li>
                     </ul>
                 </div>
@@ -596,10 +674,36 @@
 
             <div class="border-t border-[#E1E5E9] pt-8 flex flex-col md:flex-row justify-between items-center text-[#9CA3AF] text-xs">
                 <p>&copy; 2026 Kassel Business Digital.</p>
-                <p class="mt-2 md:mt-0 font-medium">Excellence in Process Architecture.</p>
+                <p class="mt-2 md:mt-0 font-medium">Intelligente Systeme für alle.</p>
             </div>
         </div>
     </footer>
+
+
+        <!-- Content -->
+        <div class="flex-1 min-w-0">
+          <h3 class="text-[15px] font-bold text-[#071F36] leading-tight mb-1">
+            Für Makler gemacht
+          </h3>
+          <p class="text-[13px] text-[#4A5563] leading-snug mb-2">
+            Von jemandem, der selbst 1,5 Jahre Makler war.
+          </p>
+          <a href="versicherungsmakler.html"
+             class="inline-flex items-center gap-1 text-[13px] font-semibold text-[#071F36] hover:text-[#0A2A4A] transition-colors group">
+            Mehr erfahren
+            <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+          </a>
+        </div>
+
+        <!-- Close button -->
+        <button type="button"
+                onclick="closePeekPopup()"
+                class="absolute top-2 right-2 text-[#9CA3AF] hover:text-[#071F36] transition-colors p-1 rounded-full hover:bg-[#F3F5F7]"
+                aria-label="Popup schließen">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
 
     <div id="contact-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
         <div class="absolute inset-0 bg-[#071F36]/90 backdrop-blur-sm transition-opacity opacity-0" id="contact-backdrop" onclick="closeContactModal()"></div>

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     
-    <title>Kassel Business Digital | Automatisierung für den Mittelstand</title>
-    <meta name="description" content="Wir automatisieren Ihre Abläufe intelligent. Bis zu 50% Zeitersparnis für Ihre Mitarbeiter. Ihre bestehende Software bleibt. Langfristige Betreuung inklusive.">
+    <title>KBD | Leistungen – Intelligente Systemarchitekturen & Blaupausen-System</title>
+    <meta name="description" content="Von der Strukturanalyse zur intelligenten Systemarchitektur. Unser Blaupausen-System: hochwertige Lösungen, individuell angepasst, wirtschaftlich zugänglich. Für Unternehmen mit 10-200 Mitarbeitern.">
     
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.kassel-bd.de/leistungen.html">
@@ -25,8 +25,8 @@
     <link rel="dns-prefetch" href="https://unpkg.com">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Kassel Business Digital | Automatisierung für den Mittelstand">
-    <meta property="og:description" content="Intelligente Automatisierung Ihrer Abläufe. Bis zu 50% Zeitersparnis. Ihre Software bleibt. Langfristige Betreuung inklusive.">
+    <meta property="og:title" content="KBD | Leistungen – Intelligente Systemarchitekturen">
+    <meta property="og:description" content="Von der Strukturanalyse zur intelligenten Systemarchitektur. Erprobte Blaupausen, individuell angepasst. Für den Mittelstand.">
     <meta property="og:image" content="https://www.kassel-bd.de/icon.png">
     <meta property="og:url" content="https://www.kassel-bd.de/leistungen.html">
     <meta property="og:locale" content="de_DE">
@@ -34,8 +34,8 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.kassel-bd.de/leistungen.html">
-    <meta name="twitter:title" content="Kassel Business Digital | Automatisierung">
-    <meta name="twitter:description" content="Intelligente Automatisierung. 50% mehr Effizienz. Ihre Software bleibt. Langfristige Betreuung.">
+    <meta name="twitter:title" content="KBD | Leistungen – Intelligente Systemarchitekturen">
+    <meta name="twitter:description" content="Erprobte Blaupausen, individuell angepasst. Hochwertige IT-Infrastruktur, auch für kleinere Budgets.">
     <meta name="twitter:image" content="https://www.kassel-bd.de/icon.png">
 
     <script type="application/ld+json">
@@ -52,9 +52,32 @@
     }
     </script>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.kassel-bd.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Leistungen"
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="css/design-system.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest" defer></script>
     <script src="config.js"></script>
+    <script src="js/components.js" defer></script>
+    <script src="js/button-animation.js" defer></script>
 
     <script>
         tailwind.config = {
@@ -106,53 +129,7 @@
             text-transform: uppercase; color: var(--soft-grey); font-size: 13px;
         }
 
-        /* BUTTONS */
-        .btn-primary {
-            background-color: var(--kbd-blue);
-            color: white;
-            font-family: 'Inter', sans-serif;
-            font-weight: 500; 
-            font-size: 16px;
-            border-radius: 0px; 
-            padding: 14px 24px;
-            border: 1px solid var(--kbd-blue);
-            transition: all 0.2s ease;
-            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-            cursor: pointer;
-            text-align: center;
-            min-height: 44px; /* Touch target minimum */
-            touch-action: manipulation; /* Disable double-tap zoom */
-        }
-        .btn-primary:hover {
-            background-color: #0A2A4A;
-            border-color: #0A2A4A;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(7, 31, 54, 0.15);
-        }
-        .btn-primary:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
-
-        .btn-white {
-            background-color: var(--white);
-            color: var(--kbd-blue);
-            font-family: 'Inter', sans-serif;
-            font-weight: 500;
-            font-size: 16px;
-            border-radius: 0px;
-            padding: 14px 24px;
-            border: 1px solid var(--white);
-            transition: all 0.2s ease;
-            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-            cursor: pointer;
-            text-align: center;
-            min-height: 44px; /* Touch target minimum */
-            touch-action: manipulation; /* Disable double-tap zoom */
-        }
-        .btn-white:hover {
-            background-color: #F3F5F7;
-            border-color: #F3F5F7;
-            color: var(--kbd-blue);
-            transform: translateY(-1px);
-        }
+        /* Buttons: global via design-system.css */
 
         /* PROCESS SPECIFICS */
         .process-number-bg { 
@@ -214,7 +191,21 @@
                     <a href="leistungen.html" class="nav-item relative py-2 opacity-100 border-b-2 border-white pb-1 font-semibold">Leistungen</a>
                     
                     <a href="technologie.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Technologie</a>
-                    <a href="erfolge.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Erfolge</a>
+                    <a href="erfolge.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Erfolge</a>                    
+                    <!-- Expertise Dropdown -->
+                    <div class="nav-dropdown">
+                        <span class="nav-dropdown-trigger nav-item relative py-2 hover:opacity-80 transition-opacity"
+                              tabindex="0"
+                              role="button"
+                              aria-expanded="false"
+                              aria-haspopup="true">
+                            Expertise
+                            <i data-lucide="chevron-down" class="nav-dropdown-icon"></i>
+                        </span>
+                        <div class="nav-dropdown-menu" role="menu">
+                            <a href="versicherungsmakler.html" class="nav-dropdown-item" role="menuitem">Versicherungsmakler</a>
+                        </div>
+                    </div>
                     <a href="publikationen/index.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Publikationen</a>
                     
                     <button type="button" onclick="openContactModal(event)" class="btn-primary ml-2 border-white/10 !py-2 !px-5 !text-[14px]">
@@ -233,7 +224,20 @@
                 <a href="ueberuns.html" class="block text-lg border-b border-gray-100 pb-4">Über Uns</a>
                 <a href="leistungen.html" class="block text-lg border-b border-gray-100 pb-4 font-bold text-[#071F36]">Leistungen</a>
                 <a href="technologie.html" class="block text-lg border-b border-gray-100 pb-4">Technologie</a>
-                <a href="erfolge.html" class="block text-lg border-b border-gray-100 pb-4">Erfolge</a>
+                <a href="erfolge.html" class="block text-lg border-b border-gray-100 pb-4">Erfolge</a>                
+                <!-- Expertise Mobile Dropdown -->
+                <div class="border-b border-gray-100 pb-4">
+                    <div class="mobile-dropdown-trigger text-lg flex justify-between items-center"
+                         onclick="toggleMobileDropdown('mobile-expertise-dropdown')">
+                        <span>Expertise</span>
+                        <i data-lucide="chevron-down" class="mobile-dropdown-icon w-5 h-5" style="transition: transform 0.3s ease;"></i>
+                    </div>
+                    <div id="mobile-expertise-dropdown" class="mobile-dropdown-content">
+                        <a href="versicherungsmakler.html" class="mobile-dropdown-item block py-3 pl-8 text-[#4A5563] hover:text-[#071F36]">
+                            Versicherungsmakler
+                        </a>
+                    </div>
+                </div>
                 <a href="publikationen/index.html" class="block text-lg border-b border-gray-100 pb-4">Publikationen</a>
                 <a href="karriere.html" class="block text-lg border-b border-gray-100 pb-4">Karriere</a>
                 
@@ -248,7 +252,7 @@
         
         <div class="relative w-full">
             <div class="h-[70vh] min-h-[600px] w-full relative overflow-hidden">
-                 <img src="images/leistungen/hero.jpeg" 
+                 <img src="images/leistungen/hero-2-2.webp" 
                       alt="KBD Structural Architecture" 
                       class="absolute inset-0 w-full h-full object-cover object-center brightness-[0.8]"
                       fetchpriority="high" />
@@ -258,11 +262,11 @@
                 <div class="bg-white p-10 md:p-16 shadow-2xl border-t-4 border-[#071F36] text-center rounded-[0px]">
                     <span class="eyebrow mb-8 block">Leistungen & Methodik</span>
                     <h1 class="text-4xl md:text-6xl lg:text-[64px] mb-8 leading-tight">
-                        Vom Chaos zur<br class="hidden md:block" />digitalen Präzision.
+                        Blaupause.<br class="hidden md:block" />Individualisierung. System.
                     </h1>
                     <div class="h-px w-24 bg-[#E1E5E9] mx-auto mb-8"></div>
                     <p class="text-body text-lg md:text-[18px] max-w-[70ch] mx-auto leading-relaxed">
-                        Wir installieren keine Software auf Verdacht. Unser 4-Phasen-Modell stellt sicher, dass Digitalisierung erst stattfindet, wenn der analoge Prozess sauber funktioniert.
+                        Jede unserer Lösungen basiert auf erprobten Architektur-Blaupausen aus realen Umsetzungen. Diese werden individuell auf Ihre Struktur angepasst. So bekommen Sie hochwertige Lösungen – ohne unnötiges Risiko oder überzogene Budgets.
                     </p>
                 </div>
             </div>
@@ -271,10 +275,10 @@
         <section class="section-padding bg-white pb-0">
             <div class="max-w-7xl mx-auto px-6 lg:px-8">
                 <div class="mb-20 max-w-2xl">
-                    <span class="eyebrow mb-4 block text-[#071F36]">So arbeiten wir</span>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-[#071F36]">Intelligente Automatisierung statt Software-Chaos</h2>
+                    <span class="eyebrow mb-4 block text-[#071F36]">Methodik</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-[#071F36]">Vom Strukturproblem zur intelligenten Lösung</h2>
                     <p class="text-body text-lg text-[#2D3748]">
-                        Mehr Software löst keine Probleme – sie macht sie nur teurer. Wir automatisieren Ihre bestehenden Systeme intelligent, damit Ihre Mitarbeiter bis zu 50% mehr Zeit für echte Wertschöpfung haben.
+                        Mehr Software löst keine Probleme – sie macht sie nur teurer. Wir analysieren zuerst Ihre Struktur, dann bauen wir ein System, das Ihre bestehende Software intelligent verbindet und Ihren Mitarbeitern die repetitive Arbeit abnimmt.
                     </p>
                 </div>
 
@@ -285,7 +289,7 @@
                                 <span class="process-number-bg">01</span>
                                 <div class="relative z-10 pt-4">
                                     <span class="text-[#4A5563] font-bold tracking-wider text-sm uppercase mb-2 block">Schritt 1</span>
-                                    <h3 class="text-2xl md:text-3xl font-bold text-[#071F36]">Zeit-Analyse:<br>Wo verschwenden Sie Geld?</h3>
+                                    <h3 class="text-2xl md:text-3xl font-bold text-[#071F36]">Strukturanalyse:<br>Wo bremst Sie Ihre Architektur?</h3>
                                 </div>
                             </div>
                             <div class="md:col-span-8">
@@ -299,7 +303,7 @@
                                         </ul>
                                     </div>
                                     <div class="technical-card">
-                                        <img src="images/leistungen/audit.jpeg" alt="Baustellen Analyse">
+                                        <img src="images/leistungen/audit.webp" alt="Baustellen Analyse">
                                         <div class="card-overlay"><p class="text-white text-sm italic opacity-90">"Nur auf einem sauberen Fundament kann man sicher bauen."</p></div>
                                     </div>
                                 </div>
@@ -313,7 +317,7 @@
                                 <span class="process-number-bg">02</span>
                                 <div class="relative z-10 pt-4">
                                     <span class="text-[#4A5563] font-bold tracking-wider text-sm uppercase mb-2 block opacity-80">Schritt 2</span>
-                                    <h3 class="text-2xl md:text-3xl font-bold text-[#071F36]">Automatisierung:<br>Daten fließen automatisch</h3>
+                                    <h3 class="text-2xl md:text-3xl font-bold text-[#071F36]">Architektur-Design:<br>Die richtige Blaupause für Ihre Struktur</h3>
                                 </div>
                             </div>
                             <div class="md:col-span-8">
@@ -326,7 +330,7 @@
                                         </ul>
                                     </div>
                                     <div class="technical-card">
-                                        <img src="images/leistungen/prozess.jpeg" alt="Architektur Planung">
+                                        <img src="images/leistungen/prozess.webp" alt="Architektur Planung">
                                         <div class="card-overlay"><p class="text-white text-sm italic opacity-90">"Ein schlechter analoger Prozess wird digital nur zu einem schlechten digitalen Prozess."</p></div>
                                     </div>
                                 </div>
@@ -340,7 +344,7 @@
                                 <span class="process-number-bg">03</span>
                                 <div class="relative z-10 pt-4">
                                     <span class="text-[#4A5563] font-bold tracking-wider text-sm uppercase mb-2 block opacity-80">Schritt 3</span>
-                                    <h3 class="text-2xl md:text-3xl font-bold text-[#071F36]">Langfristige<br>Betreuung</h3>
+                                    <h3 class="text-2xl md:text-3xl font-bold text-[#071F36]">Implementation:<br>Passgenaue Umsetzung</h3>
                                 </div>
                             </div>
                             <div class="md:col-span-8">
@@ -353,7 +357,7 @@
                                         </ul>
                                     </div>
                                     <div class="technical-card">
-                                        <img src="images/leistungen/verbindung.jpeg" alt="Vernetzte Systeme">
+                                        <img src="images/leistungen/verbindung.webp" alt="Vernetzte Systeme">
                                         <div class="card-overlay"><p class="text-white text-sm italic opacity-90">"Smarte Brücken zwischen Ihren Systemen, die Ihnen Arbeit abnehmen."</p></div>
                                     </div>
                                 </div>
@@ -367,7 +371,7 @@
                                 <span class="process-number-bg">04</span>
                                 <div class="relative z-10 pt-4">
                                     <span class="text-[#4A5563] font-bold tracking-wider text-sm uppercase mb-2 block opacity-80">Scale Phase</span>
-                                    <h3 class="text-2xl md:text-3xl font-bold text-[#071F36]">Onboarding &<br>Skalierung</h3>
+                                    <h3 class="text-2xl md:text-3xl font-bold text-[#071F36]">Langfristige<br>Partnerschaft</h3>
                                 </div>
                             </div>
                             <div class="md:col-span-8">
@@ -380,7 +384,7 @@
                                         </ul>
                                     </div>
                                     <div class="technical-card">
-                                        <img src="images/leistungen/skalierung.jpeg" alt="Skalierung und Erfolg">
+                                        <img src="images/leistungen/skalierung.webp" alt="Skalierung und Erfolg">
                                         <div class="card-overlay"><p class="text-white text-sm italic opacity-90">"Technik scheitert oft am Menschen. Wir sorgen für Akzeptanz."</p></div>
                                     </div>
                                 </div>
@@ -398,12 +402,12 @@
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
                     <div class="lg:col-span-5">
                         <span class="text-white/60 text-xs font-bold tracking-widest uppercase mb-4 block">Alternative Route</span>
-                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">Der "Lean Connect" Ansatz</h3>
-                        <p class="text-white/80 text-lg leading-relaxed mb-8">Für Betriebe mit stabilen Prozessen bieten wir eine gestraffte Implementierung mit Fokus auf Prozessautomatisierung und maximale Effizienzsteigerungen.</p>
+                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">Beschleunigtes Verfahren</h3>
+                        <p class="text-white/80 text-lg leading-relaxed mb-8">Für Unternehmen mit klarer Ausgangslage und stabilen Prozessen: eine gestraffte Umsetzung, die direkt auf unseren bewährten Blaupausen aufbaut.</p>
                         <div class="h-px w-16 bg-white/30 mb-8"></div>
                     </div>
                     <div class="lg:col-span-7">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                             <div class="bg-white/10 backdrop-blur-md p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
                                 <div class="mb-6">
                                     <div class="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors">
@@ -422,6 +426,15 @@
                                     <p class="text-white/70 text-sm leading-relaxed">Maximale Effizienzsteigerung bei minimalem Eingriff. Messbare Ergebnisse durch intelligente Prozessautomatisierung.</p>
                                 </div>
                             </div>
+                            <div class="bg-white/10 backdrop-blur-md p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
+                                <div class="mb-6">
+                                    <div class="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors">
+                                        <i data-lucide="shield-check" class="w-6 h-6 text-white"></i>
+                                    </div>
+                                    <h4 class="text-xl font-bold text-white mb-3">Pay for Results</h4>
+                                    <p class="text-white/70 text-sm leading-relaxed">Kein Stundensatz, kein Berater-Honorar. Wir definieren vorher, was wir liefern – und Sie zahlen nur, wenn wir es tun.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -433,11 +446,14 @@
             
             <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
                 <div class="flex flex-col md:flex-row items-center justify-center gap-8">
-                    <h2 class="text-xl md:text-2xl font-bold text-white m-0 tracking-wide drop-shadow-sm">
-                        Starten wir mit der Bestandsaufnahme
-                    </h2>
-                    
-                    <button onclick="openContactModal(event)" class="px-8 py-3 bg-white text-[#071F36] font-bold text-sm rounded-none shadow-[0_4px_14px_0_rgba(0,0,0,0.3)] hover:shadow-[0_6px_20px_rgba(255,255,255,0.2)] hover:-translate-y-0.5 transition-all duration-300 border border-white/20 cursor-pointer">
+                    <div class="text-center md:text-left">
+                        <h2 class="text-xl md:text-2xl font-bold text-white m-0 tracking-wide drop-shadow-sm">
+                            Starten wir mit der Strukturanalyse
+                        </h2>
+                        <p class="text-white/50 text-xs mt-2">Pay for Results: Sie zahlen nur für messbare Ergebnisse.</p>
+                    </div>
+
+                    <button onclick="openContactModal(event)" data-text-swap class="px-8 py-3 bg-white text-[#071F36] font-bold text-sm rounded-full shadow-[0_4px_14px_0_rgba(0,0,0,0.3)] hover:shadow-[0_6px_20px_rgba(255,255,255,0.2)] hover:-translate-y-0.5 transition-all duration-300 border border-white/20 cursor-pointer overflow-hidden relative">
                         Kontakt
                     </button>
                 </div>
@@ -455,7 +471,8 @@
                         <img src="icon.png" alt="KBD Logo" width="56" height="56" class="h-12 md:h-14 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity" />
                     </a>
                     <p class="text-[#4A5563] text-sm leading-relaxed max-w-md mb-8">
-                        Wir automatisieren Ihre Abläufe intelligent, damit Ihre Mitarbeiter mehr Zeit für echte Wertschöpfung haben.    </p>
+                        Intelligente Systemarchitekturen für den Mittelstand. Erprobte Blaupausen, individuell angepasst. Von angehenden Wirtschaftsinformatikern gebaut.
+                    </p>
                     <div class="flex items-center gap-6">
                         <a href="https://www.linkedin.com/company/kassel-bd" target="_blank" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="KBD auf LinkedIn"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
                         <a href="https://www.instagram.com/kassel_bd/" target="_blank" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="KBD auf Instagram"><i data-lucide="instagram" class="w-5 h-5"></i></a>
@@ -478,6 +495,7 @@
                         <li><a href="leistungen.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all font-bold text-[#071F36]">Leistungen</a></li>
                         <li><a href="technologie.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Technologie</a></li>
                         <li><a href="erfolge.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Erfolge</a></li>
+                                <li><a href="versicherungsmakler.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Versicherungsmakler</a></li>
                         <li><a href="publikationen/index.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Publikationen</a></li>
                     </ul>
                 </div>
@@ -501,10 +519,36 @@
 
             <div class="border-t border-[#E1E5E9] pt-8 flex flex-col md:flex-row justify-between items-center text-[#9CA3AF] text-xs">
                 <p>&copy; 2026 Kassel Business Digital.</p>
-                <p class="mt-2 md:mt-0 font-medium">Excellence in Process Architecture.</p>
+                <p class="mt-2 md:mt-0 font-medium">Intelligente Systeme für alle.</p>
             </div>
         </div>
     </footer>
+
+
+        <!-- Content -->
+        <div class="flex-1 min-w-0">
+          <h3 class="text-[15px] font-bold text-[#071F36] leading-tight mb-1">
+            Für Makler gemacht
+          </h3>
+          <p class="text-[13px] text-[#4A5563] leading-snug mb-2">
+            Von jemandem, der selbst 1,5 Jahre Makler war.
+          </p>
+          <a href="versicherungsmakler.html"
+             class="inline-flex items-center gap-1 text-[13px] font-semibold text-[#071F36] hover:text-[#0A2A4A] transition-colors group">
+            Mehr erfahren
+            <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+          </a>
+        </div>
+
+        <!-- Close button -->
+        <button type="button"
+                onclick="closePeekPopup()"
+                class="absolute top-2 right-2 text-[#9CA3AF] hover:text-[#071F36] transition-colors p-1 rounded-full hover:bg-[#F3F5F7]"
+                aria-label="Popup schließen">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
 
     <div id="contact-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
         <div class="absolute inset-0 bg-[#071F36]/90 backdrop-blur-sm transition-opacity opacity-0" id="contact-backdrop" onclick="closeContactModal()"></div>

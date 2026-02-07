@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     
-    <title>KBD Research | Recruiting im Mittelstand 2025</title>
-    <meta name="description" content="Warum Fachkräfte lieber digital arbeiten als Zettel zu suchen. Ein Whitepaper von Kassel Business Digital zur Mitarbeitergewinnung.">
+    <title>KBD Research | Der Fachkräftemangel ist ein Strukturproblem</title>
+    <meta name="description" content="Der Fachkräftemangel ist real. Aber er ist nicht die Ursache, sondern das Symptom. Warum Unternehmen keine neuen Leute brauchen, sondern bessere Systeme.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.kassel-bd.de/publikationen/efficiency_paradox.html">
     
     <meta property="og:type" content="article">
-    <meta property="og:title" content="KBD Research: Recruiting im Mittelstand 2025">
-    <meta property="og:description" content="Vergessen Sie den Obstkorb. Warum junge Talente analoge Betriebe meiden.">
+    <meta property="og:title" content="KBD Research | Fachkräftemangel als Strukturproblem">
+    <meta property="og:description" content="Der Fachkräftemangel ist real. Aber er ist nicht die Ursache, sondern das Symptom. Warum Unternehmen keine neuen Leute brauchen, sondern bessere Systeme.">
     <meta property="og:image" content="https://www.kassel-bd.de/icon.png">
     <meta property="og:url" content="https://www.kassel-bd.de/publikationen/efficiency_paradox.html">
     
@@ -23,9 +23,12 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#071F36">
     
+    <link rel="stylesheet" href="../css/design-system.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
     <script src="../config.js"></script>
+    <script src="../js/components.js" defer></script>
+    <script src="../js/button-animation.js" defer></script>
 
     <script>
         tailwind.config = {
@@ -100,27 +103,7 @@
             padding: 24px;
         }
 
-        /* BUTTONS */
-        .btn-primary {
-            background-color: var(--kbd-blue);
-            color: white;
-            font-family: 'Inter', sans-serif;
-            font-weight: 500; 
-            font-size: 15px;
-            border-radius: 0px; 
-            padding: 12px 24px;
-            border: 1px solid var(--kbd-blue);
-            transition: all 0.2s ease;
-            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-            cursor: pointer;
-            white-space: nowrap;
-        }
-        .btn-primary:hover {
-            background-color: #0A2A4A;
-            border-color: #0A2A4A;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(7, 31, 54, 0.15);
-        }
+        /* Buttons: global via design-system.css */
 
         /* FORM STYLES */
         .form-input {
@@ -177,9 +160,23 @@
                     <a href="../ueberuns.html" class="hover:opacity-80 transition-opacity">Über Uns</a>
                     <a href="../leistungen.html" class="hover:opacity-80 transition-opacity">Leistungen</a>
                     <a href="../technologie.html" class="hover:opacity-80 transition-opacity">Technologie</a>
-                    <a href="../erfolge.html" class="hover:opacity-80 transition-opacity">Erfolge</a>
+                    <a href="../erfolge.html" class="hover:opacity-80 transition-opacity">Erfolge</a>                    
+                    <!-- Expertise Dropdown -->
+                    <div class="nav-dropdown">
+                        <span class="nav-dropdown-trigger nav-item relative py-2 hover:opacity-80 transition-opacity"
+                              tabindex="0"
+                              role="button"
+                              aria-expanded="false"
+                              aria-haspopup="true">
+                            Expertise
+                            <i data-lucide="chevron-down" class="nav-dropdown-icon"></i>
+                        </span>
+                        <div class="nav-dropdown-menu" role="menu">
+                            <a href="../versicherungsmakler.html" class="nav-dropdown-item" role="menuitem">Versicherungsmakler</a>
+                        </div>
+                    </div>
                     <a href="index.html" class="opacity-100 border-b-2 border-[#071F36] pb-1">Publikationen</a>
-                    <button type="button" onclick="openContactModal(event)" class="btn-primary ml-2 border-transparent !py-2 !px-5 !text-[14px]">
+                    <button type="button" onclick="openContactModal(event)" class="btn-primary ml-2 border-white/10 !py-2 !px-5 !text-[14px]">
                         Kontakt
                     </button>
                 </div>
@@ -225,7 +222,7 @@
                         </button>
                     </div>
 
-                    <button type="button" onclick="openContactModal(event)" class="btn-primary ml-2 border-transparent !py-2 !px-5 !text-[14px] hidden md:flex">
+                    <button type="button" onclick="openContactModal(event)" class="btn-primary ml-2 border-white/10 !py-2 !px-5 !text-[14px] hidden md:flex">
                         Kontakt
                     </button>
                 </div>
@@ -241,7 +238,20 @@
                 <a href="../ueberuns.html" class="block text-lg border-b border-gray-100 pb-4">Über Uns</a>
                 <a href="../leistungen.html" class="block text-lg border-b border-gray-100 pb-4">Leistungen</a>
                 <a href="../technologie.html" class="block text-lg border-b border-gray-100 pb-4">Technologie</a>
-                <a href="../erfolge.html" class="block text-lg border-b border-gray-100 pb-4">Erfolge</a>
+                <a href="../erfolge.html" class="block text-lg border-b border-gray-100 pb-4">Erfolge</a>                
+                <!-- Expertise Mobile Dropdown -->
+                <div class="border-b border-gray-100 pb-4">
+                    <div class="mobile-dropdown-trigger text-lg flex justify-between items-center"
+                         onclick="toggleMobileDropdown('mobile-expertise-dropdown')">
+                        <span>Expertise</span>
+                        <i data-lucide="chevron-down" class="mobile-dropdown-icon w-5 h-5" style="transition: transform 0.3s ease;"></i>
+                    </div>
+                    <div id="mobile-expertise-dropdown" class="mobile-dropdown-content">
+                        <a href="../versicherungsmakler.html" class="mobile-dropdown-item block py-3 pl-8 text-[#4A5563] hover:text-[#071F36]">
+                            Versicherungsmakler
+                        </a>
+                    </div>
+                </div>
                 <a href="index.html" class="block text-lg border-b border-gray-100 pb-4 font-bold text-[#071F36]">Publikationen</a>
                 <a href="../karriere.html" class="block text-lg border-b border-gray-100 pb-4">Karriere</a>
                 <button type="button" onclick="openContactModal(event)" class="w-full text-left text-lg font-bold text-[#071F36] pt-2">
@@ -352,7 +362,7 @@
                         <p class="text-white/80 mb-8 max-w-xl mx-auto text-sm md:text-base leading-relaxed">
                             Sie wissen oft selbst am besten, wo es im Getriebe knirscht, finden aber im Tagesgeschäft keine Zeit für die Lösung. Wir werfen gemeinsam einen Blick in Ihren "Maschinenraum", analysieren Ihre aktuellen Abläufe und zeigen Ihnen ganz konkrete Möglichkeiten, wie Sie Ihren Betrieb digital attraktiver machen.
                         </p>
-                        <button onclick="openContactModal(event)" class="bg-white text-[#071F36] font-bold py-3 px-8 hover:bg-[#F3F5F7] transition-all hover:scale-105 shadow-lg border border-transparent">
+                        <button onclick="openContactModal(event)" data-text-swap class="bg-white text-[#071F36] font-bold py-3 px-8 rounded-full hover:bg-[#F3F5F7] transition-all hover:scale-105 shadow-lg border border-transparent">
                             Digital-Check vereinbaren
                         </button>
                     </div>
@@ -416,7 +426,7 @@
                         <img src="../icon.png" alt="KBD Logo" width="56" height="56" class="h-12 md:h-14 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity" />
                     </a>
                     <p class="text-[#4A5563] text-sm leading-relaxed max-w-md mb-8">
-                        Wir automatisieren Ihre Abläufe intelligent, damit Ihre Mitarbeiter mehr Zeit für echte Wertschöpfung haben.     </p>
+                        Intelligente Systemarchitekturen für den Mittelstand. Erprobte Blaupausen, individuell angepasst. Von angehenden Wirtschaftsinformatikern gebaut.</p>
                     <div class="flex items-center gap-6">
                         <a href="https://www.linkedin.com/company/kassel-bd" target="_blank" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="KBD auf LinkedIn"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
                         <a href="https://www.instagram.com/kassel_bd/" target="_blank" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="KBD auf Instagram"><i data-lucide="instagram" class="w-5 h-5"></i></a>
@@ -439,6 +449,7 @@
                         <li><a href="../leistungen.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Leistungen</a></li>
                         <li><a href="../technologie.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Technologie</a></li>
                         <li><a href="../erfolge.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Erfolge</a></li>
+                        <li><a href="../versicherungsmakler.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Versicherungsmakler</a></li>
                         <li><a href="index.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all font-bold text-[#071F36]">Publikationen</a></li>
                     </ul>
                 </div>
@@ -462,7 +473,7 @@
 
             <div class="border-t border-[#E1E5E9] pt-8 flex flex-col md:flex-row justify-between items-center text-[#9CA3AF] text-xs">
                 <p>&copy; 2025 Kassel Business Digital.</p>
-                <p class="mt-2 md:mt-0 font-medium">Excellence in Process Architecture.</p>
+                <p class="mt-2 md:mt-0 font-medium">Intelligente Systeme für alle.</p>
             </div>
         </div>
     </footer>

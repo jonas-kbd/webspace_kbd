@@ -411,6 +411,73 @@ if (document.getElementById('navbar')) {
 // Initialize sticky anchor nav if present
 initStickyAnchorNav();
 
+// --- DROPDOWN NAVIGATION ---
+function initDropdownNav() {
+    // Desktop: Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        const dropdowns = document.querySelectorAll('.nav-dropdown');
+        dropdowns.forEach(dropdown => {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+    });
+
+    // Keyboard navigation support
+    const dropdownTriggers = document.querySelectorAll('.nav-dropdown-trigger');
+    dropdownTriggers.forEach(trigger => {
+        trigger.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.closest('.nav-dropdown').classList.toggle('active');
+            }
+            if (e.key === 'Escape') {
+                this.closest('.nav-dropdown').classList.remove('active');
+            }
+        });
+    });
+
+    // Arrow key navigation within dropdown menu
+    const dropdownMenus = document.querySelectorAll('.nav-dropdown-menu');
+    dropdownMenus.forEach(menu => {
+        const items = menu.querySelectorAll('.nav-dropdown-item');
+        items.forEach((item, index) => {
+            item.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    const nextItem = items[index + 1];
+                    if (nextItem) nextItem.focus();
+                }
+                if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    const prevItem = items[index - 1];
+                    if (prevItem) prevItem.focus();
+                }
+                if (e.key === 'Escape') {
+                    e.preventDefault();
+                    menu.closest('.nav-dropdown').classList.remove('active');
+                    menu.closest('.nav-dropdown').querySelector('.nav-dropdown-trigger').focus();
+                }
+            });
+        });
+    });
+}
+
+function toggleMobileDropdown(id) {
+    const content = document.getElementById(id);
+    if (!content) return;
+
+    const icon = content.previousElementSibling.querySelector('.mobile-dropdown-icon');
+
+    content.classList.toggle('expanded');
+    if (icon) {
+        icon.style.transform = content.classList.contains('expanded') ? 'rotate(180deg)' : 'rotate(0deg)';
+    }
+}
+
+// Initialize on page load
+initDropdownNav();
+
 // Make functions globally available
 window.openContactModal = openContactModal;
 window.closeContactModal = closeContactModal;
@@ -421,4 +488,6 @@ window.handleNewsletterSubmit = handleNewsletterSubmit;
 window.handleFormSubmit = handleFormSubmit;
 window.resetForm = resetForm;
 window.toggleMobileMenu = toggleMobileMenu;
+window.toggleMobileDropdown = toggleMobileDropdown;
+window.initDropdownNav = initDropdownNav;
 

@@ -46,9 +46,12 @@
     }
     </script>
 
+    <link rel="stylesheet" href="css/design-system.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
     <script src="config.js"></script>
+    <script src="js/components.js" defer></script>
+    <script src="js/button-animation.js" defer></script>
 
     <script>
         tailwind.config = {
@@ -101,48 +104,7 @@
             text-transform: uppercase; color: var(--soft-grey); font-size: 12px;
         }
 
-        /* BUTTONS */
-        .btn-primary {
-            background-color: var(--kbd-blue);
-            color: white;
-            font-family: 'Inter', sans-serif;
-            font-weight: 500; 
-            font-size: 16px;
-            border-radius: 0px; 
-            padding: 14px 24px;
-            border: 1px solid var(--kbd-blue);
-            transition: all 0.2s ease;
-            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-            cursor: pointer;
-            text-align: center;
-        }
-        .btn-primary:hover {
-            background-color: #0A2A4A;
-            border-color: #0A2A4A;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(7, 31, 54, 0.15);
-        }
-
-        .btn-white {
-            background-color: var(--white);
-            color: var(--kbd-blue);
-            font-family: 'Inter', sans-serif;
-            font-weight: 500;
-            font-size: 16px;
-            border-radius: 0px;
-            padding: 14px 24px;
-            border: 1px solid var(--white);
-            transition: all 0.2s ease;
-            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-            cursor: pointer;
-            text-align: center;
-        }
-        .btn-white:hover {
-            background-color: #F3F5F7;
-            border-color: #F3F5F7;
-            color: var(--kbd-blue);
-            transform: translateY(-1px);
-        }
+        /* Buttons: global via design-system.css */
 
         /* UTILITIES */
         .section-padding { padding-top: 128px; padding-bottom: 128px; }
@@ -207,7 +169,21 @@
                     <a href="ueberuns.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Über Uns</a>
                     <a href="leistungen.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Leistungen</a>
                     <a href="technologie.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Technologie</a>
-                    <a href="erfolge.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Erfolge</a>
+                    <a href="erfolge.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Erfolge</a>                    
+                    <!-- Expertise Dropdown -->
+                    <div class="nav-dropdown">
+                        <span class="nav-dropdown-trigger nav-item relative py-2 hover:opacity-80 transition-opacity"
+                              tabindex="0"
+                              role="button"
+                              aria-expanded="false"
+                              aria-haspopup="true">
+                            Expertise
+                            <i data-lucide="chevron-down" class="nav-dropdown-icon"></i>
+                        </span>
+                        <div class="nav-dropdown-menu" role="menu">
+                            <a href="versicherungsmakler.html" class="nav-dropdown-item" role="menuitem">Versicherungsmakler</a>
+                        </div>
+                    </div>
                     <a href="publikationen/index.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Publikationen</a>
                     
                     <button type="button" onclick="openContactModal(event)" class="btn-primary ml-2 border-white/10 !py-2 !px-5 !text-[14px]">
@@ -226,7 +202,20 @@
                 <a href="ueberuns.html" class="block text-lg border-b border-gray-100 pb-4">Über Uns</a>
                 <a href="leistungen.html" class="block text-lg border-b border-gray-100 pb-4">Leistungen</a>
                 <a href="technologie.html" class="block text-lg border-b border-gray-100 pb-4">Technologie</a>
-                <a href="erfolge.html" class="block text-lg border-b border-gray-100 pb-4">Erfolge</a>
+                <a href="erfolge.html" class="block text-lg border-b border-gray-100 pb-4">Erfolge</a>                
+                <!-- Expertise Mobile Dropdown -->
+                <div class="border-b border-gray-100 pb-4">
+                    <div class="mobile-dropdown-trigger text-lg flex justify-between items-center"
+                         onclick="toggleMobileDropdown('mobile-expertise-dropdown')">
+                        <span>Expertise</span>
+                        <i data-lucide="chevron-down" class="mobile-dropdown-icon w-5 h-5" style="transition: transform 0.3s ease;"></i>
+                    </div>
+                    <div id="mobile-expertise-dropdown" class="mobile-dropdown-content">
+                        <a href="versicherungsmakler.html" class="mobile-dropdown-item block py-3 pl-8 text-[#4A5563] hover:text-[#071F36]">
+                            Versicherungsmakler
+                        </a>
+                    </div>
+                </div>
                 <a href="publikationen/index.html" class="block text-lg border-b border-gray-100 pb-4">Publikationen</a>
                 <a href="karriere.html" class="block text-lg border-b border-gray-100 pb-4">Karriere</a>
                 
@@ -240,7 +229,7 @@
     <main class="flex-grow">
         
         <div class="hero-banner">
-            <img src="images/dsgvobild.jpeg" 
+            <img src="images/dsgvobild.webp" 
                  alt="Abstrakte Technologie-Strukturen" 
                  class="hero-bg-img" 
                  loading="eager" />
@@ -256,7 +245,8 @@
         <div class="max-w-4xl mx-auto px-6 lg:px-8 py-24">
 
             <section id="dsgvo-content" class="space-y-16">
-                
+
+                <!-- 1. Datenschutz auf einen Blick -->
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
                     <div class="md:col-span-4">
                         <h2 class="text-lg font-bold text-[#071F36]">1. Datenschutz auf einen Blick</h2>
@@ -265,14 +255,19 @@
                         <div>
                             <span class="eyebrow">Allgemeine Hinweise</span>
                             <div class="text-body text-[16px]">
-                                <p>Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung. Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL-bzw. TLS-Verschlüsselung.</p>
+                                <p>Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
                             </div>
                         </div>
                         <div>
-                            <span class="eyebrow">Datenschutz & Tracking</span>
+                            <span class="eyebrow">Verschlüsselung</span>
                             <div class="text-body text-[16px]">
-                                <p>Wir setzen auf dieser Website Technologien ein, um unsere Prozesse zu optimieren und das Nutzerverhalten besser zu verstehen. Hierbei kommen Cookies und Tracking-Skripte (z. B. von HubSpot) zum Einsatz, jedoch <strong>ausschließlich dann, wenn Sie uns hierzu Ihre ausdrückliche Einwilligung (Opt-In) über unser Cookie-Banner erteilt haben.</strong></p>
-                                <p class="mt-2">Ohne Ihre Zustimmung werden keine Analyse-Daten erhoben. Essenzielle Cookies, die für den technischen Betrieb der Seite notwendig sind, werden unabhängig davon gesetzt.</p>
+                                <p>Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://" auf „https://" wechselt.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="eyebrow">Keine Cookies, kein Tracking</span>
+                            <div class="text-body text-[16px]">
+                                <p><strong>Diese Website setzt keine Cookies und verwendet keine Analyse- oder Tracking-Tools.</strong> Es gibt kein Cookie-Banner, weil keines erforderlich ist. Es werden weder Google Analytics, noch HubSpot Analytics, noch LinkedIn Insight Tags, noch sonstige Remarketing-Pixel eingesetzt.</p>
                             </div>
                         </div>
                     </div>
@@ -280,6 +275,7 @@
 
                 <div class="h-px w-full bg-[#E1E5E9]"></div>
 
+                <!-- 2. Verantwortliche Stelle -->
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
                     <div class="md:col-span-4">
                         <h2 class="text-lg font-bold text-[#071F36]">2. Verantwortliche Stelle</h2>
@@ -290,7 +286,8 @@
                             <div class="text-body text-[16px]">
                                 Jonas Meyer & Dayan Hindermann GbR<br>
                                 Nordring 1<br>
-                                34519 Diemelsee
+                                34519 Diemelsee<br>
+                                Deutschland
                             </div>
                         </div>
                         <div>
@@ -305,113 +302,157 @@
                                 E-Mail: <a href="mailto:info@kassel-bd.de" class="hover:text-[#071F36] hover:underline">info@kassel-bd.de</a>
                             </div>
                         </div>
+                        <div>
+                            <span class="eyebrow">Datenschutzbeauftragter</span>
+                            <div class="text-body text-[16px]">
+                                <p>Die Benennung eines Datenschutzbeauftragten ist für uns gesetzlich nicht vorgeschrieben, da weniger als 20 Personen ständig mit der automatisierten Verarbeitung personenbezogener Daten beschäftigt sind (§ 38 BDSG).</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="h-px w-full bg-[#E1E5E9]"></div>
 
+                <!-- 3. Hosting & Infrastruktur -->
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
                     <div class="md:col-span-4">
                         <h2 class="text-lg font-bold text-[#071F36]">3. Hosting & Infrastruktur</h2>
                     </div>
                     <div class="md:col-span-8 space-y-8">
                         <div>
-                            <span class="eyebrow">Externes Hosting durch Strato</span>
+                            <span class="eyebrow">Webhosting</span>
                             <div class="text-body text-[16px]">
-                                <p class="mb-4">Wir hosten unsere Website bei der Strato AG, Pascalstraße 10, 10587 Berlin (nachfolgend: Strato). Wenn Sie unsere Website besuchen, erfasst Strato verschiedene Logfiles inklusive Ihrer IP-Adressen. Dies ist technisch notwendig, um die Website sicher und stabil auszuliefern.</p>
-                                <p class="mb-4"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (Berechtigtes Interesse an Zuverlässigkeit und Sicherheit).</p>
-                                <p><strong>Auftragsverarbeitung:</strong> Ein AV-Vertrag mit Strato wurde geschlossen.</p>
-                            </div>
-                        </div>
-                        <div>
-                            <span class="eyebrow">Technische Einbindungen (CDNs)</span>
-                            <div class="text-body text-[16px] legal-value">
-                                <p class="mb-2">Um unsere Website optisch ansprechend und schnell auszuliefern, nutzen wir Content Delivery Networks (CDNs). Dabei wird technisch bedingt Ihre IP-Adresse an den Anbieter übermittelt:</p>
-                                <ul>
-                                    <li><strong>Tailwind CSS:</strong> (via cdn.tailwindcss.com / Cloudflare Inc., USA) zur Design-Darstellung.</li>
-                                    <li><strong>Lucide Icons:</strong> (via unpkg.com / NPM Inc.) zur Darstellung von Icons.</li>
+                                <p class="mb-4">Unsere Website wird bei der <strong>Strato AG</strong>, Pascalstraße 10, 10587 Berlin, gehostet. Beim Besuch unserer Website erfasst Strato automatisch Informationen in sogenannten Server-Logfiles, die Ihr Browser automatisch übermittelt. Dies sind:</p>
+                                <ul class="list-disc pl-5 space-y-1 text-[#4A5563] text-[15px] mb-4">
+                                    <li>IP-Adresse des anfragenden Rechners</li>
+                                    <li>Datum und Uhrzeit des Zugriffs</li>
+                                    <li>Name und URL der abgerufenen Datei</li>
+                                    <li>Verwendeter Browser und Betriebssystem</li>
+                                    <li>Referrer-URL</li>
                                 </ul>
-                                <p>Die Nutzung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="h-px w-full bg-[#E1E5E9]"></div>
-
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-                    <div class="md:col-span-4">
-                        <h2 class="text-lg font-bold text-[#071F36]">4. Datenerfassung & Kommunikation</h2>
-                    </div>
-                    <div class="md:col-span-8 space-y-8">
-                        <div>
-                            <span class="eyebrow">Kontaktformular & E-Mail</span>
-                            <div class="text-body text-[16px]">
-                                <p class="mb-4">Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben (Name, E-Mail, Mobilnummer, Unternehmensname, Thema, Nachricht) zwecks Bearbeitung in unserem CRM (HubSpot) gespeichert.</p>
-                                <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) oder Art. 6 Abs. 1 lit. f DSGVO (Berechtigtes Interesse).</p>
+                                <p class="mb-2"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der sicheren und stabilen Bereitstellung der Website).</p>
+                                <p class="mb-2"><strong>Speicherdauer:</strong> Die Logfiles werden nach maximal 7 Tagen gelöscht.</p>
+                                <p><strong>Auftragsverarbeitung:</strong> Mit Strato wurde ein Vertrag zur Auftragsverarbeitung (AV-Vertrag) gemäß Art. 28 DSGVO geschlossen.</p>
                             </div>
                         </div>
                         <div>
-                            <span class="eyebrow">Videokonferenzen (Microsoft Teams)</span>
-                            <div class="text-body text-[16px]">
-                                <p>Für Online-Meetings und Audits nutzen wir Microsoft Teams. Hierbei werden Metadaten, Video- und Audiodaten verarbeitet.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="h-px w-full bg-[#E1E5E9]"></div>
-
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-                    <div class="md:col-span-4">
-                        <h2 class="text-lg font-bold text-[#071F36]">5. Analyse & Werbe-Tracking</h2>
-                    </div>
-                    <div class="md:col-span-8 space-y-8">
-                        <div>
-                            <span class="eyebrow">Hinweis</span>
-                            <div class="text-body text-[16px] italic">
-                                <p>Tracking-Tools werden nur aktiviert, wenn Sie im Cookie-Banner ausdrücklich zugestimmt haben (Opt-In).</p>
-                            </div>
-                        </div>
-                        <div>
-                            <span class="eyebrow">HubSpot Analytics</span>
-                            <div class="text-body text-[16px]">
-                                <p class="mb-4">Wir nutzen Webanalysedienste von HubSpot Inc. (USA). HubSpot verwendet Cookies, um zu analysieren, wie Besucher unsere Website nutzen (z. B. Verweildauer, aufgerufene Seiten). Diese Informationen helfen uns, unsere Beratungsangebote besser auf den deutschen Mittelstand auszurichten.</p>
-                                <p>HubSpot ist nach dem EU-US Data Privacy Framework zertifiziert. Ein AV-Vertrag wurde geschlossen.</p>
-                            </div>
-                        </div>
-                        <div>
-                            <span class="eyebrow">LinkedIn Insight Tag</span>
-                            <div class="text-body text-[16px]">
-                                <p class="mb-4">Diese Website verwendet das „LinkedIn Insight Tag“ der LinkedIn Ireland Unlimited Company. Dieses Tool legt ein Cookie ab, welches die Erfassung von Daten wie IP-Adresse und Seitenereignissen ermöglicht. Wir nutzen dies, um Zielgruppen besser zu verstehen und relevante Impulse anzuzeigen.</p>
-                                <p><strong>Rechtsgrundlage für alle Tracker:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung).</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="h-px w-full bg-[#E1E5E9]"></div>
-
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-                    <div class="md:col-span-4">
-                        <h2 class="text-lg font-bold text-[#071F36]">6. Interne Tools & Zahlung</h2>
-                    </div>
-                    <div class="md:col-span-8 space-y-8">
-                        <div>
-                            <span class="eyebrow">Interne Verarbeitung</span>
+                            <span class="eyebrow">Technisch notwendige Drittdienste (CDNs)</span>
                             <div class="text-body text-[16px] legal-value">
-                                <p class="mb-2">Zur Erbringung unserer Dienstleistung nutzen wir spezialisierte Software (alle mit AV-Vertrag):</p>
+                                <p class="mb-4">Für die Darstellung unserer Website binden wir zwei Content Delivery Networks (CDNs) ein. Beim Laden dieser Ressourcen wird technisch bedingt Ihre IP-Adresse an den jeweiligen Anbieter übermittelt:</p>
                                 <ul>
-                                    <li><strong>Lexoffice:</strong> Buchhaltung & Rechnungsstellung.</li>
-                                    <li><strong>Notion:</strong> Projektorganisation & Dokumentation.</li>
-                                    <li><strong>HubSpot CRM:</strong> Zentrale Kundendatenbank.</li>
+                                    <li><strong>Tailwind CSS</strong> (via cdn.tailwindcss.com): CSS-Framework zur Gestaltung der Website. Anbieter: Cloudflare Inc., 101 Townsend St, San Francisco, CA 94107, USA. Cloudflare ist nach dem EU-US Data Privacy Framework zertifiziert.</li>
+                                    <li><strong>Lucide Icons</strong> (via unpkg.com): Icon-Bibliothek zur Darstellung von Symbolen. Anbieter: npm Inc. (via unpkg CDN), USA.</li>
                                 </ul>
+                                <p class="mt-4"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der funktionsfähigen und ansprechenden Darstellung der Website).</p>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="eyebrow">Schriften</span>
+                            <div class="text-body text-[16px]">
+                                <p>Alle Schriftarten (Inter) werden lokal auf unserem Server gehostet. Es findet <strong>kein Abruf von externen Schriftarten-Servern</strong> (z. B. Google Fonts) statt. Es werden keine Daten an Dritte übermittelt.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-px w-full bg-[#E1E5E9]"></div>
+
+                <!-- 4. Kontaktformular & Anfragen -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                    <div class="md:col-span-4">
+                        <h2 class="text-lg font-bold text-[#071F36]">4. Kontaktformular & Anfragen</h2>
+                    </div>
+                    <div class="md:col-span-8 space-y-8">
+                        <div>
+                            <span class="eyebrow">Erhobene Daten</span>
+                            <div class="text-body text-[16px]">
+                                <p class="mb-4">Wenn Sie uns über das Kontaktformular eine Anfrage senden, erheben wir folgende Daten:</p>
+                                <ul class="list-disc pl-5 space-y-1 text-[#4A5563] text-[15px] mb-4">
+                                    <li>Vorname und Nachname (Pflichtfeld)</li>
+                                    <li>E-Mail-Adresse (Pflichtfeld)</li>
+                                    <li>Telefonnummer (freiwillig)</li>
+                                    <li>Unternehmen (freiwillig)</li>
+                                    <li>Thema der Anfrage (Pflichtfeld)</li>
+                                    <li>Nachricht (freiwillig)</li>
+                                </ul>
+                                <p>Zusätzlich werden der Zeitpunkt der Absendung und die Seite, von der die Anfrage gesendet wurde, erfasst.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="eyebrow">Datenfluss & Auftragsverarbeiter</span>
+                            <div class="text-body text-[16px]">
+                                <p class="mb-4">Ihre Formulardaten werden über eine automatisierte Verarbeitungskette weitergeleitet:</p>
+                                <ol class="list-decimal pl-5 space-y-2 text-[#4A5563] text-[15px] mb-4">
+                                    <li><strong>N8N Automation</strong> (gehostet auf Hostinger International Ltd., EU): Empfang und Weiterleitung der Formulardaten.</li>
+                                    <li><strong>Notion</strong> (Notion Labs Inc., USA): Speicherung und Verwaltung der Anfrage in unserem CRM-System.</li>
+                                </ol>
+                                <p class="mb-2">Notion ist nach dem EU-US Data Privacy Framework zertifiziert. Mit Hostinger und Notion wurden AV-Verträge gemäß Art. 28 DSGVO geschlossen.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="eyebrow">Rechtsgrundlage</span>
+                            <div class="text-body text-[16px]">
+                                <p>Art. 6 Abs. 1 lit. b DSGVO (Durchführung vorvertraglicher Maßnahmen) in Verbindung mit Art. 6 Abs. 1 lit. a DSGVO (Ihre Einwilligung über die Datenschutz-Checkbox im Formular).</p>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="eyebrow">Spamschutz</span>
+                            <div class="text-body text-[16px]">
+                                <p>Zum Schutz vor automatisierten Anfragen verwenden wir ein unsichtbares Honeypot-Feld. Es werden keine externen Captcha-Dienste (z. B. Google reCAPTCHA) eingesetzt.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-px w-full bg-[#E1E5E9]"></div>
+
+                <!-- 5. Newsletter -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                    <div class="md:col-span-4">
+                        <h2 class="text-lg font-bold text-[#071F36]">5. Newsletter</h2>
+                    </div>
+                    <div class="md:col-span-8 space-y-8">
+                        <div>
+                            <span class="eyebrow">Aktueller Status</span>
+                            <div class="text-body text-[16px]">
+                                <p class="mb-4">Auf unserer Website befindet sich ein Anmeldeformular für unseren Newsletter. <strong>Der Newsletter wird derzeit nicht aktiv versendet.</strong> Das Formular dient der Vorbereitung für einen zukünftigen Newsletter-Service.</p>
+                                <p class="mb-4">Wenn Sie sich anmelden, erheben wir: Vorname, Nachname und E-Mail-Adresse. Diese Daten werden über N8N (Hostinger, EU) verarbeitet.</p>
+                                <p class="mb-2"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung).</p>
+                                <p>Bei Aktivierung des Newsletters werden wir ein Double-Opt-In-Verfahren einsetzen. Sie können Ihre Einwilligung jederzeit widerrufen. Eine Abmeldemöglichkeit finden Sie unter <a href="abmelden.html" class="underline hover:text-[#071F36]">abmelden.html</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-px w-full bg-[#E1E5E9]"></div>
+
+                <!-- 6. Interne Datenverarbeitung -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                    <div class="md:col-span-4">
+                        <h2 class="text-lg font-bold text-[#071F36]">6. Interne Datenverarbeitung</h2>
+                    </div>
+                    <div class="md:col-span-8 space-y-8">
+                        <div>
+                            <span class="eyebrow">Auftragsverarbeiter & interne Tools</span>
+                            <div class="text-body text-[16px] legal-value">
+                                <p class="mb-4">Zur Erbringung unserer Dienstleistungen setzen wir folgende Software ein. Mit allen Anbietern wurden AV-Verträge gemäß Art. 28 DSGVO geschlossen:</p>
+                                <ul>
+                                    <li><strong>Notion</strong> (Notion Labs Inc., USA): CRM-System und Projektmanagement. Notion ist nach dem EU-US Data Privacy Framework zertifiziert.</li>
+                                    <li><strong>Lexware</strong> (Haufe-Lexware GmbH & Co. KG, Deutschland): Buchhaltung und Rechnungswesen.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="eyebrow">Videokonferenzen</span>
+                            <div class="text-body text-[16px]">
+                                <p class="mb-4">Für vereinbarte Online-Meetings nutzen wir <strong>Google Meet</strong> (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Dabei werden Metadaten, Video- und Audiodaten verarbeitet. Eine Nutzung erfolgt nur auf Basis eines vereinbarten Termins.</p>
+                                <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Durchführung vertraglicher oder vorvertraglicher Maßnahmen).</p>
                             </div>
                         </div>
                         <div>
                             <span class="eyebrow">Zahlungsabwicklung</span>
                             <div class="text-body text-[16px]">
-                                <p>Für die Bezahlung (z. B. Audits) nutzen wir gängige Zahlungswege (Überweisung, PayPal, Stripe). Dabei werden Zahlungsdaten an den jeweiligen Anbieter übermittelt (Art. 6 Abs. 1 lit. b DSGVO).</p>
+                                <p>Die Bezahlung unserer Leistungen erfolgt per Banküberweisung auf Basis der von uns gestellten Rechnungen. Es werden keine Online-Zahlungsdienste (z. B. PayPal, Stripe) auf dieser Website eingesetzt.</p>
                             </div>
                         </div>
                     </div>
@@ -419,24 +460,69 @@
 
                 <div class="h-px w-full bg-[#E1E5E9]"></div>
 
+                <!-- 7. Ihre Rechte -->
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
                     <div class="md:col-span-4">
                         <h2 class="text-lg font-bold text-[#071F36]">7. Ihre Rechte (Betroffenenrechte)</h2>
                     </div>
                     <div class="md:col-span-8 space-y-8">
                         <div>
-                            <span class="eyebrow">Sie haben jederzeit das Recht auf:</span>
+                            <span class="eyebrow">Sie haben jederzeit das Recht auf</span>
                             <div class="text-body text-[16px] legal-value">
                                 <ul>
-                                    <li>Auskunft (Art. 15 DSGVO)</li>
-                                    <li>Berichtigung (Art. 16 DSGVO)</li>
-                                    <li>Löschung (Art. 17 DSGVO)</li>
-                                    <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
-                                    <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
-                                    <li><strong>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</strong></li>
-                                    <li>Widerruf Ihrer Einwilligung.</li>
+                                    <li><strong>Auskunft</strong> über Ihre bei uns gespeicherten Daten (Art. 15 DSGVO)</li>
+                                    <li><strong>Berichtigung</strong> unrichtiger Daten (Art. 16 DSGVO)</li>
+                                    <li><strong>Löschung</strong> Ihrer Daten (Art. 17 DSGVO)</li>
+                                    <li><strong>Einschränkung der Verarbeitung</strong> (Art. 18 DSGVO)</li>
+                                    <li><strong>Datenübertragbarkeit</strong> (Art. 20 DSGVO)</li>
+                                    <li><strong>Widerspruch</strong> gegen die Verarbeitung (Art. 21 DSGVO)</li>
+                                    <li><strong>Widerruf</strong> Ihrer erteilten Einwilligung mit Wirkung für die Zukunft (Art. 7 Abs. 3 DSGVO)</li>
                                 </ul>
-                                <p>Kontakt: <a href="mailto:info@kassel-bd.de">info@kassel-bd.de</a></p>
+                                <p class="mt-4">Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: <a href="mailto:info@kassel-bd.de">info@kassel-bd.de</a></p>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="eyebrow">Beschwerderecht</span>
+                            <div class="text-body text-[16px]">
+                                <p>Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren (Art. 77 DSGVO). Die für uns zuständige Aufsichtsbehörde ist der Hessische Beauftragte für Datenschutz und Informationsfreiheit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-px w-full bg-[#E1E5E9]"></div>
+
+                <!-- 8. Aufbewahrungsfristen -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                    <div class="md:col-span-4">
+                        <h2 class="text-lg font-bold text-[#071F36]">8. Aufbewahrungsfristen</h2>
+                    </div>
+                    <div class="md:col-span-8 space-y-8">
+                        <div>
+                            <div class="text-body text-[16px] legal-value">
+                                <ul>
+                                    <li><strong>Kontaktanfragen:</strong> Löschung nach Abschluss der Bearbeitung, spätestens nach 6 Monaten, sofern keine weitergehende Geschäftsbeziehung entsteht.</li>
+                                    <li><strong>Rechnungsdaten:</strong> 10 Jahre (§ 147 AO, § 257 HGB).</li>
+                                    <li><strong>Geschäftsbriefe:</strong> 6 Jahre (§ 257 HGB).</li>
+                                    <li><strong>Newsletter-Anmeldungen:</strong> Bis zum Widerruf Ihrer Einwilligung.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-px w-full bg-[#E1E5E9]"></div>
+
+                <!-- 9. Änderungen -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                    <div class="md:col-span-4">
+                        <h2 class="text-lg font-bold text-[#071F36]">9. Aktualität und Änderungen</h2>
+                    </div>
+                    <div class="md:col-span-8 space-y-8">
+                        <div>
+                            <div class="text-body text-[16px]">
+                                <p><strong>Stand:</strong> Februar 2026</p>
+                                <p class="mt-2">Wir behalten uns vor, diese Datenschutzerklärung gelegentlich anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.</p>
                             </div>
                         </div>
                     </div>
@@ -470,7 +556,7 @@
                         <img src="icon.png" alt="KBD Logo" width="56" height="56" class="h-12 md:h-14 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity" />
                     </a>
                     <p class="text-[#4A5563] text-sm leading-relaxed max-w-md mb-8">
-                        Wir automatisieren Ihre Abläufe intelligent, damit Ihre Mitarbeiter mehr Zeit für echte Wertschöpfung haben.   </p>
+                        Intelligente Systemarchitekturen für den Mittelstand. Erprobte Blaupausen, individuell angepasst. Von angehenden Wirtschaftsinformatikern gebaut.</p>
                     <div class="flex items-center gap-6">
                         <a href="https://www.linkedin.com/company/kassel-bd" target="_blank" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="KBD auf LinkedIn"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
                         <a href="https://www.instagram.com/kassel_bd/" target="_blank" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="KBD auf Instagram"><i data-lucide="instagram" class="w-5 h-5"></i></a>
@@ -493,6 +579,7 @@
                         <li><a href="leistungen.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Leistungen</a></li>
                         <li><a href="technologie.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Technologie</a></li>
                         <li><a href="erfolge.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Erfolge</a></li>
+                                <li><a href="versicherungsmakler.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Versicherungsmakler</a></li>
                         <li><a href="publikationen/index.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Publikationen</a></li>
                     </ul>
                 </div>
@@ -516,7 +603,7 @@
 
             <div class="border-t border-[#E1E5E9] pt-8 flex flex-col md:flex-row justify-between items-center text-[#9CA3AF] text-xs">
                 <p>&copy; 2026 Kassel Business Digital.</p>
-                <p class="mt-2 md:mt-0 font-medium">Excellence in Process Architecture.</p>
+                <p class="mt-2 md:mt-0 font-medium">Intelligente Systeme für alle.</p>
             </div>
         </div>
     </footer>

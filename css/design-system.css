@@ -114,32 +114,40 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --- BUTTON SYSTEM (Unified CTAs) --- */
-.btn-primary {
-    background-color: var(--kbd-blue);
-    color: white;
-    font-weight: 500; 
+.btn-primary,
+.btn-white,
+.btn-outline {
+    position: relative;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
     font-size: 16px;
-    border-radius: 0px;
+    border-radius: 2rem;
     padding: 14px 28px;
-    border: 1px solid var(--kbd-blue);
-    transition: all 0.2s ease;
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center; 
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     gap: 8px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
-    width: 100%; /* Mobile first: full width */
-    min-height: 44px; /* Touch target minimum */
-    touch-action: manipulation; /* Disable double-tap zoom */
+    min-height: 44px;
+    touch-action: manipulation;
+}
+
+.btn-primary {
+    background-color: var(--kbd-blue);
+    color: white;
+    border: 1px solid var(--kbd-blue);
+    width: 100%;
 }
 
 @media (min-width: 640px) {
-    .btn-primary { 
-        width: auto; 
-        padding: 16px 32px; 
-        min-height: auto; 
+    .btn-primary {
+        width: auto;
+        padding: 16px 32px;
+        min-height: auto;
     }
 }
 
@@ -147,6 +155,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--kbd-blue-hover);
     border-color: var(--kbd-blue-hover);
     transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(7, 31, 54, 0.3);
     color: white;
     text-decoration: none;
 }
@@ -160,22 +169,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn-white {
     background-color: var(--white);
     color: var(--kbd-blue);
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    border-radius: 0px;
-    padding: 14px 24px;
     border: 1px solid var(--white);
-    transition: all 0.2s ease;
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center; 
-    gap: 8px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    min-height: 44px; /* Touch target minimum */
-    touch-action: manipulation; /* Disable double-tap zoom */
 }
 
 .btn-white:hover {
@@ -183,6 +177,7 @@ h1, h2, h3, h4, h5, h6 {
     border-color: var(--bg-grey);
     color: var(--kbd-blue);
     transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.2);
     text-decoration: none;
 }
 
@@ -190,34 +185,82 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid var(--kbd-blue);
     color: var(--kbd-blue);
     background-color: transparent;
-    border-radius: 0px;
-    padding: 14px 28px;
-    font-weight: 500;
-    font-size: 16px;
-    transition: all 0.2s ease-out;
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center; 
-    gap: 8px;
-    cursor: pointer;
-    text-decoration: none;
     width: 100%;
-    min-height: 44px; /* Touch target minimum */
-    touch-action: manipulation; /* Disable double-tap zoom */
 }
 
 @media (min-width: 640px) {
-    .btn-outline { 
-        width: auto; 
-        padding: 16px 32px; 
-        min-height: auto; 
+    .btn-outline {
+        width: auto;
+        padding: 16px 32px;
+        min-height: auto;
     }
 }
 
 .btn-outline:hover {
     background-color: rgba(7, 31, 54, 0.05);
+    transform: translateY(-1px);
     text-decoration: none;
 }
+
+.btn-white-outline {
+    background-color: transparent;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 2rem;
+    padding: 14px 28px;
+    border: 1px solid white;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    min-height: 44px;
+    touch-action: manipulation;
+}
+
+.btn-white-outline:hover {
+    background-color: white;
+    color: var(--kbd-blue);
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--soft-grey);
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 2rem;
+    padding: 14px 24px;
+    border: 1px solid var(--border-grey);
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    min-height: 44px;
+    touch-action: manipulation;
+}
+
+.btn-secondary:hover {
+    background-color: var(--bg-grey);
+    color: var(--kbd-blue);
+    border-color: #D1D5DB;
+    text-decoration: none;
+}
+
+/* --- BUTTON TEXT-SWAP ANIMATION --- */
+/* All animation styles are handled inline by js/button-animation.js
+   to avoid CSS specificity conflicts with per-page <style> blocks. */
 
 /* CTA Variant: Primary Action (Gespräch vereinbaren) */
 .cta-primary {
@@ -278,9 +321,148 @@ h1, h2, h3, h4, h5, h6 {
     display: none; 
 }
 
-.no-scrollbar { 
-    -ms-overflow-style: none; 
-    scrollbar-width: none; 
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* --- DROPDOWN NAVIGATION --- */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-trigger {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.nav-dropdown-icon {
+    transition: transform 0.3s ease;
+    width: 16px;
+    height: 16px;
+}
+
+.nav-dropdown.active .nav-dropdown-icon,
+.nav-dropdown-trigger:hover .nav-dropdown-icon {
+    transform: rotate(180deg);
+}
+
+/* Desktop dropdown menu */
+.nav-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 12px;
+    background: white;
+    border: 1px solid var(--border-grey);
+    box-shadow: 0 10px 40px rgba(7, 31, 54, 0.15);
+    min-width: 240px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown.active .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    margin-top: 8px;
+}
+
+.nav-dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+}
+
+.nav-dropdown-item {
+    display: block;
+    padding: 12px 20px;
+    color: var(--rich-grey);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav-dropdown-item:hover {
+    background-color: var(--bg-grey);
+    color: var(--kbd-blue);
+    padding-left: 24px;
+}
+
+.nav-dropdown-item.active {
+    color: var(--kbd-blue);
+    font-weight: 700;
+    background-color: var(--bg-grey);
+}
+
+/* Mobile dropdown (accordion style) */
+@media (max-width: 1024px) {
+    .mobile-dropdown-trigger {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .mobile-dropdown-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .mobile-dropdown-content.expanded {
+        max-height: 500px;
+    }
+
+    .mobile-dropdown-item {
+        padding-left: 2rem;
+        font-size: 0.95rem;
+        color: var(--soft-grey);
+    }
+
+    .mobile-dropdown-item.active {
+        color: var(--kbd-blue);
+        font-weight: 700;
+    }
+}
+
+/* Accessibility */
+.nav-dropdown-trigger:focus-visible {
+    outline: 3px solid var(--kbd-blue);
+    outline-offset: 2px;
+}
+
+.nav-dropdown-item:focus-visible {
+    outline: 3px solid var(--kbd-blue);
+    outline-offset: -3px;
+    background-color: var(--bg-grey);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .nav-dropdown-menu,
+    .nav-dropdown-icon,
+    .mobile-dropdown-content {
+        transition-duration: 0.01ms !important;
+    }
 }
 
 /* --- FORM INPUT STYLES --- */

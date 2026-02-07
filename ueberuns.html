@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     
-    <title>Kassel Business Digital | Über Uns & Team</title>
-    <meta name="description" content="Jonas Meyer und Dayan Hindermann – Wir verstehen Betriebswirtschaft und Technologie. Intelligente Automatisierung für den Mittelstand. Keine Berater-Folien, funktionierende Lösungen.">
+    <title>KBD | Über Uns – Wir verstehen, was unter der Haube passiert</title>
+    <meta name="description" content="Zwei angehende Wirtschaftsinformatiker, die intelligente Systeme für den Mittelstand bauen. Keine Berater-Folien. Sondern Lösungen, die Strukturprobleme lösen.">
     
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.kassel-bd.de/ueberuns.html">
@@ -25,8 +25,8 @@
     <link rel="dns-prefetch" href="https://unpkg.com">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Kassel Business Digital | Über Uns & Team">
-    <meta property="og:description" content="Betriebswirtschaft trifft Technologie. Automatisierung, die funktioniert. Lernen Sie unser Team kennen.">
+    <meta property="og:title" content="KBD | Über Uns – Wir verstehen, was unter der Haube passiert">
+    <meta property="og:description" content="Zwei angehende Wirtschaftsinformatiker, die intelligente Systeme für den Mittelstand bauen. Keine Berater-Folien. Funktionierende Lösungen.">
     <meta property="og:image" content="https://www.kassel-bd.de/icon.png">
     <meta property="og:url" content="https://www.kassel-bd.de/ueberuns.html">
     <meta property="og:locale" content="de_DE">
@@ -34,8 +34,8 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.kassel-bd.de/ueberuns.html">
-    <meta name="twitter:title" content="Kassel Business Digital | Über Uns & Team">
-    <meta name="twitter:description" content="Betriebswirtschaft trifft Technologie. Automatisierung, die funktioniert.">
+    <meta name="twitter:title" content="KBD | Über Uns – Wir verstehen, was unter der Haube passiert">
+    <meta name="twitter:description" content="Intelligente Systeme für den Mittelstand. Gebaut von Leuten, die verstehen wie Software wirklich funktioniert.">
     <meta name="twitter:image" content="https://www.kassel-bd.de/icon.png">
 
     <script type="application/ld+json">
@@ -52,9 +52,32 @@
     }
     </script>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.kassel-bd.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Über uns"
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="css/design-system.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest" defer></script>
     <script src="config.js"></script>
+    <script src="js/components.js" defer></script>
+    <script src="js/button-animation.js" defer></script>
 
     <script>
         tailwind.config = {
@@ -104,72 +127,7 @@
             text-transform: uppercase; color: var(--soft-grey); font-size: 13px;
         }
 
-        /* BUTTONS */
-        .btn-primary {
-            background-color: var(--kbd-blue);
-            color: white;
-            font-family: 'Inter', sans-serif;
-            font-weight: 500; 
-            font-size: 16px;
-            border-radius: 0px; 
-            padding: 14px 24px;
-            border: 1px solid var(--kbd-blue);
-            transition: all 0.2s ease;
-            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-            cursor: pointer;
-            text-align: center;
-            min-height: 44px; /* Touch target minimum */
-            touch-action: manipulation; /* Disable double-tap zoom */
-        }
-        .btn-primary:hover {
-            background-color: #0A2A4A;
-            border-color: #0A2A4A;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(7, 31, 54, 0.15);
-        }
-        .btn-primary:disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            color: var(--kbd-blue);
-            border: 1px solid var(--kbd-blue);
-            font-weight: 500;
-            font-size: 16px;
-            border-radius: 0px;
-            padding: 14px 24px;
-            transition: all 0.3s ease;
-            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-            min-height: 44px; /* Touch target minimum */
-            touch-action: manipulation; /* Disable double-tap zoom */
-        }
-        .btn-outline:hover { background-color: #F3F5F7; }
-
-        .btn-white {
-            background-color: var(--white);
-            color: var(--kbd-blue);
-            font-family: 'Inter', sans-serif;
-            font-weight: 500;
-            font-size: 16px;
-            border-radius: 0px;
-            padding: 14px 24px;
-            border: 1px solid var(--white);
-            transition: all 0.2s ease;
-            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-            cursor: pointer;
-            text-align: center;
-            min-height: 44px; /* Touch target minimum */
-            touch-action: manipulation; /* Disable double-tap zoom */
-        }
-        .btn-white:hover {
-            background-color: #F3F5F7;
-            border-color: #F3F5F7;
-            color: var(--kbd-blue);
-            transform: translateY(-1px);
-        }
+        /* Buttons: global via design-system.css */
 
         /* HERO BRACKETS */
         .mckinsey-bracket-bl-container {
@@ -243,7 +201,21 @@
                     
                     <a href="leistungen.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Leistungen</a>
                     <a href="technologie.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Technologie</a>
-                    <a href="erfolge.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Erfolge</a>
+                    <a href="erfolge.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Erfolge</a>                    
+                    <!-- Expertise Dropdown -->
+                    <div class="nav-dropdown">
+                        <span class="nav-dropdown-trigger nav-item relative py-2 hover:opacity-80 transition-opacity"
+                              tabindex="0"
+                              role="button"
+                              aria-expanded="false"
+                              aria-haspopup="true">
+                            Expertise
+                            <i data-lucide="chevron-down" class="nav-dropdown-icon"></i>
+                        </span>
+                        <div class="nav-dropdown-menu" role="menu">
+                            <a href="versicherungsmakler.html" class="nav-dropdown-item" role="menuitem">Versicherungsmakler</a>
+                        </div>
+                    </div>
                     <a href="publikationen/index.html" class="nav-item relative py-2 hover:opacity-80 transition-opacity">Publikationen</a>
                     
                     <button type="button" onclick="openContactModal(event)" class="btn-primary ml-2 border-white/10 !py-2 !px-5 !text-[14px]">
@@ -262,7 +234,20 @@
                 <a href="ueberuns.html" class="block text-lg border-b border-gray-100 pb-4 font-bold text-[#071F36]">Über Uns</a>
                 <a href="leistungen.html" class="block text-lg border-b border-gray-100 pb-4">Leistungen</a>
                 <a href="technologie.html" class="block text-lg border-b border-gray-100 pb-4">Technologie</a>
-                <a href="erfolge.html" class="block text-lg border-b border-gray-100 pb-4">Erfolge</a>
+                <a href="erfolge.html" class="block text-lg border-b border-gray-100 pb-4">Erfolge</a>                
+                <!-- Expertise Mobile Dropdown -->
+                <div class="border-b border-gray-100 pb-4">
+                    <div class="mobile-dropdown-trigger text-lg flex justify-between items-center"
+                         onclick="toggleMobileDropdown('mobile-expertise-dropdown')">
+                        <span>Expertise</span>
+                        <i data-lucide="chevron-down" class="mobile-dropdown-icon w-5 h-5" style="transition: transform 0.3s ease;"></i>
+                    </div>
+                    <div id="mobile-expertise-dropdown" class="mobile-dropdown-content">
+                        <a href="versicherungsmakler.html" class="mobile-dropdown-item block py-3 pl-8 text-[#4A5563] hover:text-[#071F36]">
+                            Versicherungsmakler
+                        </a>
+                    </div>
+                </div>
                 <a href="publikationen/index.html" class="block text-lg border-b border-gray-100 pb-4">Publikationen</a>
                 <a href="karriere.html" class="block text-lg border-b border-gray-100 pb-4">Karriere</a>
                 
@@ -277,7 +262,7 @@
         
         <div class="relative w-full bg-[#F3F5F7]">
             <div class="relative w-full h-[65vh] min-h-[600px] overflow-hidden z-0">
-                <img src="images/ueberuns/jonasdayanueberuns.png" 
+                <img src="images/ueberuns/jonasdayanueberuns.webp" 
                      alt="Kassel Business Digital Founders & Team" 
                      class="absolute inset-0 w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-1000"
                      loading="eager"
@@ -291,7 +276,7 @@ fetchpriority="high"
                     <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full">
                         <div class="max-w-4xl pb-12 lg:pb-32">
                             <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] drop-shadow-md">
-                                Die Köpfe hinter<br>der Struktur.
+                                Wir verstehen, was<br>unter der Haube passiert.
                             </h1>
                         </div>
                     </div>
@@ -315,10 +300,10 @@ fetchpriority="high"
                             <div class="bg-white p-10 lg:p-12 shadow-sm relative z-20">
                                 <span class="eyebrow mb-4 block text-[#071F36]">Unternehmensprofil</span>
                                 <h3 class="text-2xl font-bold text-[#071F36] mb-6 leading-tight">
-                                    Technische Expertise. Zwei Rollen.
+                                    Zwei angehende Wirtschaftsinformatiker. Ein Systemverständnis.
                                 </h3>
                                 <p class="text-base text-[#4A5563] leading-relaxed mb-8">
-                                    KBD wurde von zwei angehenden Wirtschaftsinformatikern gegründet, die beide technische Experten sind: Einer analysiert und konzipiert die Lösung, der andere entwickelt und integriert die Systeme. Wir verstehen die Technik vollständig – von der Analyse bis zur Implementierung.
+                                    KBD wurde von zwei angehenden Wirtschaftsinformatikern gegründet, die es leid waren, wie die Branche arbeitet: oberflächliche Tool-Konfiguration, aufgeblähte Projekte, kein echtes Systemverständnis. Einer analysiert und architekturiert, der andere entwickelt und integriert. Beide verstehen, was unter der Haube passiert – von der Datenbankabfrage bis zur API-Architektur.
                                 </p>
                                 
                                 <button onclick="openContactModal(event)" class="text-[#071F36] font-semibold text-sm border-b border-[#071F36] pb-0.5 hover:opacity-70 transition-opacity">
@@ -336,27 +321,27 @@ fetchpriority="high"
             <div class="max-w-7xl mx-auto px-6 lg:px-8">
                 <div class="mb-16 max-w-2xl">
                     <span class="eyebrow mb-4 block">Gründer & Geschäftsführung</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-[#071F36]">Zwei Technik-Experten. Zwei Rollen.</h2>
-                    <p class="mt-4 text-[#4A5563]">Zwei angehende Wirtschaftsinformatiker mit technischer Expertise. Einer analysiert und strukturiert Prozesse, der andere entwickelt und integriert Systeme. Beide verstehen Technologie – mit unterschiedlichen Schwerpunkten.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#071F36]">Zwei Rollen. Ein Ziel.</h2>
+                    <p class="mt-4 text-[#4A5563]">Zwei angehende Wirtschaftsinformatiker, die lieber Systeme bauen als PowerPoints. Einer analysiert und architekturiert, der andere entwickelt und integriert. Beide verstehen Technologie – mit unterschiedlichen Schwerpunkten.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-start">
                     
                     <div class="group">
                         <div class="aspect-[4/5] w-full bg-[#F3F5F7] mb-8 overflow-hidden relative">
-                            <img src="images/ueberuns/jonasueberuns.jpg" 
+                            <img src="images/ueberuns/jonasueberuns.webp" 
                                  alt="Jonas Meyer" 
                                  class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out grayscale hover:grayscale-0">
                         </div>
                         <h3 class="text-2xl font-bold text-[#071F36] mb-2">Jonas Meyer</h3>
-                        <span class="text-xs font-semibold uppercase tracking-wider text-[#4A5563] mb-6 block border-l-2 border-[#071F36] pl-3">Prozess-Analyse & Konzeption</span>
-                        
+                        <span class="text-xs font-semibold uppercase tracking-wider text-[#4A5563] mb-6 block border-l-2 border-[#071F36] pl-3">Systemanalyse & Architektur</span>
+
                         <div class="space-y-4 text-body">
                             <p>
-                                Angehender Wirtschaftsinformatiker mit Fokus auf Prozess-Analyse und technische Konzeption. Ich identifiziere, welche Abläufe automatisiert werden sollten und wie die technische Lösung aussehen muss.
+                                Angehender Wirtschaftsinformatiker mit Fokus auf Systemanalyse und Architekturdesign. Ich identifiziere nicht nur, welche Abläufe ineffizient sind – ich entwerfe die Systemarchitektur, die sie dauerhaft löst.
                             </p>
                             <p>
-                                Meine Aufgabe: Ich analysiere Ihre Prozesse, definiere die Anforderungen und konzipiere die technische Lösung. Ich sorge dafür, dass wir das richtige Problem mit der richtigen Technik lösen.
+                                Mein Anspruch: Jedes System, das wir bauen, muss auch ohne uns funktionieren. Ich analysiere Ihre Prozesse, definiere die Anforderungen und sorge dafür, dass wir das richtige Problem mit der richtigen Architektur lösen.
                             </p>
                         </div>
                         <div class="mt-6 pt-6 border-t border-[#E1E5E9] flex items-center gap-6">
@@ -377,19 +362,19 @@ fetchpriority="high"
 
                     <div class="group md:mt-16">
                         <div class="aspect-[4/5] w-full bg-[#F3F5F7] mb-8 overflow-hidden relative">
-                            <img src="images/ueberuns/dayanueberuns.jpg" 
+                            <img src="images/ueberuns/dayanueberuns.webp" 
                                  alt="Dayan Hindermann" 
                                  class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out grayscale hover:grayscale-0">
                         </div>
                         <h3 class="text-2xl font-bold text-[#071F36] mb-2">Dayan Hindermann</h3>
-                        <span class="text-xs font-semibold uppercase tracking-wider text-[#4A5563] mb-6 block border-l-2 border-[#071F36] pl-3">Software-Entwicklung & Integration</span>
-                        
+                        <span class="text-xs font-semibold uppercase tracking-wider text-[#4A5563] mb-6 block border-l-2 border-[#071F36] pl-3">Software-Engineering & Systemintegration</span>
+
                         <div class="space-y-4 text-body">
                             <p>
-                                Angehender Wirtschaftsinformatiker mit Schwerpunkt auf Software-Entwicklung und System-Integration. Ich setze die Automatisierungen technisch um und verbinde Ihre bestehenden Systeme.
+                                Angehender Wirtschaftsinformatiker mit Schwerpunkt auf Software-Engineering und tiefe Systemintegration. Ich baue nicht auf Low-Code-Plattformen. Ich schreibe die Architektur, die darunter liegt.
                             </p>
                             <p>
-                                Meine Aufgabe: Ich entwickle die Schnittstellen, baue die Workflows und integriere Ihre Tools. Clean Code, wartbare Architektur und funktionierende Lösungen – keine aufgeblähten Theoriekonstrukte.
+                                Clean Code, wartbare Systeme, und Lösungen, die skalieren – nicht Prototypen, die im Produktivbetrieb zusammenbrechen. Ich entwickle die Schnittstellen, baue die Workflows und sorge dafür, dass alles sauber zusammenspielt.
                             </p>
                         </div>
                         <div class="mt-6 pt-6 border-t border-[#E1E5E9] flex items-center gap-6">
@@ -436,9 +421,13 @@ fetchpriority="high"
                                 <div class="w-1.5 h-1.5 bg-[#071F36] mt-2 flex-shrink-0"></div>
                                 <p class="text-base text-[#4A5563] leading-relaxed">Sie legen Wert auf Unabhängigkeit von großen Software-Herstellern.</p>
                             </li>
+                            <li class="flex items-start gap-4">
+                                <div class="w-1.5 h-1.5 bg-[#071F36] mt-2 flex-shrink-0"></div>
+                                <p class="text-base text-[#4A5563] leading-relaxed">Sie möchten nur für Ergebnisse zahlen, nicht für Beraterstunden – und erwarten von Ihrem Partner dasselbe Vertrauen in seine eigene Arbeit.</p>
+                            </li>
                         </ul>
                     </div>
-                    
+
                     <div class="border-l-4 border-[#E1E5E9] pl-8 py-4">
                         <h3 class="text-xl font-bold text-[#071F36] mb-6">Wann Sie nicht mit uns arbeiten sollten</h3>
                         <ul class="space-y-6">
@@ -486,7 +475,9 @@ fetchpriority="high"
                         <img src="icon.png" alt="KBD Logo" width="56" height="56" class="h-12 md:h-14 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity" />
                     </a>
                     <p class="text-[#4A5563] text-sm leading-relaxed max-w-md mb-8">
-                        Wir automatisieren Ihre Abläufe intelligent, damit Ihre Mitarbeiter mehr Zeit für echte Wertschöpfung haben.   <div class="flex items-center gap-6">
+                        Intelligente Systemarchitekturen für den Mittelstand. Erprobte Blaupausen, individuell angepasst. Von angehenden Wirtschaftsinformatikern gebaut.
+                    </p>
+                    <div class="flex items-center gap-6">
                         <a href="https://www.linkedin.com/company/kassel-bd" target="_blank" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="KBD auf LinkedIn"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
                         <a href="https://www.instagram.com/kassel_bd/" target="_blank" class="text-[#9CA3AF] hover:text-[#071F36] transition-all hover:-translate-y-1" aria-label="KBD auf Instagram"><i data-lucide="instagram" class="w-5 h-5"></i></a>
                     </div>
@@ -508,6 +499,7 @@ fetchpriority="high"
                         <li><a href="leistungen.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Leistungen</a></li>
                         <li><a href="technologie.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Technologie</a></li>
                         <li><a href="erfolge.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Erfolge</a></li>
+                                <li><a href="versicherungsmakler.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Versicherungsmakler</a></li>
                         <li><a href="publikationen/index.html" class="hover:text-[#071F36] hover:underline decoration-1 underline-offset-4 transition-all">Publikationen</a></li>
                     </ul>
                 </div>
@@ -531,10 +523,36 @@ fetchpriority="high"
 
             <div class="border-t border-[#E1E5E9] pt-8 flex flex-col md:flex-row justify-between items-center text-[#9CA3AF] text-xs">
                 <p>&copy; 2026 Kassel Business Digital.</p>
-                <p class="mt-2 md:mt-0 font-medium">Excellence in Process Architecture.</p>
+                <p class="mt-2 md:mt-0 font-medium">Intelligente Systeme für alle.</p>
             </div>
         </div>
     </footer>
+
+
+        <!-- Content -->
+        <div class="flex-1 min-w-0">
+          <h3 class="text-[15px] font-bold text-[#071F36] leading-tight mb-1">
+            Für Makler gemacht
+          </h3>
+          <p class="text-[13px] text-[#4A5563] leading-snug mb-2">
+            Von jemandem, der selbst 1,5 Jahre Makler war.
+          </p>
+          <a href="versicherungsmakler.html"
+             class="inline-flex items-center gap-1 text-[13px] font-semibold text-[#071F36] hover:text-[#0A2A4A] transition-colors group">
+            Mehr erfahren
+            <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+          </a>
+        </div>
+
+        <!-- Close button -->
+        <button type="button"
+                onclick="closePeekPopup()"
+                class="absolute top-2 right-2 text-[#9CA3AF] hover:text-[#071F36] transition-colors p-1 rounded-full hover:bg-[#F3F5F7]"
+                aria-label="Popup schließen">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
 
     <div id="contact-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
         <div class="absolute inset-0 bg-[#071F36]/90 backdrop-blur-sm transition-opacity opacity-0" id="contact-backdrop" onclick="closeContactModal()"></div>
